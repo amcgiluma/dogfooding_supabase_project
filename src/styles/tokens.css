@@ -2,11 +2,13 @@
   color-scheme: dark;
   --bg: #000;
   --fg: #fff;
-  --muted: #b5b5b5;
-  --line: #30332d;
-  --green: #b8d4b0;
-  --forest: #214333;
-  --warm: #f2bd8e;
-  --ink: #11120f;
+  --muted: #a3a3a3;
+  --line: #262626;
+  --accent: #0A84FF;
+  --accent-action: #0066CC;
+  --surface: #111;
+  --surface-raised: #18181b;
+  --surface-hover: #202024;
+  --error: #f2a4aa;
   --max: 1240px;
 }

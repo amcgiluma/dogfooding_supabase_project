@@ -1,0 +1,989 @@
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-onboarding-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-onboarding-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-onboarding-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=onboarding",
+  "active": [
+    "onboarding"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Juanma",
+    "Continue"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-chat-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-chat-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-chat-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=chat",
+  "active": [
+    "chat"
+  ],
+  "composer": {
+    "x": 460,
+    "y": 918.953125,
+    "width": 760,
+    "height": 46,
+    "bottom": 964.953125
+  },
+  "buttons": [
+    "＋ New mission",
+    "Details",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-permission-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-permission-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-permission-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=permission",
+  "active": [
+    "permission"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "＋ New mission",
+    "Details",
+    "Allow in preview",
+    "Decline",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-review-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-review-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-review-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=review",
+  "active": [
+    "review"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "＋ New mission",
+    "Details",
+    "View draft",
+    "Approve in preview",
+    "Request changes",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-onboarding-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-onboarding-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-onboarding-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=onboarding",
+  "active": [
+    "onboarding"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Juanma",
+    "Continue"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-chat-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-chat-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-chat-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=chat",
+  "active": [
+    "chat"
+  ],
+  "composer": {
+    "x": 298,
+    "y": 918.953125,
+    "width": 920,
+    "height": 46,
+    "bottom": 964.953125
+  },
+  "buttons": [
+    "☷",
+    "＋",
+    "Details",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-permission-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-permission-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-permission-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=permission",
+  "active": [
+    "permission"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "☷",
+    "＋",
+    "Details",
+    "Allow in preview",
+    "Decline",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-review-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-review-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-review-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=review",
+  "active": [
+    "review"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "＋",
+    "Details",
+    "View draft",
+    "Approve in preview",
+    "Request changes",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-onboarding-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-onboarding-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-onboarding-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=onboarding",
+  "active": [
+    "onboarding"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Juanma",
+    "Continue"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-chat-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-chat-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-chat-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=chat",
+  "active": [
+    "chat"
+  ],
+  "composer": {
+    "x": 476,
+    "y": 918.953125,
+    "width": 760,
+    "height": 46,
+    "bottom": 964.953125
+  },
+  "buttons": [
+    "Details",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-permission-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-permission-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-permission-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=permission",
+  "active": [
+    "permission"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Details",
+    "Allow in preview",
+    "Decline",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-review-desktop.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-review-desktop.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-review-desktop.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "1440x1000",
+  "doc": 1440,
+  "body": 1440,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=review",
+  "active": [
+    "review"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Details",
+    "View draft",
+    "Approve in preview",
+    "Request changes",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/chooser-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/chooser-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/chooser-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "headings": [
+    "Elige cómo hablar con Morrow",
+    "A · Espacio claro",
+    "B · Conversación amplia",
+    "C · Compañero presente"
+  ],
+  "links": 15
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,headings:[...document.querySelectorAll("h1,h2")].map(e=>e.innerText),links:[...document.querySelectorAll("main a")].length})');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-onboarding-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-onboarding-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-onboarding-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=onboarding",
+  "active": [
+    "onboarding"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Juanma",
+    "Continue"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-chat-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-chat-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-chat-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=chat",
+  "active": [
+    "chat"
+  ],
+  "composer": {
+    "x": 16,
+    "y": 763.953125,
+    "width": 358,
+    "height": 45,
+    "bottom": 808.953125
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-permission-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-permission-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-permission-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=permission",
+  "active": [
+    "permission"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "Allow in preview",
+    "Decline",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/a-review-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/a-review-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/a-review-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-a.html?view=review",
+  "active": [
+    "review"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "View draft",
+    "Approve in preview",
+    "Request changes",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-onboarding-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-onboarding-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-onboarding-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=onboarding",
+  "active": [
+    "onboarding"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Juanma",
+    "Continue"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-chat-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-chat-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-chat-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=chat",
+  "active": [
+    "chat"
+  ],
+  "composer": {
+    "x": 16,
+    "y": 763.953125,
+    "width": 358,
+    "height": 45,
+    "bottom": 808.953125
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-permission-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-permission-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-permission-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=permission",
+  "active": [
+    "permission"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "Allow in preview",
+    "Decline",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/b-review-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/b-review-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/b-review-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-b.html?view=review",
+  "active": [
+    "review"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "View draft",
+    "Approve in preview",
+    "Request changes",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-onboarding-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-onboarding-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-onboarding-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=onboarding",
+  "active": [
+    "onboarding"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "Juanma",
+    "Continue"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-chat-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-chat-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-chat-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=chat",
+  "active": [
+    "chat"
+  ],
+  "composer": {
+    "x": 16,
+    "y": 763.953125,
+    "width": 358,
+    "height": 45,
+    "bottom": 808.953125
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-permission-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-permission-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-permission-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=permission",
+  "active": [
+    "permission"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "Allow in preview",
+    "Decline",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```
+### Result
+- [Screenshot of viewport](output/playwright/morrow-chat-redesign/c-review-mobile.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as output/playwright/morrow-chat-redesign/c-review-mobile.png
+await page.screenshot({
+  path: 'output/playwright/morrow-chat-redesign/c-review-mobile.png',
+  scale: 'css',
+  type: 'png'
+});
+```
+### Result
+{
+  "viewport": "390x844",
+  "doc": 390,
+  "body": 390,
+  "overflow": false,
+  "background": "rgb(0, 0, 0)",
+  "url": "http://127.0.0.1:43871/option-c.html?view=review",
+  "active": [
+    "review"
+  ],
+  "composer": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "bottom": 0
+  },
+  "buttons": [
+    "☰",
+    "Details",
+    "View draft",
+    "Approve in preview",
+    "Request changes",
+    "Send"
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const c=document.querySelector("[data-testid=composer]"); const r=c?.getBoundingClientRect(); const active=[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view); const buttons=[...document.querySelectorAll("button")].filter(e=>e.getBoundingClientRect().width>0); return {viewport:`${innerWidth}x${innerHeight}`,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,background:getComputedStyle(document.body).backgroundColor,url:location.href,active,composer:r&&{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom},buttons:buttons.map(e=>e.innerText.trim()).filter(Boolean).slice(-6)} }');
+```

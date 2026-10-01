@@ -1,0 +1,28 @@
+- main [ref=f3e21]:
+  - paragraph [ref=f3e22]: morrow+
+  - img "Reserved space for your future mascot"
+  - region [ref=f3e23]:
+    - paragraph [ref=f3e24]: hello, human.
+    - paragraph [ref=f3e25]: Step 3 of 4
+    - generic [ref=f3e26]:
+      - heading "What kind of help should we start with?" [level=1] [ref=f3e47]:
+        - generic [aria-hidden] [ref=f3e29]: What kind of help should we start with?
+      - generic [ref=f3e37]:
+        - generic [ref=f3e38]: Your name
+        - paragraph [ref=f3e39]: Juanma
+      - generic [ref=f3e48]:
+        - generic [ref=f3e49]: Your goal
+        - paragraph [ref=f3e50]: Explore security workflows
+      - generic [ref=f3e31]:
+        - generic [ref=f3e51]:
+          - text: How would you like to use a companion?
+          - textbox "How would you like to use a companion?" [ref=f3e52]:
+            - /placeholder: A few words is enough
+            - text: Build something
+        - generic "Ways to use Morrow" [ref=f3e53]:
+          - button "Build something" [active] [pressed] [ref=f3e54] [cursor=pointer]
+          - button "Research a question" [ref=f3e55] [cursor=pointer]
+          - button "Stay on top of changes" [ref=f3e56] [cursor=pointer]
+        - generic [ref=f3e34]:
+          - button "Back" [ref=f3e46] [cursor=pointer]
+          - button "Continue" [ref=f3e35] [cursor=pointer]: Continue →

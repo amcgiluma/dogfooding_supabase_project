@@ -1,0 +1,72 @@
+- generic [active] [ref=e1]:
+  - navigation "Static preview controls" [ref=e2]:
+    - generic [ref=e3]: Static preview
+    - link "All options" [ref=e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=e5]: Preview view
+    - combobox "Preview view" [ref=e6]:
+      - option "Onboarding"
+      - option "Chat" [selected]
+      - option "Permission"
+      - option "Review"
+  - generic [ref=e7]:
+    - complementary [ref=e8]:
+      - generic [ref=e9]: Morrow
+      - navigation "Primary" [ref=e10]:
+        - link "General chat" [ref=e11] [cursor=pointer]:
+          - /url: "#chat"
+          - generic [aria-hidden] [ref=e12]: ⌂
+          - text: General chat
+      - button "＋ New mission" [ref=e13] [cursor=pointer]
+      - generic [ref=e14]: Missions
+      - navigation "Missions" [ref=e15]:
+        - link "Design the reading app In progress" [ref=e16] [cursor=pointer]:
+          - /url: "#chat"
+          - generic [ref=e17]: Design the reading app
+          - generic [ref=e18]: In progress
+        - link "Research public references Permission needed" [ref=e19] [cursor=pointer]:
+          - /url: "#permission"
+          - generic [ref=e20]: Research public references
+          - generic [ref=e21]: Permission needed
+        - link "Weekly design review Ready for review" [ref=e22] [cursor=pointer]:
+          - /url: "#review"
+          - generic [ref=e23]: Weekly design review
+          - generic [ref=e24]: Ready for review
+      - generic [ref=e25]:
+        - generic [ref=e26]: J
+        - generic [ref=e27]: Juanma
+    - main [ref=e28]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - strong [ref=e33]: General chat
+          - button "Open mission details" [ref=e35] [cursor=pointer]: Details
+        - generic [ref=e37]:
+          - article [ref=e38]:
+            - paragraph [ref=e39]: Morrow
+            - generic [ref=e40]: "Start with an inbox and a reading queue. Keep saved links searchable. Which matters more today: capturing links quickly or choosing your next read?"
+          - article [ref=e41]:
+            - paragraph [ref=e42]: Juanma
+            - generic [ref=e43]: Choosing the next read. Keep it simple.
+          - article [ref=e44]:
+            - paragraph [ref=e45]: Morrow
+            - generic [ref=e46]: Then I would show three next reads, with the inbox one click away. We can turn that into a first screen.
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: Message Morrow
+            - textbox "Message Morrow" [ref=e50]
+            - button "Send" [ref=e51] [cursor=pointer]
+          - generic [ref=e52]: Shift + Enter for a new line
+      - region "Mission details":
+        - heading "Mission details" [level=2]
+        - generic:
+          - heading "Goal" [level=3]
+          - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+          - heading "Progress" [level=3]
+          - list [ref=e53]:
+            - listitem: Define the simplest useful flow
+            - listitem: Compare public design references
+            - listitem: Review a three-screen outline
+          - heading "History" [level=3]
+          - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+          - heading "Output" [level=3]
+          - paragraph: No output attached yet.

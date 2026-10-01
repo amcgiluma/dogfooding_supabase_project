@@ -1,0 +1,45 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Mira
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - paragraph [ref=f6e589]: No missions yet.
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e590]:
+        - text: Switch companion
+        - combobox "Switch companion" [ref=f6e591]:
+          - option "Nova"
+          - option "Mira" [selected]
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e592]:
+    - generic [ref=f6e593]:
+      - generic [ref=f6e594]:
+        - strong [ref=f6e595]: Mira
+        - generic [ref=f6e596]: · General chat
+      - generic [ref=f6e597]:
+        - button "Details" [ref=f6e598] [cursor=pointer]
+        - button "New mission" [ref=f6e599] [cursor=pointer]
+    - region "General conversation" [ref=f6e601]:
+      - region "General conversation" [ref=f6e602]:
+        - generic [ref=f6e604]:
+          - heading "Hey Test Juanma. What’s next?" [level=1] [ref=f6e605]
+          - paragraph [ref=f6e606]: A small start counts.
+        - generic [ref=f6e607]:
+          - generic [ref=f6e608]:
+            - generic [ref=f6e609]: Message Mira
+            - textbox "Message Mira" [ref=f6e610]:
+              - /placeholder: What’s on your mind?
+            - button "Send" [disabled] [ref=f6e611]
+          - paragraph [ref=f6e612]: Shift + Enter for a new line

@@ -1,0 +1,2 @@
+[   13305ms] TypeError: detailsOpener?.focus is not a function
+    at HTMLDialogElement.<anonymous> (http://127.0.0.1:43871/option-a.html?view=review:2:19161)

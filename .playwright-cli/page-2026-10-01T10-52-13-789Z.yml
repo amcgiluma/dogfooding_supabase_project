@@ -1,0 +1,58 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Nova
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - button "Build a calm reading app landing page Active" [ref=f6e333] [cursor=pointer]:
+        - strong [ref=f6e97]: Build a calm reading app landing page
+        - generic [ref=f6e98]: Active
+      - button "Compare three ways to validate this product idea Active" [ref=f6e394] [cursor=pointer]:
+        - strong [ref=f6e100]: Compare three ways to validate this product idea
+        - generic [ref=f6e101]: Active
+      - button "Watch for useful updates about local AI tools Complete" [ref=f6e550] [cursor=pointer]:
+        - strong [ref=f6e103]: Watch for useful updates about local AI tools
+        - generic [ref=f6e104]: Complete
+      - button "Compare reading app launch options Paused" [ref=f6e434] [cursor=pointer]:
+        - strong [ref=f6e192]: Compare reading app launch options
+        - generic [ref=f6e193]: Paused
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e558]:
+    - generic [ref=f6e559]:
+      - generic [ref=f6e560]:
+        - heading "Companions" [level=1] [ref=f6e561]
+        - paragraph [ref=f6e562]: Each companion keeps their own conversations and missions.
+      - button "Cancel" [expanded] [ref=f6e582] [cursor=pointer]
+    - generic [ref=f6e583]:
+      - generic [ref=f6e584]: Name your companion
+      - generic [ref=f6e585]:
+        - textbox "Name your companion" [active] [ref=f6e586]:
+          - /placeholder: A new companion
+        - button "Create and open" [ref=f6e587] [cursor=pointer]
+      - paragraph [ref=f6e588]: A new companion starts with an empty workspace.
+    - list [ref=f6e564]:
+      - listitem [ref=f6e565]:
+        - img "Reserved space for your future mascot" [ref=f6e566]
+        - generic [ref=f6e571]:
+          - generic [ref=f6e572]:
+            - heading "Nova" [level=2] [ref=f6e573]
+            - button "Rename" [ref=f6e574] [cursor=pointer]
+          - paragraph [ref=f6e575]: 4 missions
+          - generic [ref=f6e576]:
+            - button "Open chat" [ref=f6e577] [cursor=pointer]
+            - 'button "Open: Build a calm reading app landing page" [ref=f6e578] [cursor=pointer]'
+            - 'button "Open: Compare three ways to validate this product idea" [ref=f6e579] [cursor=pointer]'
+            - 'button "Open: Watch for useful updates about local AI tools" [ref=f6e580] [cursor=pointer]'
+            - 'button "Open: Compare reading app launch options" [ref=f6e581] [cursor=pointer]'

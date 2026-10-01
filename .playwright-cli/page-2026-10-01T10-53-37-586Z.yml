@@ -1,0 +1,66 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Nova
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - button "Build a calm reading app landing page Active" [ref=f6e613] [cursor=pointer]:
+        - strong [ref=f6e614]: Build a calm reading app landing page
+        - generic [ref=f6e615]: Active
+      - button "Compare three ways to validate this product idea Active" [ref=f6e616] [cursor=pointer]:
+        - strong [ref=f6e617]: Compare three ways to validate this product idea
+        - generic [ref=f6e618]: Active
+      - button "Watch for useful updates about local AI tools Complete" [ref=f6e619] [cursor=pointer]:
+        - strong [ref=f6e620]: Watch for useful updates about local AI tools
+        - generic [ref=f6e621]: Complete
+      - button "Compare reading app launch options Paused" [ref=f6e622] [cursor=pointer]:
+        - strong [ref=f6e623]: Compare reading app launch options
+        - generic [ref=f6e624]: Paused
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e590]:
+        - text: Switch companion
+        - combobox "Switch companion" [ref=f6e591]:
+          - option "Nova" [selected]
+          - option "Mira"
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e625]:
+    - generic [ref=f6e626]:
+      - generic [ref=f6e627]:
+        - heading "Companions" [level=1] [ref=f6e628]
+        - paragraph [ref=f6e629]: Each companion keeps their own conversations and missions.
+      - button "Create companion +" [ref=f6e630] [cursor=pointer]
+    - list [ref=f6e631]:
+      - listitem [ref=f6e632]:
+        - img "Reserved space for your future mascot" [ref=f6e633]
+        - generic [ref=f6e638]:
+          - generic [ref=f6e639]:
+            - heading "Nova" [level=2] [ref=f6e640]
+            - button "Rename" [ref=f6e641] [cursor=pointer]
+          - paragraph [ref=f6e642]: 4 missions
+          - generic [ref=f6e643]:
+            - button "Open chat" [ref=f6e644] [cursor=pointer]
+            - 'button "Open: Build a calm reading app landing page" [ref=f6e645] [cursor=pointer]'
+            - 'button "Open: Compare three ways to validate this product idea" [ref=f6e646] [cursor=pointer]'
+            - 'button "Open: Watch for useful updates about local AI tools" [ref=f6e647] [cursor=pointer]'
+            - 'button "Open: Compare reading app launch options" [ref=f6e648] [cursor=pointer]'
+      - listitem [ref=f6e649]:
+        - img "Reserved space for your future mascot" [ref=f6e650]
+        - generic [ref=f6e655]:
+          - generic [ref=f6e662]:
+            - generic [ref=f6e663]: Rename Mira
+            - textbox "Rename Mira" [active] [ref=f6e664]: Mira
+            - button "Save" [ref=f6e665] [cursor=pointer]
+            - button "Cancel" [ref=f6e666] [cursor=pointer]
+          - paragraph [ref=f6e659]: No missions yet
+          - button "Open chat" [ref=f6e661] [cursor=pointer]

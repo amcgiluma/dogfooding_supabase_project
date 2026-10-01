@@ -1,0 +1,37 @@
+- generic [active] [ref=f21e1]:
+  - navigation "Static preview controls" [ref=f21e2]:
+    - generic [ref=f21e3]: Static preview
+    - link "All options" [ref=f21e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f21e5]: Preview view
+    - combobox "Preview view" [ref=f21e6]:
+      - option "Onboarding" [selected]
+      - option "Chat"
+      - option "Permission"
+      - option "Review"
+  - main [ref=f21e8]:
+    - generic [ref=f21e11]:
+      - generic [ref=f21e12]: Morrow
+      - generic [ref=f21e13]:
+        - generic [ref=f21e14]: Step 1 of 4
+        - heading "What should I call you?" [level=1] [ref=f21e15]
+        - generic [ref=f21e16]:
+          - generic [ref=f21e17]: Your answer
+          - textbox "Your answer" [ref=f21e18]: Juanma
+          - button "Juanma" [ref=f21e20] [cursor=pointer]
+          - button "Continue" [ref=f21e22] [cursor=pointer]
+        - paragraph [ref=f21e23]: A few quick answers make this workspace yours.
+    - region "Mission details":
+      - heading "Mission details" [level=2]
+      - generic:
+        - heading "Goal" [level=3]
+        - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+        - heading "Progress" [level=3]
+        - list [ref=f21e24]:
+          - listitem: Define the simplest useful flow
+          - listitem: Compare public design references
+          - listitem: Review a three-screen outline
+        - heading "History" [level=3]
+        - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+        - heading "Output" [level=3]
+        - paragraph: No output attached yet.

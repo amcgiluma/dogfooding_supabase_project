@@ -1,0 +1,37 @@
+[     258ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[  132808ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[  148165ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/onboarding/Onboarding.tsx?t=1790849554937:0
+[  148165ms] [ERROR] [vite] Failed to reload /src/features/onboarding/Onboarding.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  233127ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/onboarding/onboarding.css?t=1790849639903:0
+[  233127ms] [ERROR] [vite] Failed to reload /src/features/onboarding/onboarding.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  333732ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[  341347ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/app/App.tsx?t=1790849748123:0
+[  341348ms] [ERROR] [vite] Failed to reload /src/app/App.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  396335ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/home/Home.tsx?t=1790849803111:0
+[  396335ms] [ERROR] [vite] Failed to reload /src/features/home/Home.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  441658ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/workspace/Workspace.tsx?t=1790849848434:0
+[  441658ms] [ERROR] [vite] Failed to reload /src/features/workspace/Workspace.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  470007ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[  503767ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/chat/Chat.tsx?t=1790849910543:0
+[  503767ms] [ERROR] [vite] Failed to reload /src/features/chat/Chat.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  573766ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/mission/MissionDetail.tsx?t=1790849980543:0
+[  573766ms] [ERROR] [vite] Failed to reload /src/features/mission/MissionDetail.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  687893ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/styles/tokens.css?t=1790850094670:0
+[  687893ms] [ERROR] [vite] Failed to reload /src/styles/tokens.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  694646ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/styles/base.css?t=1790850101423:0
+[  694646ms] [ERROR] [vite] Failed to reload /src/styles/base.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  708381ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/app/app.css?t=1790850115158:0
+[  708381ms] [ERROR] [vite] Failed to reload /src/app/app.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  754944ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/workspace/workspace.css?t=1790850161721:0
+[  754944ms] [ERROR] [vite] Failed to reload /src/features/workspace/workspace.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  779220ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/chat/chat.css?t=1790850185996:0
+[  779221ms] [ERROR] [vite] Failed to reload /src/features/chat/chat.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  800597ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/home/home.css?t=1790850207374:0
+[  800597ms] [ERROR] [vite] Failed to reload /src/features/home/home.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  822837ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/mission/mission.css?t=1790850229614:0
+[  822837ms] [ERROR] [vite] Failed to reload /src/features/mission/mission.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  886717ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/create-mission/create-mission.css?t=1790850293494:0
+[  886717ms] [ERROR] [vite] Failed to reload /src/features/create-mission/create-mission.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[ 1076018ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:43872/src/features/workspace/Workspace.tsx?t=1790850482788:0
+[ 1076018ms] [ERROR] [vite] Failed to reload /src/features/workspace/Workspace.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[ 1187110ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992

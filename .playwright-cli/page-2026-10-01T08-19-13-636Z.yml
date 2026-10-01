@@ -1,0 +1,70 @@
+- generic [active] [ref=f1e1]:
+  - navigation "Static preview controls" [ref=f1e2]:
+    - generic [ref=f1e3]: Static preview
+    - link "All options" [ref=f1e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f1e5]: Preview view
+    - combobox "Preview view" [ref=f1e6]:
+      - option "Onboarding" [selected]
+      - option "Chat"
+      - option "Permission"
+      - option "Review"
+  - generic [ref=f1e7]:
+    - complementary [ref=f1e8]:
+      - generic [ref=f1e9]:
+        - generic [ref=f1e10]: M
+        - generic [ref=f1e11]: Morrow
+      - generic [ref=f1e12]:
+        - generic [ref=f1e13]: Companion
+        - combobox "Companion" [ref=f1e14]:
+          - option "Morrow" [selected]
+          - option "Scout"
+      - navigation "Primary" [ref=f1e15]:
+        - link "General chat" [ref=f1e16] [cursor=pointer]:
+          - /url: "#chat"
+      - generic [ref=f1e17]: Missions
+      - navigation "Missions" [ref=f1e18]:
+        - link "Design the reading app In progress" [ref=f1e19] [cursor=pointer]:
+          - /url: "#chat"
+          - generic [ref=f1e20]: Design the reading app
+          - generic [ref=f1e21]: In progress
+        - link "Research public references Permission needed" [ref=f1e22] [cursor=pointer]:
+          - /url: "#permission"
+          - generic [ref=f1e23]: Research public references
+          - generic [ref=f1e24]: Permission needed
+        - link "Weekly design review Ready for review" [ref=f1e25] [cursor=pointer]:
+          - /url: "#review"
+          - generic [ref=f1e26]: Weekly design review
+          - generic [ref=f1e27]: Ready for review
+      - generic [ref=f1e28]:
+        - generic [ref=f1e29]: J
+        - generic [ref=f1e30]: Juanma
+    - main [ref=f1e31]:
+      - generic [ref=f1e33]:
+        - generic [ref=f1e34]:
+          - strong [ref=f1e36]: Set up Morrow
+          - button "Open mission details" [ref=f1e38] [cursor=pointer]: Details
+        - generic [ref=f1e40]:
+          - generic [ref=f1e41]: M
+          - generic [ref=f1e42]: Step 1 of 4
+          - heading "What should I call you?" [level=1] [ref=f1e43]
+          - generic [ref=f1e44]:
+            - generic [ref=f1e45]: Your answer
+            - textbox "Your answer" [ref=f1e46]: Juanma
+            - button "Juanma" [ref=f1e48] [cursor=pointer]
+            - button "Continue" [ref=f1e50] [cursor=pointer]
+          - paragraph [ref=f1e51]: A few quick answers make this workspace yours.
+      - region "Mission details":
+        - heading "Mission details" [level=2]
+        - generic:
+          - heading "Goal" [level=3]
+          - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+          - heading "Progress" [level=3]
+          - list [ref=f1e52]:
+            - listitem: Define the simplest useful flow
+            - listitem: Compare public design references
+            - listitem: Review a three-screen outline
+          - heading "History" [level=3]
+          - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+          - heading "Output" [level=3]
+          - paragraph: No output attached yet.

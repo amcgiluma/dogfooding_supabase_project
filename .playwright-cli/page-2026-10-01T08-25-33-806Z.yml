@@ -1,0 +1,65 @@
+- generic [active] [ref=f10e1]:
+  - navigation "Static preview controls" [ref=f10e2]:
+    - generic [ref=f10e3]: Static preview
+    - link "All options" [ref=f10e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f10e5]: Preview view
+    - combobox "Preview view" [ref=f10e6]:
+      - option "Onboarding"
+      - option "Chat"
+      - option "Permission" [selected]
+      - option "Review"
+  - generic [ref=f10e7]:
+    - complementary [ref=f10e8]:
+      - generic "Morrow" [ref=f10e9]: M
+      - navigation "Primary" [ref=f10e10]:
+        - button "Missions" [ref=f10e11] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f10e12]: ☷
+        - link "Chat" [ref=f10e13] [cursor=pointer]:
+          - /url: "#chat"
+          - generic [aria-hidden] [ref=f10e14]: ◉
+        - button "New mission" [ref=f10e15] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f10e16]: ＋
+      - generic "Juanma" [ref=f10e17]: J
+    - main [ref=f10e19]:
+      - generic [ref=f10e21]:
+        - generic [ref=f10e22]:
+          - generic [ref=f10e23]:
+            - strong [ref=f10e24]: Research public references
+            - generic [ref=f10e25]: · Permission needed
+          - button "Open mission details" [ref=f10e27] [cursor=pointer]: Details
+        - generic [ref=f10e29]:
+          - article [ref=f10e30]:
+            - paragraph [ref=f10e31]: Morrow
+            - generic [ref=f10e32]: I can review three publicly available design references to compare reading queues. May I open those public pages?
+          - generic [ref=f10e33]: Sample mission context · Permission needed
+        - generic [ref=f10e34]:
+          - generic [ref=f10e35]:
+            - generic [ref=f10e36]:
+              - strong [ref=f10e37]: Open public references?
+              - generic [ref=f10e38]: Read 3 public pages. No sign-in, downloads, or account access.
+            - generic [ref=f10e39]:
+              - button "Allow in preview" [ref=f10e40] [cursor=pointer]
+              - button "Decline" [ref=f10e41] [cursor=pointer]
+          - generic [ref=f10e42]:
+            - generic [ref=f10e43]: Message Morrow
+            - textbox "Message Morrow" [ref=f10e44]
+            - button "Send" [ref=f10e45] [cursor=pointer]
+          - generic [ref=f10e46]: Shift + Enter for a new line
+      - region "Mission details":
+        - heading "Mission details" [level=2]
+        - generic:
+          - heading "Goal" [level=3]
+          - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+          - heading "Progress" [level=3]
+          - list [ref=f10e47]:
+            - listitem: Define the simplest useful flow
+            - listitem: Compare public design references
+            - listitem: Review a three-screen outline
+          - heading "History" [level=3]
+          - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+          - heading "Output" [level=3]
+          - paragraph: No output attached yet.
+          - generic:
+            - heading "Permission scope" [level=3]
+            - paragraph: Read 3 public pages. No sign-in, downloads, or account access. This preview did not open any sites.

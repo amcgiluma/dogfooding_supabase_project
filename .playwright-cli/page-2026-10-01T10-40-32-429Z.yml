@@ -1,0 +1,13 @@
+- main [ref=e5]:
+  - paragraph [ref=e6]: morrow+
+  - img "Reserved space for your future mascot"
+  - region [ref=e7]:
+    - paragraph [ref=e8]: hello, human.
+    - paragraph [ref=e9]: Step 1 of 4
+    - generic [ref=e10]:
+      - heading "First things first. What should I call you?" [level=1] [ref=e12]
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - text: Your name
+          - textbox "Your name" [active] [ref=e17]
+        - button "Continue" [ref=e19] [cursor=pointer]: Continue →

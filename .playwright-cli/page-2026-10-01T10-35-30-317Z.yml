@@ -1,0 +1,52 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Nova
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - button "Build a calm landing page for my idea Active" [ref=f6e96] [cursor=pointer]:
+        - strong [ref=f6e97]: Build a calm landing page for my idea
+        - generic [ref=f6e98]: Active
+      - button "Compare three ways to validate this product idea Permission needed" [ref=f6e99] [cursor=pointer]:
+        - strong [ref=f6e100]: Compare three ways to validate this product idea
+        - generic [ref=f6e101]: Permission needed
+      - button "Watch for useful updates about local AI tools Ready for review" [ref=f6e102] [cursor=pointer]:
+        - strong [ref=f6e103]: Watch for useful updates about local AI tools
+        - generic [ref=f6e104]: Ready for review
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e116]:
+    - generic [ref=f6e117]:
+      - generic [ref=f6e118]:
+        - strong [ref=f6e119]: Nova
+        - generic [ref=f6e120]: · General chat
+      - generic [ref=f6e121]:
+        - button "Details" [ref=f6e122] [cursor=pointer]
+        - button "New mission" [ref=f6e123] [cursor=pointer]
+    - region "General conversation" [ref=f6e125]:
+      - region "General conversation" [ref=f6e126]:
+        - generic [ref=f6e127]:
+          - article [ref=f6e137]:
+            - generic [ref=f6e138]: You /
+            - paragraph [ref=f6e139]: Hello, Nova.
+          - article [ref=f6e140]:
+            - generic [ref=f6e141]: Nova /
+            - paragraph [ref=f6e142]: I’ve noted that for your workspace. This is a local demo, so no work runs in the background.
+        - generic [ref=f6e131]:
+          - generic [ref=f6e132]:
+            - generic [ref=f6e133]: Message Nova
+            - textbox "Message Nova" [active] [ref=f6e134]:
+              - /placeholder: What’s on your mind?
+            - button "Send" [disabled] [ref=f6e135]
+          - paragraph [ref=f6e136]: Shift + Enter for a new line

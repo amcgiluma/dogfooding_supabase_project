@@ -1,0 +1,52 @@
+- generic [active] [ref=f58e1]:
+  - navigation "Static preview controls" [ref=f58e2]:
+    - generic [ref=f58e3]: Static preview
+    - link "All options" [ref=f58e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f58e5]: Preview view
+    - combobox "Preview view" [ref=f58e6]:
+      - option "Onboarding"
+      - option "Chat" [selected]
+      - option "Permission"
+      - option "Review"
+  - main [ref=f58e8]:
+    - generic [ref=f58e10]:
+      - generic [ref=f58e11]:
+        - button "Open navigation" [ref=f58e12] [cursor=pointer]: ☰
+        - generic [ref=f58e13]:
+          - strong [ref=f58e14]: Morrow
+          - generic [ref=f58e15]: · General chat
+        - button "Open mission details" [ref=f58e17] [cursor=pointer]: Details
+      - generic [ref=f58e19]:
+        - article [ref=f58e20]:
+          - paragraph [ref=f58e21]: Juanma
+          - generic [ref=f58e22]: Help me shape a small reading app. I want one place to save articles and choose what to read next.
+        - article [ref=f58e23]:
+          - paragraph [ref=f58e24]: Morrow
+          - generic [ref=f58e25]: "Start with an inbox and a reading queue. Keep saved links searchable. Which matters more today: capturing links quickly or choosing your next read?"
+        - article [ref=f58e26]:
+          - paragraph [ref=f58e27]: Juanma
+          - generic [ref=f58e28]: Choosing the next read. Keep it simple.
+        - article [ref=f58e29]:
+          - paragraph [ref=f58e30]: Morrow
+          - generic [ref=f58e31]: Then I would show three next reads, with the inbox one click away. We can turn that into a first screen.
+      - generic [ref=f58e32]:
+        - generic [ref=f58e33]:
+          - generic [ref=f58e34]: Message Morrow
+          - textbox "Message Morrow" [ref=f58e35]
+          - button "Send" [ref=f58e36] [cursor=pointer]
+        - generic [ref=f58e37]: Shift + Enter for a new line
+    - region "Mission details":
+      - heading "Mission details" [level=2]
+      - generic:
+        - heading "Goal" [level=3]
+        - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+        - heading "Progress" [level=3]
+        - list [ref=f58e38]:
+          - listitem: Define the simplest useful flow
+          - listitem: Compare public design references
+          - listitem: Review a three-screen outline
+        - heading "History" [level=3]
+        - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+        - heading "Output" [level=3]
+        - paragraph: No output attached yet.

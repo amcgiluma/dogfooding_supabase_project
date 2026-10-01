@@ -1,0 +1,22 @@
+[      56ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/app/App.tsx?t=1790849748123:0
+[   50712ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[   57507ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/workspace/Workspace.tsx?t=1790849848434:0
+[   57507ms] [ERROR] [vite] Failed to reload /src/features/workspace/Workspace.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  119616ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/chat/Chat.tsx?t=1790849910543:0
+[  119616ms] [ERROR] [vite] Failed to reload /src/features/chat/Chat.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  137773ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/chat/Chat.tsx?t=1790849910543:0
+[  272417ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[  303742ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/styles/tokens.css?t=1790850094670:0
+[  303742ms] [ERROR] [vite] Failed to reload /src/styles/tokens.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  310495ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/styles/base.css?t=1790850101423:0
+[  310495ms] [ERROR] [vite] Failed to reload /src/styles/base.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  324230ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/app/app.css?t=1790850115158:0
+[  324230ms] [ERROR] [vite] Failed to reload /src/app/app.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  370793ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/workspace/workspace.css?t=1790850161721:0
+[  370793ms] [ERROR] [vite] Failed to reload /src/features/workspace/workspace.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  387032ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:43872/src/features/workspace/workspace.css?t=1790850161721:0
+[  651172ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[  691866ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:43872/src/features/workspace/Workspace.tsx?t=1790850482788:0
+[  691866ms] [ERROR] [vite] Failed to reload /src/features/workspace/Workspace.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://127.0.0.1:43872/@vite/client:808
+[  791702ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992
+[ 2330779ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:43872/node_modules/.vite/deps/react-dom_client.js?v=d6b1635d:17992

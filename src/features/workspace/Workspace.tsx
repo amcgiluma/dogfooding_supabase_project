@@ -1,85 +1,59 @@
-import { useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactElement, type RefObject } from 'react';
 import { useApp } from '../../app/AppProvider';
-import { getCompanion, getCompanionMissions } from '../../domain/selectors';
-import { APPEARANCES } from '../../domain/seeds';
-import type { Mission } from '../../domain/types';
+import { getCompanion } from '../../domain/selectors';
 import { Chat } from '../chat/Chat';
 import { CreateMission } from '../create-mission/CreateMission';
 import './workspace.css';
 
-interface WorkspaceProps { missionDetail?: ReactNode }
-
-function statusLabel(mission: Mission): string {
-  switch (mission.status) {
-    case 'active': return 'Active';
-    case 'waiting_permission': return 'Waiting for permission';
-    case 'paused': return 'Paused';
-    case 'awaiting_review': return 'Paused · Ready for review';
-    case 'completed': return 'Completed';
-  }
+interface WorkspaceProps {
+  onMenu: () => void;
+  menuRef: RefObject<HTMLButtonElement | null>;
+  createOpen: boolean;
+  onCreateOpenChange: (open: boolean) => void;
+  renderMissionDetail: (props: { detailsOpen: boolean; wide: boolean; onCloseDetails: () => void; onOpenDetails: (opener?: HTMLElement) => void }) => ReactElement;
 }
 
-/** Companion workspace with one visible conversation scope and mission navigation. */
-export function Workspace({ missionDetail }: WorkspaceProps) {
+export function Workspace({ onMenu, menuRef, createOpen, onCreateOpenChange, renderMissionDetail }: WorkspaceProps) {
   const { snapshot, view, navigate } = useApp();
-  const [createOpen, setCreateOpen] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [wide, setWide] = useState(() => typeof window === 'undefined' || window.innerWidth > 900);
+  const missionIdForDetails = view.kind === 'workspace' ? view.missionId : null;
   const createTrigger = useRef<HTMLButtonElement>(null);
+  const detailsTrigger = useRef<HTMLButtonElement>(null);
+  const detailsRestoreTarget = useRef<HTMLElement | null>(null);
+  const generalDetailsDialog = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    const query = window.matchMedia('(min-width: 901px)');
+    const update = () => setWide(query.matches);
+    update(); query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+  useEffect(() => { setDetailsOpen(false); }, [view.kind === 'workspace' ? `${view.companionId}:${view.missionId ?? ''}` : 'home']);
+  useEffect(() => {
+    const dialog = generalDetailsDialog.current;
+    if (!dialog) return;
+    if (missionIdForDetails === null && !wide && detailsOpen && !dialog.open) dialog.showModal();
+    if ((!detailsOpen || wide || missionIdForDetails !== null) && dialog.open) dialog.close();
+  }, [detailsOpen, wide, view.kind === 'workspace' ? view.missionId : null]);
   if (view.kind !== 'workspace') return null;
   const { companionId, missionId } = view;
   const companion = getCompanion(snapshot, companionId);
-  if (!companion) return <main className="workspace-page"><p>This companion is unavailable.</p><button className="workspace-text-button" type="button" onClick={() => navigate({ kind: 'home' })}>Return home</button></main>;
-  const missions = getCompanionMissions(snapshot, companionId);
-  const appearance = APPEARANCES.find((item) => item.id === companion.appearance) ?? APPEARANCES[0];
+  if (!companion) return <main className="workspace-page"><p>This companion is unavailable.</p><button type="button" onClick={() => navigate({ kind: 'home' })}>Return to companions</button></main>;
+  const title = missionId ? snapshot.missions.find((item) => item.id === missionId)?.objective ?? 'Mission' : 'General chat';
+  function closeDetails() { setDetailsOpen(false); requestAnimationFrame(() => (detailsRestoreTarget.current ?? detailsTrigger.current)?.focus()); }
+  function openDetails(opener?: HTMLElement) { detailsRestoreTarget.current = opener ?? detailsTrigger.current; setDetailsOpen(true); }
 
-  function selectMission(nextMissionId: string | null) {
-    navigate({ kind: 'workspace', companionId, missionId: nextMissionId });
-  }
-
-  return (
-    <main className="workspace-page">
-      <header className="workspace-header">
-        <div className="workspace-identity">
-          <img src={appearance.src} alt="" />
-          <div><p className="workspace-eyebrow">{companion.name} / Workspace</p><h1>{companion.name}</h1></div>
-        </div>
-        <div className="workspace-header-actions">
-          <button className="workspace-text-button" type="button" onClick={() => navigate({ kind: 'home' })}>All companions</button>
-          <button ref={createTrigger} className="workspace-create-button" type="button" aria-expanded={createOpen} aria-controls="workspace-create-region" onClick={() => {
-            if (createOpen) { setCreateOpen(false); requestAnimationFrame(() => createTrigger.current?.focus()); }
-            else setCreateOpen(true);
-          }}>{createOpen ? 'Close create form' : 'Create mission +'}</button>
-        </div>
-      </header>
-
-      <div id="workspace-create-region">{createOpen && <CreateMission companionId={companionId} onClose={(restoreFocus = true) => {
-        setCreateOpen(false);
-        if (restoreFocus) requestAnimationFrame(() => createTrigger.current?.focus());
-      }} />}</div>
-
-      <div className="workspace-grid">
-        <section className="workspace-conversation" aria-labelledby="workspace-conversation-title">
-          <h2 id="workspace-conversation-title">{missionId ? 'Mission' : 'General conversation'}</h2>
-          {missionId ? (
-            missionDetail ?? <p className="workspace-empty-detail">Mission details are loading.</p>
-          ) : (
-            <Chat key={`general-${companionId}`} scope={{ kind: 'general', companionId }} />
-          )}
-        </section>
-        <aside className="workspace-missions" aria-labelledby="workspace-missions-title">
-          <h2 id="workspace-missions-title">Your missions</h2>
-          <button className={`workspace-mission-row${missionId === null ? ' workspace-mission-selected' : ''}`} type="button" onClick={() => selectMission(null)} aria-current={missionId === null ? 'page' : undefined}>
-            <span><strong>General conversation</strong><small>{missionId === null ? 'Selected' : 'Companion chat'}</small></span>
-            <span aria-hidden="true">→</span>
-          </button>
-          {missions.length === 0 ? <p className="workspace-empty-missions">No missions yet. Create one when you are ready.</p> : missions.map((mission) => (
-            <button className={`workspace-mission-row${missionId === mission.id ? ' workspace-mission-selected' : ''}`} type="button" key={mission.id} onClick={() => selectMission(mission.id)} aria-current={missionId === mission.id ? 'page' : undefined}>
-              <span><strong>{mission.objective}</strong><small>{mission.kind} · {statusLabel(mission)}</small></span>
-              <span aria-hidden="true">→</span>
-            </button>
-          ))}
-        </aside>
-      </div>
-      <p className="workspace-demo-note">Demo · each conversation and mission belongs to {companion.name}.</p>
-    </main>
-  );
+  return <main className="workspace-page">
+    <header className="workspace-topbar"><button ref={menuRef} type="button" className="mobile-menu" onClick={onMenu} aria-label="Open navigation">☰</button><div className="mascot-slot mascot-slot-mobile" role="img" aria-label="Reserved space for your future mascot"><i/><i/><i/><i/></div><div className="workspace-context"><strong>{companion.name}</strong><span>· {title}</span></div><div className="workspace-top-actions"><button ref={detailsTrigger} className="workspace-quiet-button" type="button" aria-expanded={detailsOpen} aria-controls="mission-details-surface" onClick={(event) => openDetails(event.currentTarget)}>Details</button><button ref={createTrigger} className="workspace-quiet-button workspace-create-trigger" type="button" onClick={() => onCreateOpenChange(true)}>New mission</button></div></header>
+    {createOpen && <CreateMission companionId={companionId} onClose={(restoreFocus = true) => { onCreateOpenChange(false); if (restoreFocus) requestAnimationFrame(() => (wide ? createTrigger.current : menuRef.current)?.focus()); }} />}
+    <div className={`workspace-stage${detailsOpen && wide ? ' has-details' : ''}`}>
+      <section className="workspace-conversation" aria-label={missionId ? 'Mission conversation' : 'General conversation'}>
+        {missionId ? renderMissionDetail({ detailsOpen, wide, onCloseDetails: closeDetails, onOpenDetails: openDetails }) : <>
+          <Chat key={`general-${companionId}`} scope={{ kind: 'general', companionId }} companionName={companion.name} />
+          {detailsOpen && wide && <aside className="general-details" id="mission-details-surface"><div className="workspace-details-heading"><h2>Companion details</h2><button type="button" className="workspace-quiet-button" onClick={closeDetails}>Close</button></div><dl><div><dt>For</dt><dd>{snapshot.profile?.name}</dd></div><div><dt>Current goal</dt><dd>{snapshot.profile?.goal}</dd></div><div><dt>How to help</dt><dd>{snapshot.profile?.intendedUse}</dd></div><div><dt>Missions</dt><dd>{snapshot.missions.filter((item) => item.companionId === companionId).length}</dd></div></dl></aside>}
+          <dialog ref={generalDetailsDialog} id={!wide ? 'mission-details-surface' : undefined} className="general-details-dialog" aria-label="Companion details" onCancel={(event) => { event.preventDefault(); closeDetails(); }} onClose={() => { if (detailsOpen) closeDetails(); }}>{!wide && <><div className="workspace-details-heading"><h2>Companion details</h2><button type="button" className="workspace-quiet-button" onClick={closeDetails}>Close</button></div><dl><div><dt>For</dt><dd>{snapshot.profile?.name}</dd></div><div><dt>Current goal</dt><dd>{snapshot.profile?.goal}</dd></div><div><dt>How to help</dt><dd>{snapshot.profile?.intendedUse}</dd></div><div><dt>Missions</dt><dd>{snapshot.missions.filter((item) => item.companionId === companionId).length}</dd></div></dl></>}</dialog>
+        </>}
+      </section>
+    </div>
+  </main>;
 }

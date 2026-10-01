@@ -1,0 +1,52 @@
+- generic [active] [ref=f77e1]:
+  - navigation "Static preview controls" [ref=f77e2]:
+    - generic [ref=f77e3]: Static preview
+    - link "All options" [ref=f77e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f77e5]: Preview view
+    - combobox "Preview view" [ref=f77e6]:
+      - option "Onboarding"
+      - option "Chat"
+      - option "Permission" [selected]
+      - option "Review"
+  - main [ref=f77e8]:
+    - generic [ref=f77e10]:
+      - generic [ref=f77e11]:
+        - button "Open navigation" [ref=f77e12] [cursor=pointer]: ☰
+        - strong [ref=f77e14]: Research public references
+        - button "Open mission details" [ref=f77e16] [cursor=pointer]: Details
+      - generic [ref=f77e18]:
+        - article [ref=f77e19]:
+          - paragraph [ref=f77e20]: Morrow
+          - generic [ref=f77e21]: I can review three publicly available design references to compare reading queues. May I open those public pages?
+        - generic [ref=f77e22]: Sample mission context · Permission needed
+      - generic [ref=f77e23]:
+        - generic [ref=f77e24]:
+          - generic [ref=f77e25]:
+            - strong [ref=f77e26]: Open public references?
+            - generic [ref=f77e27]: Read 3 public pages. No sign-in, downloads, or account access.
+          - generic [ref=f77e28]:
+            - button "Allow in preview" [ref=f77e29] [cursor=pointer]
+            - button "Decline" [ref=f77e30] [cursor=pointer]
+        - generic [ref=f77e31]:
+          - generic [ref=f77e32]: Message Morrow
+          - textbox "Message Morrow" [ref=f77e33]
+          - button "Send" [ref=f77e34] [cursor=pointer]
+        - generic [ref=f77e35]: Shift + Enter for a new line
+    - region "Mission details":
+      - heading "Mission details" [level=2]
+      - generic:
+        - heading "Goal" [level=3]
+        - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+        - heading "Progress" [level=3]
+        - list [ref=f77e36]:
+          - listitem: Define the simplest useful flow
+          - listitem: Compare public design references
+          - listitem: Review a three-screen outline
+        - heading "History" [level=3]
+        - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+        - heading "Output" [level=3]
+        - paragraph: No output attached yet.
+        - generic:
+          - heading "Permission scope" [level=3]
+          - paragraph: Read 3 public pages. No sign-in, downloads, or account access. This preview did not open any sites.

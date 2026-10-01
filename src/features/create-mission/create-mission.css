@@ -1,28 +1,22 @@
-.create-mission { min-width: 0; border-top: 1px solid var(--line); margin-top: 28px; padding-top: 15px; }
-.create-mission-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
-.create-mission h2 { margin: 0; font-size: 22px; letter-spacing: -.035em; }
-.create-mission-form { display: grid; justify-items: start; gap: 13px; max-width: 600px; margin-top: 16px; }
-.create-mission-field { display: grid; gap: 6px; width: min(100%, 480px); color: #e1e2d9; }
-.create-mission-field input { width: 100%; min-width: 0; border: 1px solid #45483f; background: #080907; color: var(--fg); padding: 11px 12px; font: inherit; }
-.create-mission-field input:focus-visible, .create-mission-text-button:focus-visible, .create-mission-kind input:focus-visible, .create-mission-submit:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
-.create-mission-field input[aria-invalid="true"] { border-color: var(--warm); }
-.create-mission-kinds { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; border: 0; border-top: 1px solid var(--line); margin: 0; padding: 8px 0 0; }
-.create-mission-kinds legend { padding-right: 8px; color: #e1e2d9; }
-.create-mission-kind { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; color: var(--fg); cursor: pointer; }
-.create-mission-kind input { accent-color: var(--green); }
-.create-mission-hint, .create-mission-demo { margin: -5px 0 0; color: var(--muted); font-size: 13px; }
-.create-mission-error { margin: 0; color: var(--warm); }
-.create-mission-submit { border: 1px solid var(--green); background: var(--forest); color: var(--fg); padding: 10px 14px; font: inherit; font-weight: 700; cursor: pointer; }
-.create-mission-submit:disabled { cursor: default; opacity: .6; }
-.create-mission-text-button { border: 0; border-bottom: 1px solid #60645a; background: transparent; color: #c8d9c3; padding: 4px 0; font: inherit; cursor: pointer; }
-.create-mission-text-button:hover { color: var(--fg); border-color: var(--green); }
-.create-mission-examples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
-.create-mission-example { min-width: 0; border-top: 1px solid var(--line); padding-top: 11px; }
-.create-mission-example img { width: 100%; height: 120px; object-fit: cover; margin-bottom: 10px; }
-.create-mission-example p { margin: 5px 0 8px; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
-.create-mission-demo { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 10px; }
-@media (max-width: 720px) {
-  .create-mission-examples { grid-template-columns: 1fr; gap: 0; }
-  .create-mission-example { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; align-items: center; padding: 10px 0; }
-  .create-mission-example img { height: 82px; margin: 0; }
-}
+.create-mission { position: fixed; inset: 0; width: min(100vw - 28px, 620px); max-width: 620px; max-height: calc(100dvh - 28px); margin: auto; border: 1px solid #39393f; border-radius: 8px; padding: 18px; background: var(--surface); color: var(--fg); overflow: auto; }
+.create-mission::backdrop { background: rgb(0 0 0 / 78%); }
+.create-mission-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 9px; }
+.create-mission-heading h2 { margin: 0; font-size: 18px; }
+.create-mission-text-button { min-height: 40px; border: 0; padding: 7px; background: transparent; color: var(--accent); cursor: pointer; }
+.create-mission-form { display: grid; justify-items: start; gap: 11px; padding-top: 13px; }
+.create-mission-field { display: grid; width: 100%; gap: 5px; font-size: 13px; }
+.create-mission-field input { width: 100%; min-height: 42px; border: 1px solid #39393f; border-radius: 4px; padding: 8px 10px; background: var(--surface-raised); color: var(--fg); font-size: 16px; }
+.create-mission-field input[aria-invalid="true"] { border-color: var(--error); }
+.create-mission-kinds { display: flex; flex-wrap: wrap; gap: 4px 15px; width: 100%; border: 0; border-top: 1px solid var(--line); margin: 0; padding: 9px 0 0; }
+.create-mission-kinds legend { padding-right: 8px; color: var(--muted); font-size: 12px; }
+.create-mission-kind { display: flex; min-height: 38px; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
+.create-mission-kind input { accent-color: var(--accent); }
+.create-mission-hint, .create-mission-demo { margin: 0; color: var(--muted); font-size: 12px; }
+.create-mission-submit { min-height: 42px; border: 1px solid var(--accent-action); border-radius: 4px; padding: 8px 13px; background: var(--accent-action); color: var(--fg); font-weight: 650; cursor: pointer; }
+.create-mission-submit:disabled { opacity: .55; }
+.create-mission-examples { border-top: 1px solid var(--line); margin-top: 16px; }
+.create-mission-example { border-bottom: 1px solid var(--line); padding: 9px 0; }
+.create-mission-example strong { font-size: 13px; }.create-mission-example p { margin: 2px 0; color: #d0d0d5; font-size: 12px; }
+.create-mission-error { margin: 0; color: var(--error); font-size: 13px; }
+.create-mission-demo { margin-top: 10px; }
+@media (max-width: 520px) { .create-mission { padding: 13px; } }

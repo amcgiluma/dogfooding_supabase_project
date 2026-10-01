@@ -1,0 +1,83 @@
+- generic [ref=f4e3]:
+  - complementary [ref=f4e20]:
+    - button "morrow+" [ref=f4e22] [cursor=pointer]
+    - generic [ref=f4e23]:
+      - img "Reserved space for your future mascot" [ref=f4e24]
+      - generic [ref=f4e29]:
+        - strong [ref=f4e30]: Morrow
+        - generic [ref=f4e31]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f4e32]:
+      - button "General chat" [ref=f4e33] [cursor=pointer]
+      - button "＋ New mission" [ref=f4e34] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f4e35]
+      - button "Build a calm landing page for my idea Active" [ref=f4e36] [cursor=pointer]:
+        - strong [ref=f4e37]: Build a calm landing page for my idea
+        - generic [ref=f4e38]: Active
+      - button "Compare three ways to validate this product idea Permission needed" [ref=f4e39] [cursor=pointer]:
+        - strong [ref=f4e40]: Compare three ways to validate this product idea
+        - generic [ref=f4e41]: Permission needed
+      - button "Watch for useful updates about local AI tools Ready for review" [ref=f4e42] [cursor=pointer]:
+        - strong [ref=f4e43]: Watch for useful updates about local AI tools
+        - generic [ref=f4e44]: Ready for review
+    - generic [ref=f4e45]:
+      - button "Companions" [ref=f4e46] [cursor=pointer]
+      - generic [ref=f4e47]:
+        - img "Reserved space for your future mascot" [ref=f4e48]
+        - generic [ref=f4e53]: Juanma
+      - generic [ref=f4e54]: Local demo · manual progress only
+      - button "Reset demo" [ref=f4e55] [cursor=pointer]
+  - main [ref=f4e56]:
+    - generic [ref=f4e57]:
+      - generic [ref=f4e58]:
+        - strong [ref=f4e59]: Morrow
+        - generic [ref=f4e60]: · Watch for useful updates about local AI tools
+      - generic [ref=f4e61]:
+        - button "Details" [expanded] [ref=f4e62] [cursor=pointer]
+        - button "New mission" [ref=f4e63] [cursor=pointer]
+    - region "Mission conversation" [ref=f4e77]:
+      - region "Mission conversation" [ref=f4e78]:
+        - generic [ref=f4e80]:
+          - heading "Hi, I’m Morrow." [level=1] [ref=f4e81]
+          - paragraph [ref=f4e82]: Let’s make progress on this mission.
+        - generic [ref=f4e83]:
+          - region "Mission actions" [ref=f4e85]:
+            - paragraph [ref=f4e86]: This mission is paused while you review the deliverable.
+            - generic [ref=f4e87]:
+              - button "View deliverable" [active] [ref=f4e88] [cursor=pointer]
+              - button "Confirm complete" [ref=f4e89] [cursor=pointer]
+              - button "Request corrections" [ref=f4e90] [cursor=pointer]
+          - generic [ref=f4e91]:
+            - generic [ref=f4e92]: Reply to Morrow about this mission
+            - textbox "Reply to Morrow about this mission" [ref=f4e93]:
+              - /placeholder: What’s on your mind?
+            - button "Send" [disabled] [ref=f4e94]
+          - paragraph [ref=f4e95]: Shift + Enter for a new line
+      - complementary [ref=f4e96]:
+        - generic [ref=f4e97]:
+          - generic [ref=f4e99]:
+            - paragraph [ref=f4e100]: monitoring mission
+            - heading "Watch for useful updates about local AI tools" [level=2] [ref=f4e101]
+            - generic [ref=f4e102]:
+              - generic [ref=f4e103]: Paused · Ready for review
+              - generic [ref=f4e104]: Demo steps happen only when you advance them
+          - button "Edit goal" [ref=f4e106] [cursor=pointer]
+          - generic [ref=f4e107]:
+            - heading "Progress 100% · demo estimate" [level=3] [ref=f4e108]:
+              - text: Progress
+              - generic [ref=f4e109]: 100% · demo estimate
+            - progressbar "Demo progress" [ref=f4e110]
+            - group [ref=f4e112]:
+              - generic "Stages and subtasks" [ref=f4e113] [cursor=pointer]
+          - generic [ref=f4e114]:
+            - heading "History" [level=3] [ref=f4e115]
+            - list [ref=f4e116]:
+              - listitem [ref=f4e117]:
+                - time [ref=f4e118]: Oct 1, 2026, 12:30 PM
+                - paragraph [ref=f4e119]: Ready for your review.
+          - region [ref=f4e120]:
+            - heading "Deliverables" [level=3] [ref=f4e121]
+            - article [ref=f4e122]:
+              - paragraph [ref=f4e123]: update · ready for review
+              - heading "Weekly update" [level=4] [ref=f4e124]
+              - time [ref=f4e125]: Oct 1, 2026, 12:30 PM
+              - paragraph [ref=f4e126]: "Fictional sample digest 1. Local inference: A hypothetical tool adds a smaller model option, which may reduce memory use for local testing. 2. Developer workflow: A hypothetical desktop runner improves prompt comparison, which could make experiments easier to repeat. 3. Data handling: A hypothetical release clarifies offline mode, worth checking before using sensitive files. Suggested next step: choose one signal and compare its setup effort and memory needs against your current workflow. This digest is entirely fictional. No actual sources were checked, and nothing is being watched or scheduled."

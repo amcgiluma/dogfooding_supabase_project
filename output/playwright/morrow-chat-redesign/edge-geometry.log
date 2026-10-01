@@ -1,0 +1,624 @@
+### Result
+{
+  "url": "/option-a.html?view=chat",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "chat"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-a.html?view=permission",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "permission"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ],
+  "actionStrip": [
+    16,
+    545.21875,
+    288,
+    125.328125,
+    670.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-a.html?view=review",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "review"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ],
+  "actionStrip": [
+    16,
+    542.75,
+    288,
+    127.796875,
+    670.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-b.html?view=chat",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "chat"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-b.html?view=permission",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "permission"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ],
+  "actionStrip": [
+    16,
+    535.21875,
+    288,
+    135.328125,
+    670.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-b.html?view=review",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "review"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ],
+  "actionStrip": [
+    16,
+    532.75,
+    288,
+    137.796875,
+    670.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-c.html?view=chat",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "chat"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-c.html?view=permission",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "permission"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ],
+  "actionStrip": [
+    16,
+    545.21875,
+    288,
+    125.328125,
+    670.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-c.html?view=review",
+  "viewport": "320x740",
+  "documentWidth": 320,
+  "bodyWidth": 320,
+  "overflow": false,
+  "activeViews": [
+    "review"
+  ],
+  "composer": [
+    16,
+    680.546875,
+    288,
+    45,
+    725.546875
+  ],
+  "send": [
+    245.875,
+    681.546875,
+    58.125,
+    44,
+    304,
+    725.546875
+  ],
+  "actionStrip": [
+    16,
+    542.75,
+    288,
+    127.796875,
+    670.546875
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-a.html?view=chat",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "chat"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-a.html?view=permission",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "permission"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ],
+  "actionStrip": [
+    20,
+    876.953125,
+    728,
+    59,
+    935.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-a.html?view=review",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "review"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ],
+  "actionStrip": [
+    20,
+    876.953125,
+    728,
+    59,
+    935.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-b.html?view=chat",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "chat"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-b.html?view=permission",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "permission"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ],
+  "actionStrip": [
+    20,
+    876.953125,
+    728,
+    59,
+    935.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-b.html?view=review",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "review"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ],
+  "actionStrip": [
+    20,
+    876.953125,
+    728,
+    59,
+    935.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-c.html?view=chat",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "chat"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-c.html?view=permission",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "permission"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ],
+  "actionStrip": [
+    20,
+    876.953125,
+    728,
+    59,
+    935.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```
+### Result
+{
+  "url": "/option-c.html?view=review",
+  "viewport": "768x1024",
+  "documentWidth": 768,
+  "bodyWidth": 768,
+  "overflow": false,
+  "activeViews": [
+    "review"
+  ],
+  "composer": [
+    20,
+    945.953125,
+    728,
+    46,
+    991.953125
+  ],
+  "send": [
+    679.875,
+    947.953125,
+    68.125,
+    44,
+    748,
+    991.953125
+  ],
+  "actionStrip": [
+    20,
+    876.953125,
+    728,
+    59,
+    935.953125
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => {const v=[...document.querySelectorAll("[data-view]")].find(e=>!e.hidden),c=v?.querySelector("[data-testid=composer]"),s=c?.querySelector("button"),a=v?.querySelector(".action-strip"),r=c?.getBoundingClientRect(),sr=s?.getBoundingClientRect(),ar=a?.getBoundingClientRect();return {url:location.pathname+location.search,viewport:`${innerWidth}x${innerHeight}`,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,activeViews:[...document.querySelectorAll("[data-view]")].filter(e=>!e.hidden).map(e=>e.dataset.view),composer:r&&[r.x,r.y,r.width,r.height,r.bottom],send:sr&&[sr.x,sr.y,sr.width,sr.height,sr.right,sr.bottom],actionStrip:ar&&[ar.x,ar.y,ar.width,ar.height,ar.bottom]}}');
+```

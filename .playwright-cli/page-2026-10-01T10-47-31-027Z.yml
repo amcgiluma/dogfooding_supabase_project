@@ -1,0 +1,26 @@
+- main [ref=f3e21]:
+  - paragraph [ref=f3e22]: morrow+
+  - img "Reserved space for your future mascot"
+  - region [ref=f3e23]:
+    - paragraph [ref=f3e24]: hello, human.
+    - paragraph [ref=f3e25]: Step 4 of 4
+    - generic [ref=f3e26]:
+      - heading "One last thing. What should we call your companion?" [level=1] [ref=f3e57]:
+        - generic [aria-hidden] [ref=f3e29]: One last thing
+      - generic [ref=f3e37]:
+        - generic [ref=f3e38]: Your name
+        - paragraph [ref=f3e39]: Juanma
+      - generic [ref=f3e48]:
+        - generic [ref=f3e49]: Your goal
+        - paragraph [ref=f3e50]: Explore security workflows
+      - generic [ref=f3e58]:
+        - generic [ref=f3e59]: How you’ll use Morrow
+        - paragraph [ref=f3e60]: Build something
+      - generic [ref=f3e31]:
+        - generic [ref=f3e61]:
+          - text: Companion name
+          - textbox "Companion name" [active] [ref=f3e62]: Morrow
+        - paragraph [ref=f3e63]: Your profile is saved on this device.
+        - generic [ref=f3e34]:
+          - button "Back" [ref=f3e46] [cursor=pointer]
+          - button "Enter chat" [ref=f3e64] [cursor=pointer]

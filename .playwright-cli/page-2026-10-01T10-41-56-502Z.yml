@@ -1,0 +1,89 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Nova
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - button "Build a calm landing page for my idea Active" [ref=f6e288] [cursor=pointer]:
+        - strong [ref=f6e97]: Build a calm landing page for my idea
+        - generic [ref=f6e98]: Active
+      - button "Compare three ways to validate this product idea Permission needed" [ref=f6e99] [cursor=pointer]:
+        - strong [ref=f6e100]: Compare three ways to validate this product idea
+        - generic [ref=f6e101]: Permission needed
+      - button "Watch for useful updates about local AI tools Ready for review" [ref=f6e102] [cursor=pointer]:
+        - strong [ref=f6e103]: Watch for useful updates about local AI tools
+        - generic [ref=f6e104]: Ready for review
+      - button "Compare reading app launch options Active" [ref=f6e191] [cursor=pointer]:
+        - strong [ref=f6e192]: Compare reading app launch options
+        - generic [ref=f6e193]: Active
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e116]:
+    - generic [ref=f6e117]:
+      - generic [ref=f6e118]:
+        - strong [ref=f6e119]: Nova
+        - generic [ref=f6e120]: · Build a calm landing page for my idea
+      - generic [ref=f6e121]:
+        - button "Details" [expanded] [active] [ref=f6e122] [cursor=pointer]
+        - button "New mission" [ref=f6e123] [cursor=pointer]
+    - region "Mission conversation" [ref=f6e239]:
+      - region "Mission conversation" [ref=f6e240]:
+        - generic [ref=f6e242]:
+          - heading "Hi, I’m Nova." [level=1] [ref=f6e243]
+          - paragraph [ref=f6e244]: Let’s make progress on this mission.
+        - generic [ref=f6e245]:
+          - region "Mission actions" [ref=f6e247]:
+            - paragraph [ref=f6e289]: This is a demo. Advance one simulated step when you choose.
+            - generic [ref=f6e290]:
+              - button "Pause mission" [ref=f6e291] [cursor=pointer]
+              - button "Advance demo one step" [ref=f6e292] [cursor=pointer]
+          - generic [ref=f6e252]:
+            - generic [ref=f6e253]: Reply to Nova about this mission
+            - textbox "Reply to Nova about this mission" [ref=f6e254]:
+              - /placeholder: What’s on your mind?
+            - button "Send" [disabled] [ref=f6e255]
+          - paragraph [ref=f6e256]: Shift + Enter for a new line
+      - complementary [ref=f6e293]:
+        - generic [ref=f6e294]:
+          - generic [ref=f6e295]:
+            - generic [ref=f6e296]:
+              - paragraph [ref=f6e297]: app mission
+              - heading "Build a calm landing page for my idea" [level=2] [ref=f6e298]
+              - generic [ref=f6e299]:
+                - generic [ref=f6e300]: Active · working
+                - generic [ref=f6e301]: Demo steps happen only when you advance them
+            - button "Close" [ref=f6e302] [cursor=pointer]
+          - button "Edit goal" [ref=f6e304] [cursor=pointer]
+          - generic [ref=f6e305]:
+            - heading "Progress 18% · demo estimate" [level=3] [ref=f6e306]:
+              - text: Progress
+              - generic [ref=f6e307]: 18% · demo estimate
+            - progressbar "Demo progress" [ref=f6e308]
+            - group [ref=f6e310]:
+              - generic "Stages and subtasks" [ref=f6e311] [cursor=pointer]
+          - generic [ref=f6e312]:
+            - heading "History" [level=3] [ref=f6e313]
+            - list [ref=f6e314]:
+              - listitem [ref=f6e315]:
+                - time [ref=f6e316]: Oct 1, 2026, 12:34 PM
+                - paragraph [ref=f6e317]: Started the first pass.
+              - listitem [ref=f6e318]:
+                - time [ref=f6e319]: Oct 1, 2026, 12:41 PM
+                - paragraph [ref=f6e320]: Mission paused.
+              - listitem [ref=f6e321]:
+                - time [ref=f6e322]: Oct 1, 2026, 12:41 PM
+                - paragraph [ref=f6e323]: Mission resumed.
+          - region [ref=f6e324]:
+            - heading "Deliverables" [level=3] [ref=f6e325]
+            - paragraph [ref=f6e326]: No deliverables yet. Advance the demo to create a sample output.

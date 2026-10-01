@@ -59,6 +59,8 @@ export function AppProvider({ children, repository, runtime = defaultRuntime }: 
       if (result.kind === 'loaded') {
         snapshotRef.current = result.snapshot;
         setSnapshot(result.snapshot);
+        const firstCompanion = result.snapshot.profile ? result.snapshot.companions[0] : undefined;
+        if (firstCompanion) setView({ kind: 'workspace', companionId: firstCompanion.id, missionId: null });
         changeStorage({ mode: 'ready' });
       } else if (result.kind === 'empty') {
         const fresh = createInitialSnapshot();

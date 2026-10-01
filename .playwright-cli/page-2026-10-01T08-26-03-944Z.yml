@@ -1,0 +1,72 @@
+- generic [active] [ref=f28e1]:
+  - navigation "Static preview controls" [ref=f28e2]:
+    - generic [ref=f28e3]: Static preview
+    - link "All options" [ref=f28e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f28e5]: Preview view
+    - combobox "Preview view" [ref=f28e6]:
+      - option "Onboarding"
+      - option "Chat"
+      - option "Permission"
+      - option "Review" [selected]
+  - main [ref=f28e8]:
+    - generic [ref=f28e10]:
+      - generic [ref=f28e11]:
+        - button "Open navigation" [ref=f28e12] [cursor=pointer]: ☰
+        - strong [ref=f28e14]: Weekly design review
+        - button "Open mission details" [ref=f28e16] [cursor=pointer]: Details
+      - generic [ref=f28e17]:
+        - strong [ref=f28e18]: Weekly design review
+        - text: · Ready for review
+      - generic [ref=f28e20]:
+        - article [ref=f28e21]:
+          - paragraph [ref=f28e22]: Morrow
+          - generic [ref=f28e23]: "The first outline is ready for your review. It keeps the reading flow to three screens:"
+        - article [ref=f28e24]:
+          - paragraph [ref=f28e25]: Morrow
+          - list [ref=f28e27]:
+            - listitem [ref=f28e28]: Inbox
+            - listitem [ref=f28e29]: Next reads
+            - listitem [ref=f28e30]: Saved article view
+        - generic [ref=f28e31]: Sample mission context · Ready for review
+      - generic [ref=f28e32]:
+        - generic [ref=f28e33]:
+          - generic [ref=f28e34]:
+            - strong [ref=f28e35]: Reading app outline
+            - generic [ref=f28e36]: Draft · 3 screens
+          - generic [ref=f28e37]:
+            - button "View draft" [ref=f28e38] [cursor=pointer]
+            - button "Approve in preview" [ref=f28e39] [cursor=pointer]
+            - button "Request changes" [ref=f28e40] [cursor=pointer]
+        - generic [ref=f28e41]:
+          - generic [ref=f28e42]: Message Morrow
+          - textbox "Message Morrow" [ref=f28e43]
+          - button "Send" [ref=f28e44] [cursor=pointer]
+        - generic [ref=f28e45]: Shift + Enter for a new line
+    - region "Mission details":
+      - heading "Mission details" [level=2]
+      - generic:
+        - heading "Goal" [level=3]
+        - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+        - heading "Progress" [level=3]
+        - list [ref=f28e46]:
+          - listitem: Define the simplest useful flow
+          - listitem: Compare public design references
+          - listitem: Review a three-screen outline
+        - heading "History" [level=3]
+        - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+        - heading "Output" [level=3]
+        - paragraph: No output attached yet.
+        - generic:
+          - heading "Reading app outline" [level=3]
+          - list [ref=f28e47]:
+            - listitem:
+              - strong [ref=f28e48]: "Inbox:"
+              - text: save and search links.
+            - listitem:
+              - strong [ref=f28e49]: "Next reads:"
+              - text: show three items with estimated reading time.
+            - listitem:
+              - strong [ref=f28e50]: "Saved article view:"
+              - text: show the original source and reading state.
+          - paragraph: Sample draft for review.

@@ -1,0 +1,65 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Nova
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - button "Build a calm reading app landing page Active" [ref=f6e333] [cursor=pointer]:
+        - strong [ref=f6e97]: Build a calm reading app landing page
+        - generic [ref=f6e98]: Active
+      - button "Compare three ways to validate this product idea Permission needed" [active] [ref=f6e99] [cursor=pointer]:
+        - strong [ref=f6e100]: Compare three ways to validate this product idea
+        - generic [ref=f6e101]: Permission needed
+      - button "Watch for useful updates about local AI tools Ready for review" [ref=f6e102] [cursor=pointer]:
+        - strong [ref=f6e103]: Watch for useful updates about local AI tools
+        - generic [ref=f6e104]: Ready for review
+      - button "Compare reading app launch options Active" [ref=f6e191] [cursor=pointer]:
+        - strong [ref=f6e192]: Compare reading app launch options
+        - generic [ref=f6e193]: Active
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e116]:
+    - generic [ref=f6e117]:
+      - generic [ref=f6e118]:
+        - strong [ref=f6e119]: Nova
+        - generic [ref=f6e120]: · Compare three ways to validate this product idea
+      - generic [ref=f6e121]:
+        - button "Details" [ref=f6e122] [cursor=pointer]
+        - button "New mission" [ref=f6e123] [cursor=pointer]
+    - region "Mission conversation" [ref=f6e239]:
+      - region "Mission conversation" [ref=f6e351]:
+        - generic [ref=f6e353]:
+          - heading "Hi, I’m Nova." [level=1] [ref=f6e354]
+          - paragraph [ref=f6e355]: Let’s make progress on this mission.
+        - generic [ref=f6e356]:
+          - region "Mission actions" [ref=f6e358]:
+            - paragraph [ref=f6e359]: Permission needed for this simulated action
+            - generic [ref=f6e360]:
+              - generic [ref=f6e361]:
+                - term [ref=f6e362]: Action
+                - definition [ref=f6e363]: Review sample research sources
+              - generic [ref=f6e364]:
+                - term [ref=f6e365]: Resource
+                - definition [ref=f6e366]: Example source summaries
+            - paragraph [ref=f6e367]: This simulated permission step represents reviewing fictional source summaries. No external sources are connected or used in this demo.
+            - generic [ref=f6e368]:
+              - button "Approve this action" [ref=f6e369] [cursor=pointer]
+              - button "Decline" [ref=f6e370] [cursor=pointer]
+              - button "Pause" [ref=f6e371] [cursor=pointer]
+          - generic [ref=f6e372]:
+            - generic [ref=f6e373]: Reply to Nova about this mission
+            - textbox "Reply to Nova about this mission" [ref=f6e374]:
+              - /placeholder: What’s on your mind?
+            - button "Send" [disabled] [ref=f6e375]
+          - paragraph [ref=f6e376]: Shift + Enter for a new line

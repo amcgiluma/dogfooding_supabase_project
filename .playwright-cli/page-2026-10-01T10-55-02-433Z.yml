@@ -1,0 +1,66 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Nova
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - button "Build a calm reading app landing page Active" [ref=f6e691] [cursor=pointer]:
+        - strong [ref=f6e692]: Build a calm reading app landing page
+        - generic [ref=f6e693]: Active
+      - button "Compare three ways to validate this product idea Active" [ref=f6e694] [cursor=pointer]:
+        - strong [ref=f6e695]: Compare three ways to validate this product idea
+        - generic [ref=f6e696]: Active
+      - button "Watch for useful updates about local AI tools Complete" [ref=f6e697] [cursor=pointer]:
+        - strong [ref=f6e698]: Watch for useful updates about local AI tools
+        - generic [ref=f6e699]: Complete
+      - button "Compare reading app launch options Paused" [ref=f6e700] [cursor=pointer]:
+        - strong [ref=f6e701]: Compare reading app launch options
+        - generic [ref=f6e702]: Paused
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e590]:
+        - text: Switch companion
+        - combobox "Switch companion" [ref=f6e591]:
+          - option "Nova" [selected]
+          - option "Mira Research"
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e670]:
+    - generic [ref=f6e671]:
+      - generic [ref=f6e672]:
+        - strong [ref=f6e673]: Nova
+        - generic [ref=f6e674]: · General chat
+      - generic [ref=f6e675]:
+        - button "Details" [ref=f6e676] [cursor=pointer]
+        - button "New mission" [ref=f6e677] [cursor=pointer]
+    - region "General conversation" [ref=f6e679]:
+      - region "General conversation" [ref=f6e703]:
+        - generic [ref=f6e704]:
+          - article [ref=f6e705]:
+            - generic [ref=f6e706]: You /
+            - paragraph [ref=f6e707]: Hello, Nova.
+          - article [ref=f6e708]:
+            - generic [ref=f6e709]: Nova /
+            - paragraph [ref=f6e710]: I’ve noted that for your workspace. This is a local demo, so no work runs in the background.
+          - article [ref=f6e711]:
+            - generic [ref=f6e712]: You /
+            - paragraph [ref=f6e713]: Line one Line two
+          - article [ref=f6e714]:
+            - generic [ref=f6e715]: Nova /
+            - paragraph [ref=f6e716]: I’ve noted that for your workspace. This is a local demo, so no work runs in the background.
+        - generic [ref=f6e717]:
+          - generic [ref=f6e718]:
+            - generic [ref=f6e719]: Message Nova
+            - textbox "Message Nova" [ref=f6e720]:
+              - /placeholder: What’s on your mind?
+            - button "Send" [disabled] [ref=f6e721]
+          - paragraph [ref=f6e722]: Shift + Enter for a new line

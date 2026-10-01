@@ -1,0 +1,96 @@
+- generic [active] [ref=f7e1]:
+  - navigation "Static preview controls" [ref=f7e2]:
+    - generic [ref=f7e3]: Static preview
+    - link "All options" [ref=f7e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f7e5]: Preview view
+    - combobox "Preview view" [ref=f7e6]:
+      - option "Onboarding"
+      - option "Chat"
+      - option "Permission"
+      - option "Review" [selected]
+  - generic [ref=f7e7]:
+    - complementary [ref=f7e8]:
+      - generic [ref=f7e9]: Morrow
+      - navigation "Primary" [ref=f7e10]:
+        - link "General chat" [ref=f7e11] [cursor=pointer]:
+          - /url: "#chat"
+          - generic [aria-hidden] [ref=f7e12]: ⌂
+          - text: General chat
+      - button "＋ New mission" [ref=f7e13] [cursor=pointer]
+      - generic [ref=f7e14]: Missions
+      - navigation "Missions" [ref=f7e15]:
+        - link "Design the reading app In progress" [ref=f7e16] [cursor=pointer]:
+          - /url: "#chat"
+          - generic [ref=f7e17]: Design the reading app
+          - generic [ref=f7e18]: In progress
+        - link "Research public references Permission needed" [ref=f7e19] [cursor=pointer]:
+          - /url: "#permission"
+          - generic [ref=f7e20]: Research public references
+          - generic [ref=f7e21]: Permission needed
+        - link "Weekly design review Ready for review" [ref=f7e22] [cursor=pointer]:
+          - /url: "#review"
+          - generic [ref=f7e23]: Weekly design review
+          - generic [ref=f7e24]: Ready for review
+      - generic [ref=f7e25]:
+        - generic [ref=f7e26]: J
+        - generic [ref=f7e27]: Juanma
+    - main [ref=f7e28]:
+      - generic [ref=f7e30]:
+        - generic [ref=f7e31]:
+          - generic [ref=f7e32]:
+            - strong [ref=f7e33]: Weekly design review
+            - generic [ref=f7e34]: · Ready for review
+          - button "Open mission details" [ref=f7e36] [cursor=pointer]: Details
+        - generic [ref=f7e38]:
+          - article [ref=f7e39]:
+            - paragraph [ref=f7e40]: Morrow
+            - generic [ref=f7e41]: "The first outline is ready for your review. It keeps the reading flow to three screens:"
+          - article [ref=f7e42]:
+            - paragraph [ref=f7e43]: Morrow
+            - list [ref=f7e45]:
+              - listitem [ref=f7e46]: Inbox
+              - listitem [ref=f7e47]: Next reads
+              - listitem [ref=f7e48]: Saved article view
+          - generic [ref=f7e49]: Sample mission context · Ready for review
+        - generic [ref=f7e50]:
+          - generic [ref=f7e51]:
+            - generic [ref=f7e52]:
+              - strong [ref=f7e53]: Reading app outline
+              - generic [ref=f7e54]: Draft · 3 screens
+            - generic [ref=f7e55]:
+              - button "View draft" [ref=f7e56] [cursor=pointer]
+              - button "Approve in preview" [ref=f7e57] [cursor=pointer]
+              - button "Request changes" [ref=f7e58] [cursor=pointer]
+          - generic [ref=f7e59]:
+            - generic [ref=f7e60]: Message Morrow
+            - textbox "Message Morrow" [ref=f7e61]
+            - button "Send" [ref=f7e62] [cursor=pointer]
+          - generic [ref=f7e63]: Shift + Enter for a new line
+      - region "Mission details":
+        - heading "Mission details" [level=2]
+        - generic:
+          - heading "Goal" [level=3]
+          - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+          - heading "Progress" [level=3]
+          - list [ref=f7e64]:
+            - listitem: Define the simplest useful flow
+            - listitem: Compare public design references
+            - listitem: Review a three-screen outline
+          - heading "History" [level=3]
+          - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+          - heading "Output" [level=3]
+          - paragraph: No output attached yet.
+          - generic:
+            - heading "Reading app outline" [level=3]
+            - list [ref=f7e65]:
+              - listitem:
+                - strong [ref=f7e66]: "Inbox:"
+                - text: save and search links.
+              - listitem:
+                - strong [ref=f7e67]: "Next reads:"
+                - text: show three items with estimated reading time.
+              - listitem:
+                - strong [ref=f7e68]: "Saved article view:"
+                - text: show the original source and reading state.
+            - paragraph: Sample draft for review.

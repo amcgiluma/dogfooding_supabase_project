@@ -1,0 +1,42 @@
+- generic [ref=f29e1]:
+  - navigation "Static preview controls" [ref=f29e2]:
+    - generic [ref=f29e3]: Static preview
+    - link "All options" [ref=f29e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f29e5]: Preview view
+    - combobox "Preview view" [ref=f29e6]:
+      - option "Onboarding" [selected]
+      - option "Chat"
+      - option "Permission"
+      - option "Review"
+  - main [ref=f29e8]:
+    - generic [ref=f29e11]:
+      - generic [ref=f29e12]: Morrow
+      - generic [ref=f29e13]:
+        - generic [ref=f29e14]: Step 2 of 4
+        - generic [ref=f29e27]:
+          - text: What should I call you?
+          - strong [ref=f29e28]: Juanma
+        - heading "What are you working toward?" [level=1] [ref=f29e29]
+        - generic [ref=f29e16]:
+          - generic [ref=f29e17]: Your answer
+          - textbox "Your answer" [ref=f29e18]: Build a simple reading app
+          - button "Build a simple reading app" [ref=f29e30] [cursor=pointer]
+          - generic [ref=f29e21]:
+            - button "Back" [ref=f29e31] [cursor=pointer]
+            - button "Continue" [active] [ref=f29e22] [cursor=pointer]
+        - paragraph [ref=f29e23]: A few quick answers make this workspace yours.
+    - region "Mission details":
+      - heading "Mission details" [level=2]
+      - generic:
+        - heading "Goal" [level=3]
+        - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+        - heading "Progress" [level=3]
+        - list [ref=f29e24]:
+          - listitem: Define the simplest useful flow
+          - listitem: Compare public design references
+          - listitem: Review a three-screen outline
+        - heading "History" [level=3]
+        - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+        - heading "Output" [level=3]
+        - paragraph: No output attached yet.

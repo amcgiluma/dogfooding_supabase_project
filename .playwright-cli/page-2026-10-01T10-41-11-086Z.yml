@@ -1,0 +1,54 @@
+- generic [ref=f6e3]:
+  - complementary [ref=f6e80]:
+    - button "morrow+" [ref=f6e82] [cursor=pointer]
+    - generic [ref=f6e83]:
+      - img "Reserved space for your future mascot" [ref=f6e84]
+      - generic [ref=f6e89]:
+        - strong [ref=f6e90]: Nova
+        - generic [ref=f6e91]: Let’s make progress
+    - navigation "Workspace navigation" [ref=f6e92]:
+      - button "General chat" [ref=f6e93] [cursor=pointer]
+      - button "＋ New mission" [ref=f6e94] [cursor=pointer]
+      - heading "Missions" [level=2] [ref=f6e95]
+      - button "Build a calm landing page for my idea Paused" [ref=f6e285] [cursor=pointer]:
+        - strong [ref=f6e97]: Build a calm landing page for my idea
+        - generic [ref=f6e98]: Paused
+      - button "Compare three ways to validate this product idea Permission needed" [ref=f6e99] [cursor=pointer]:
+        - strong [ref=f6e100]: Compare three ways to validate this product idea
+        - generic [ref=f6e101]: Permission needed
+      - button "Watch for useful updates about local AI tools Ready for review" [ref=f6e102] [cursor=pointer]:
+        - strong [ref=f6e103]: Watch for useful updates about local AI tools
+        - generic [ref=f6e104]: Ready for review
+      - button "Compare reading app launch options Active" [ref=f6e191] [cursor=pointer]:
+        - strong [ref=f6e192]: Compare reading app launch options
+        - generic [ref=f6e193]: Active
+    - generic [ref=f6e105]:
+      - button "Companions" [ref=f6e106] [cursor=pointer]
+      - generic [ref=f6e107]:
+        - img "Reserved space for your future mascot" [ref=f6e108]
+        - generic [ref=f6e113]: Test Juanma
+      - generic [ref=f6e114]: Local demo · manual progress only
+      - button "Reset demo" [ref=f6e115] [cursor=pointer]
+  - main [ref=f6e116]:
+    - generic [ref=f6e117]:
+      - generic [ref=f6e118]:
+        - strong [ref=f6e119]: Nova
+        - generic [ref=f6e120]: · Build a calm landing page for my idea
+      - generic [ref=f6e121]:
+        - button "Details" [ref=f6e122] [cursor=pointer]
+        - button "New mission" [ref=f6e123] [cursor=pointer]
+    - region "Mission conversation" [ref=f6e239]:
+      - region "Mission conversation" [ref=f6e240]:
+        - generic [ref=f6e242]:
+          - heading "Hi, I’m Nova." [level=1] [ref=f6e243]
+          - paragraph [ref=f6e244]: Let’s make progress on this mission.
+        - generic [ref=f6e245]:
+          - region "Mission actions" [ref=f6e247]:
+            - paragraph [ref=f6e286]: Work is stopped at this point. Resume when you want to continue.
+            - button "Resume mission" [ref=f6e287] [cursor=pointer]
+          - generic [ref=f6e252]:
+            - generic [ref=f6e253]: Reply to Nova about this mission
+            - textbox "Reply to Nova about this mission" [ref=f6e254]:
+              - /placeholder: What’s on your mind?
+            - button "Send" [disabled] [ref=f6e255]
+          - paragraph [ref=f6e256]: Shift + Enter for a new line

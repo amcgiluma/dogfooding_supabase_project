@@ -1,15 +1,15 @@
-import { useRef, useState, type FormEvent, type KeyboardEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from 'react';
 import { useApp } from '../../app/AppProvider';
 import type { MissionKind } from '../../domain/types';
 import './create-mission.css';
 
 interface CreateMissionProps { companionId: string; onClose: (restoreFocus?: boolean) => void }
-interface Example { kind: MissionKind; title: string; objective: string; src: string; alt: string }
+interface Example { kind: MissionKind; title: string; objective: string }
 
 const examples: Example[] = [
-  { kind: 'app', title: 'Build an app', objective: 'Build a small first version of my app idea', src: '/use-cases/create.png', alt: 'Concept image of an application being made' },
-  { kind: 'research', title: 'Research an idea', objective: 'Research the options for my idea and share the findings', src: '/use-cases/research.png', alt: 'Concept image of research materials' },
-  { kind: 'monitoring', title: 'Watch for changes', objective: 'Watch for changes that matter to me and summarize them', src: '/use-cases/watch.png', alt: 'Concept image of monitoring signals' },
+  { kind: 'app', title: 'Build an app', objective: 'Build a small first version of my app idea' },
+  { kind: 'research', title: 'Research an idea', objective: 'Research the options for my idea and share the findings' },
+  { kind: 'monitoring', title: 'Watch for changes', objective: 'Watch for changes that matter to me and summarize them' },
 ];
 const kinds: { id: MissionKind; label: string }[] = [
   { id: 'app', label: 'App' }, { id: 'research', label: 'Research' },
@@ -25,10 +25,11 @@ function recommendedDate(): string {
   return `${year}-${month}-${day}`;
 }
 
-/** Inline mission form. The date is a target only; it never schedules work. */
+/** Modal mission form. The date is a target only; it never schedules work. */
 export function CreateMission({ companionId, onClose }: CreateMissionProps) {
   const { actions, navigate } = useApp();
   const objectiveRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
   const pendingRef = useRef(false);
   const [kind, setKind] = useState<MissionKind>('app');
   const [objective, setObjective] = useState('');
@@ -38,6 +39,7 @@ export function CreateMission({ companionId, onClose }: CreateMissionProps) {
   const objectiveId = `create-mission-objective-${companionId}`;
   const dateId = `create-mission-date-${companionId}`;
   const errorId = `${objectiveId}-error`;
+  useEffect(() => { const dialog = dialogRef.current; if (dialog && !dialog.open) dialog.showModal(); }, []);
 
   async function create(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -77,7 +79,7 @@ export function CreateMission({ companionId, onClose }: CreateMissionProps) {
   }
 
   return (
-    <section className="create-mission" aria-labelledby="create-mission-title" onKeyDown={handleKeyDown}>
+    <dialog ref={dialogRef} className="create-mission" aria-labelledby="create-mission-title" onKeyDown={handleKeyDown} onCancel={(event) => { event.preventDefault(); onClose(); }} onClose={() => onClose()}>
       <div className="create-mission-heading">
         <h2 id="create-mission-title">Create a mission</h2>
         <button className="create-mission-text-button" type="button" onClick={() => onClose()}>Cancel</button>
@@ -104,13 +106,12 @@ export function CreateMission({ companionId, onClose }: CreateMissionProps) {
       </form>
       <div className="create-mission-examples" aria-label="Objective examples">
         {examples.map((example) => <article className="create-mission-example" key={example.kind}>
-          <img src={example.src} alt={example.alt} />
           <div><strong>{example.title}</strong><p>{example.objective}</p>
             <button className="create-mission-text-button" type="button" onClick={() => applyExample(example)}>Use example</button>
           </div>
         </article>)}
       </div>
-      <p className="create-mission-demo">Demo · missions and conversations stay with this companion.</p>
-    </section>
+      <p className="create-mission-demo">Demo · missions stay with this companion.</p>
+    </dialog>
   );
 }

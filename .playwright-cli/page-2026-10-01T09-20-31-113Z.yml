@@ -1,0 +1,57 @@
+- generic [ref=f29e1]:
+  - navigation "Static preview controls" [ref=f29e2]:
+    - generic [ref=f29e3]: Static preview
+    - link "All options" [ref=f29e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=f29e5]: Preview view
+    - combobox "Preview view" [ref=f29e6]:
+      - option "Onboarding"
+      - option "Chat" [selected]
+      - option "Permission"
+      - option "Review"
+  - main [ref=f29e8]:
+    - generic [ref=f29e60]:
+      - generic [ref=f29e61]:
+        - button "Open navigation" [ref=f29e62] [cursor=pointer]: ☰
+        - strong [ref=f29e64]: Atlas
+        - button "Open mission details" [ref=f29e66] [cursor=pointer]: Details
+      - generic [ref=f29e68]:
+        - article [ref=f29e69]:
+          - paragraph [ref=f29e70]: Juanma
+          - generic [ref=f29e71]: Help me shape a small reading app. I want one place to save articles and choose what to read next.
+        - article [ref=f29e72]:
+          - paragraph [ref=f29e73]: Atlas
+          - generic [ref=f29e74]: "Start with an inbox and a reading queue. Keep saved links searchable. Which matters more today: capturing links quickly or choosing your next read?"
+        - article [ref=f29e75]:
+          - paragraph [ref=f29e76]: Juanma
+          - generic [ref=f29e77]: Choosing the next read. Keep it simple.
+        - article [ref=f29e78]:
+          - paragraph [ref=f29e79]: Atlas
+          - generic [ref=f29e80]: Then I would show three next reads, with the inbox one click away. We can turn that into a first screen.
+        - article [ref=f29e87]:
+          - paragraph [ref=f29e88]: Juanma · Preview message
+          - paragraph [ref=f29e89]: Local preview draft
+        - article [ref=f29e91]:
+          - paragraph [ref=f29e92]: Juanma · Preview message
+          - paragraph [ref=f29e93]: line one line two
+      - generic [ref=f29e81]:
+        - generic [ref=f29e82]:
+          - generic [ref=f29e83]: Message Morrow
+          - textbox "Message Morrow" [active] [ref=f29e84]
+          - button "Send" [ref=f29e85] [cursor=pointer]
+        - generic [ref=f29e86]: Shift + Enter for a new line
+    - region "Mission details":
+      - heading "Mission details" [level=2]
+      - generic:
+        - heading "Goal" [level=3]
+        - paragraph: Shape a small reading app that helps Juanma save articles and choose what to read next.
+        - heading "Progress" [level=3]
+        - list [ref=f29e24]:
+          - listitem: Define the simplest useful flow
+          - listitem: Compare public design references
+          - listitem: Review a three-screen outline
+        - heading "History" [level=3]
+        - paragraph: Sample timelineToday · Reading queue discussedYesterday · Inbox scope set
+        - heading "Output" [level=3]
+        - paragraph: No output attached yet.
+  - status [ref=f29e90]: "Preview only: no message was sent."

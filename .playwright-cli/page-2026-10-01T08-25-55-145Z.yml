@@ -1,0 +1,55 @@
+- main [ref=f16e2]:
+  - heading "Elige cómo hablar con Morrow" [level=1] [ref=f16e3]
+  - paragraph [ref=f16e4]: Tres propuestas estáticas para comparar la conversación, la navegación y el contexto de misión.
+  - region "Propuestas" [ref=f16e5]:
+    - article [ref=f16e6]:
+      - 'img "Vista: navegación lateral, conversación central y detalles opcionales" [ref=f16e7]'
+      - generic [ref=f16e13]:
+        - heading "A · Espacio claro" [level=2] [ref=f16e14]
+        - paragraph [ref=f16e15]: Navegación compacta y conversación centrada, con detalles a un lado cuando hacen falta.
+        - paragraph [ref=f16e16]: Más estructura
+        - navigation "Vistas de la opción A" [ref=f16e17]:
+          - link "Inicio" [ref=f16e18] [cursor=pointer]:
+            - /url: option-a.html?view=onboarding
+          - link "Chat" [ref=f16e19] [cursor=pointer]:
+            - /url: option-a.html?view=chat
+          - link "Permiso" [ref=f16e20] [cursor=pointer]:
+            - /url: option-a.html?view=permission
+          - link "Revisión" [ref=f16e21] [cursor=pointer]:
+            - /url: option-a.html?view=review
+      - link "Abrir opción A" [ref=f16e22] [cursor=pointer]:
+        - /url: option-a.html?view=chat
+    - article [ref=f16e23]:
+      - 'img "Vista: rail estrecho y lienzo amplio de conversación" [ref=f16e24]'
+      - generic [ref=f16e31]:
+        - heading "B · Conversación amplia" [level=2] [ref=f16e32]
+        - paragraph [ref=f16e33]: Un rail discreto deja más espacio a los mensajes; las misiones aparecen en un panel.
+        - paragraph [ref=f16e34]: Más espacio para conversar
+        - navigation "Vistas de la opción B" [ref=f16e35]:
+          - link "Inicio" [ref=f16e36] [cursor=pointer]:
+            - /url: option-b.html?view=onboarding
+          - link "Chat" [ref=f16e37] [cursor=pointer]:
+            - /url: option-b.html?view=chat
+          - link "Permiso" [ref=f16e38] [cursor=pointer]:
+            - /url: option-b.html?view=permission
+          - link "Revisión" [ref=f16e39] [cursor=pointer]:
+            - /url: option-b.html?view=review
+      - link "Abrir opción B" [ref=f16e40] [cursor=pointer]:
+        - /url: option-b.html?view=chat
+    - article [ref=f16e41]:
+      - 'img "Vista: compañero identificado, misiones, conversación y detalles" [ref=f16e42]'
+      - generic [ref=f16e48]:
+        - heading "C · Compañero presente" [level=2] [ref=f16e49]
+        - paragraph [ref=f16e50]: El nombre del compañero y las misiones siguen visibles junto a una charla más cercana.
+        - paragraph [ref=f16e51]: Más presencia del compañero
+        - navigation "Vistas de la opción C" [ref=f16e52]:
+          - link "Inicio" [ref=f16e53] [cursor=pointer]:
+            - /url: option-c.html?view=onboarding
+          - link "Chat" [ref=f16e54] [cursor=pointer]:
+            - /url: option-c.html?view=chat
+          - link "Permiso" [ref=f16e55] [cursor=pointer]:
+            - /url: option-c.html?view=permission
+          - link "Revisión" [ref=f16e56] [cursor=pointer]:
+            - /url: option-c.html?view=review
+      - link "Abrir opción C" [ref=f16e57] [cursor=pointer]:
+        - /url: option-c.html?view=chat

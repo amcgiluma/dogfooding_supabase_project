@@ -1,0 +1,24 @@
+- main [ref=f1e5]:
+  - paragraph [ref=f1e6]: morrow+
+  - img "Reserved space for your future mascot"
+  - region [ref=f1e7]:
+    - paragraph [ref=f1e8]: hello, human.
+    - paragraph [ref=f1e9]: Step 2 of 4
+    - generic [ref=f1e10]:
+      - heading "Nice to meet you, Juanma. What would you like to make progress on?" [level=1] [ref=f1e20]:
+        - generic [aria-hidden] [ref=f1e13]: Nice to meet you, Juanma. What would you like to make progress on?
+      - generic [ref=f1e21]:
+        - generic [ref=f1e22]: Your name
+        - paragraph [ref=f1e23]: Juanma
+      - generic [ref=f1e15]:
+        - generic [ref=f1e24]:
+          - text: Your goal
+          - textbox "Your goal" [active] [ref=f1e25]:
+            - /placeholder: What would you like help with?
+        - generic "Goal suggestions" [ref=f1e26]:
+          - button "Ship a first version" [ref=f1e27] [cursor=pointer]
+          - button "Explore an idea" [ref=f1e28] [cursor=pointer]
+          - button "Keep track of changes" [ref=f1e29] [cursor=pointer]
+        - generic [ref=f1e18]:
+          - button "Back" [ref=f1e30] [cursor=pointer]
+          - button "Continue" [ref=f1e19] [cursor=pointer]: Continue →

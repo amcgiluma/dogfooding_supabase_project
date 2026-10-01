@@ -51,7 +51,7 @@ The test script runs the focused Node tests in `tests/`. The V01–V03 plan cove
 
 ### Walkthrough
 
-Complete the four onboarding steps, open the new companion, send a general message, then create a mission from an example or a custom objective. The seeded missions show active work, a permission decision and a ready-for-review deliverable. Advance active work with the visible demo control, pause and resume it, edit its goal explicitly, then confirm its final review or request corrections. The correction stays on the same mission and keeps its history. Refresh to check that IDs, messages and progress remain saved; use **Reset demo** to return to onboarding.
+Complete the four onboarding steps to enter your companion's chat. Send a general message, then create a mission from an example or a custom objective. Choose missions from the sidebar and open details when needed. The seeded missions show active work, a permission decision and a ready-for-review deliverable. Advance active work with the visible demo control, pause and resume it, edit its goal explicitly, then confirm its final review or request corrections. The correction stays on the same mission and keeps its history. Refresh to check that IDs, messages and progress remain saved; use **Reset demo** to return to onboarding.
 
 ### Data and demo limits
 
@@ -60,3 +60,15 @@ The demo stores its versioned snapshot in this browser's `localStorage` under `c
 Mission work is deterministic sample behavior. It advances only when you press a demo action. The prototype has no AI, backend, account/auth, payments, EC2 work or app connectors, and it does not make network requests for mission work. No Supabase project setup is needed to run it.
 
 Supabase is the intended future backend for structured data. A future adapter should preserve the repository boundary, scope every read and write to the right user and companion, and enforce authorization with Row Level Security. Any real-time subscriptions would need the same access rules. Auth, Supabase storage, deployment and external connections remain future work and are not configured by this local prototype.
+
+## Chat redesign previews
+
+[Explore the personality refinements for the selected layout A](docs/morrow-chat-redesign/index.html): Orbit, Studio and Sidekick. Each standalone HTML option includes conversational stellar onboarding, populated chat, permission request and deliverable review. Empty mascot mounts reserve space for Juanma's future artwork in the sidebar, onboarding and mobile header. Use the preview selector to switch views; controls provide local demonstration feedback without sending messages or running missions.
+
+[The original A/B/C comparison](docs/morrow-chat-redesign/initial-options.html) remains available for reference.
+
+[Open the privately published previews](https://morrow-chat-redesign.supabase-8786.chatgpt.site). Sign in with the owning ChatGPT account if prompted. Only the static previews are published; the React prototype is not deployed there.
+
+Juanma selected A3 Sidekick for the React application. The implementation uses a chat-first layout, charcoal navigation and input surfaces, blue actions and empty mounts for the future mascot. First-run onboarding has a moving stellar background and finite typewriter questions. Reduced-motion preferences show the full question immediately and keep the stars still; motion pauses while the tab is hidden.
+
+The published HTML previews remain design references. Run the React prototype locally to use the implemented experience.
