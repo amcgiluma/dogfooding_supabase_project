@@ -72,3 +72,11 @@ Supabase is the intended future backend for structured data. A future adapter sh
 Juanma selected A3 Sidekick for the React application. The implementation uses a chat-first layout, charcoal navigation and input surfaces, blue actions and empty mounts for the future mascot. First-run onboarding has a moving stellar background and finite typewriter questions. Reduced-motion preferences show the full question immediately and keep the stars still; motion pauses while the tab is hidden.
 
 The published HTML previews remain design references. Run the React prototype locally to use the implemented experience.
+
+## Raiden redesign previews
+
+[Compare Command, Signal and Vector](docs/raiden-interface/index.html): three static proposals for the Raiden identity, with graphite surfaces, cyan accents, Rajdhani and IBM Plex Sans, clipped corners and finite animations. Each includes onboarding, chat, mission creation, permission and review examples. Juanma confirmed graphite as the replacement for the earlier pure-black design constraint.
+
+[Open the privately published Raiden proposals](https://raiden-interface.supabase-8786.chatgpt.site). Sign in with the owning ChatGPT account if prompted. The older Morrow previews keep their existing URL.
+
+The React application remains on the existing design until a proposal is selected. These previews do not read or modify the prototype's saved data. See [preview setup and review status](docs/raiden-interface/README.md) for local viewing, building and the next implementation steps.
