@@ -1,0 +1,87 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]: Compañero / idea inicial
+    - generic [ref=e5]: Borrador
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - heading "Un agente que hace camino contigo." [level=1] [ref=e8]
+      - paragraph [ref=e9]: Creas un compañero, le das una misión y ves cómo avanza. Tú decides el ritmo. La infraestructura trabaja detrás.
+      - generic [ref=e10]:
+        - generic [ref=e11]: •Misiones con fecha límite
+        - generic [ref=e12]: •Equipo de agentes
+        - generic [ref=e13]: •Avances visibles
+    - region [ref=e14]:
+      - generic [ref=e15]:
+        - heading "El viaje del usuario" [level=2] [ref=e16]
+        - paragraph [ref=e17]: La experiencia se cuenta con decisiones sencillas. Nada de tipos de instancia, tokens o parámetros de infraestructura en el recorrido principal.
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - text: "01"
+          - heading "Crea a su compañero" [level=3] [ref=e20]
+          - paragraph [ref=e21]: Elige para qué le ayudará y empieza la relación.
+        - generic [ref=e22]:
+          - text: "02"
+          - heading "Le da misiones" [level=3] [ref=e23]
+          - paragraph [ref=e24]: Puede tener varias, con objetivo y fecha límite.
+        - generic [ref=e25]:
+          - text: "03"
+          - heading "Marca el ritmo" [level=3] [ref=e26]
+          - paragraph [ref=e27]: Escoge una capacidad comprensible y conoce su límite.
+        - generic [ref=e28]:
+          - text: "04"
+          - heading "Ve el progreso" [level=3] [ref=e29]
+          - paragraph [ref=e30]: Recibe avances, bloqueos, ideas y resultados.
+    - region [ref=e31]:
+      - generic [ref=e32]:
+        - heading "Lo que hay detrás" [level=2] [ref=e33]
+        - paragraph [ref=e34]: Una posible forma de conectarlo. Todavía hay que elegir el harness, definir la imagen y decidir dónde vive la memoria duradera.
+      - img "La aplicación guarda usuarios, misiones y estado en Supabase. Un control privado gestiona una instancia EC2, que ejecuta una imagen con el harness, los agentes y su memoria." [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]: Interfaz y datos
+          - strong [ref=e38]: App + Supabase
+          - paragraph [ref=e39]: Login, misiones, estados y avances en tiempo real.
+        - generic [aria-hidden] [ref=e40]: →
+        - generic [ref=e41]:
+          - generic [ref=e42]: Control privado
+          - strong [ref=e43]: Crear, pausar, limitar
+          - paragraph [ref=e44]: Decide cuándo trabaja y cuánto puede gastar.
+        - generic [aria-hidden] [ref=e45]: →
+        - generic [ref=e46]:
+          - generic [ref=e47]: Ejecución
+          - strong [ref=e48]: EC2 + agentes
+          - paragraph [ref=e49]: Imagen preparada, harness por elegir y memoria persistente.
+      - paragraph [ref=e50]: Los agentes podrían repartirse entre planificar, ejecutar y verificar. Sus ideas y mejoras entrarían en un backlog visible.
+    - region [ref=e51]:
+      - generic [ref=e52]:
+        - heading "Capacidad sin jerga" [level=2] [ref=e53]
+        - paragraph [ref=e54]: Cinco niveles fáciles de comparar. Su ritmo, límite real y precio se definirán después de medir costes. Estas barras solo ilustran la escala.
+      - generic "Cinco niveles de capacidad, de muy baja a muy alta" [ref=e55]:
+        - generic [ref=e56]:
+          - strong [ref=e57]: Muy baja
+          - paragraph [ref=e60]: Para empezar.
+        - generic [ref=e61]:
+          - strong [ref=e62]: Baja
+          - paragraph [ref=e66]: Ritmo ligero.
+        - generic [ref=e67]:
+          - strong [ref=e68]: Media
+          - paragraph [ref=e73]: Trabajo regular.
+        - generic [ref=e74]:
+          - strong [ref=e75]: Alta
+          - paragraph [ref=e81]: Más intensidad.
+        - generic [ref=e82]:
+          - strong [ref=e83]: Muy alta
+          - paragraph [ref=e90]: Máximo ritmo.
+    - region [ref=e91]:
+      - generic [ref=e92]:
+        - heading "Lo que decidiremos" [level=2] [ref=e93]
+        - paragraph [ref=e94]: La idea queda abierta. Estas decisiones cambian la experiencia, la arquitectura y el precio.
+      - generic [ref=e95]:
+        - paragraph [ref=e96]: 01 Pi o Hermes, y qué puede hacer cada uno.
+        - paragraph [ref=e97]: "02 «24/7»: siempre disponible o siempre ejecutando."
+        - paragraph [ref=e98]: 03 Una suscripción simple con límites claros.
+        - paragraph [ref=e99]: 04 Qué mejoras pueden aplicar los agentes solos.
+  - contentinfo [ref=e100]:
+    - text: Resumen visual de una lluvia de ideas. El detalle y las preguntas abiertas están en
+    - link "ideas.md" [ref=e101] [cursor=pointer]:
+      - /url: ideas.md
+    - text: .

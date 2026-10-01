@@ -1,0 +1,52 @@
+- generic [ref=f2e3]:
+  - banner [ref=f2e4]:
+    - button "Go to companions" [ref=f2e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f2e6]:
+      - button "Companions" [ref=f2e7] [cursor=pointer]
+  - main [ref=f2e9]:
+    - generic [ref=f2e10]:
+      - generic [ref=f2e11]:
+        - paragraph [ref=f2e12]: Your companions
+        - heading "Good to see you, Juanma." [level=1] [ref=f2e13]
+        - paragraph [ref=f2e14]: Each companion keeps their own conversations and missions.
+      - button "Create companion +" [ref=f2e15] [cursor=pointer]
+    - region "Companions" [ref=f2e16]:
+      - article [ref=f2e17]:
+        - button "Open Morrow" [ref=f2e18] [cursor=pointer]
+        - generic [ref=f2e19]:
+          - heading "Morrow" [level=2] [ref=f2e20]
+          - generic [ref=f2e21]:
+            - button "Rename" [ref=f2e22] [cursor=pointer]
+            - button "Choose appearance" [ref=f2e23] [cursor=pointer]
+          - button "Open Morrow →" [ref=f2e24] [cursor=pointer]
+          - generic [ref=f2e25]:
+            - heading "Missions" [level=3] [ref=f2e26]
+            - list [ref=f2e27]:
+              - listitem [ref=f2e28]:
+                - generic [ref=f2e29]:
+                  - text: Build a calm landing page for my idea
+                  - generic [ref=f2e30]: Active
+                - button "Open →" [ref=f2e31] [cursor=pointer]
+              - listitem [ref=f2e32]:
+                - generic [ref=f2e33]:
+                  - text: Compare three ways to validate this product idea
+                  - generic [ref=f2e34]: Active
+                - button "Open →" [ref=f2e35] [cursor=pointer]
+              - listitem [ref=f2e36]:
+                - generic [ref=f2e37]:
+                  - text: Watch for useful updates about local AI tools
+                  - generic [ref=f2e38]: Paused · Ready for review
+                - button "Open →" [ref=f2e39] [cursor=pointer]
+    - paragraph [ref=f2e40]: Demo · conversations and missions stay with their companion.
+  - contentinfo [ref=f2e41]:
+    - generic [ref=f2e42]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f2e43] [cursor=pointer]
+  - dialog [ref=f2e44]:
+    - button "Cancel reset" [active] [ref=f2e46] [cursor=pointer]: Cancel
+    - paragraph [ref=f2e47]: Start over
+    - heading "Reset this demo?" [level=2] [ref=f2e48]
+    - paragraph [ref=f2e49]: This removes the profile, companions, missions and conversations saved by this demo on this device.
+    - paragraph [ref=f2e50]: Other browser data will stay untouched.
+    - generic [ref=f2e51]:
+      - button "Keep my data" [ref=f2e53] [cursor=pointer]
+      - button "Reset demo" [ref=f2e54] [cursor=pointer]

@@ -1,0 +1,56 @@
+- generic [active] [ref=f38e1]:
+  - generic [ref=f38e2]:
+    - strong [ref=f38e3]: Static preview
+    - generic [ref=f38e4]: Visual concept · no saved data or live agent work
+  - main [ref=f38e5]:
+    - generic [ref=f38e6]:
+      - link "Return to visual options" [ref=f38e7] [cursor=pointer]:
+        - /url: index.html
+        - text: morrow.
+      - link "← All visual options" [ref=f38e8] [cursor=pointer]:
+        - /url: index.html
+      - navigation "Preview screens" [ref=f38e9]:
+        - button "01 Onboarding" [ref=f38e10] [cursor=pointer]
+        - button "02 Home" [ref=f38e11] [cursor=pointer]
+        - button "03 Workspace" [ref=f38e12] [cursor=pointer]
+        - button "04 Mission" [ref=f38e13] [cursor=pointer]
+    - generic [ref=f38e14]:
+      - generic [ref=f38e15]:
+        - generic [ref=f38e16]:
+          - paragraph [ref=f38e17]: Option A · Companion first
+          - heading "Hi, I’m Morrow." [level=1] [ref=f38e18]
+          - paragraph [ref=f38e19]: I’m glad you’re here. Let’s find a useful next step together.
+          - generic "Conversation with Morrow" [ref=f38e20]:
+            - generic [ref=f38e21]:
+              - text: Morrow
+              - paragraph [ref=f38e22]: What should I call you?
+            - generic [ref=f38e23]:
+              - text: You
+              - paragraph [ref=f38e24]: Juanma.
+            - generic [ref=f38e25]:
+              - text: Morrow
+              - paragraph [ref=f38e26]: What would you like to make progress on?
+            - generic [ref=f38e27]:
+              - text: You
+              - paragraph [ref=f38e28]: Ship a first app.
+            - generic [ref=f38e29]:
+              - text: Morrow
+              - paragraph [ref=f38e30]: What kind of help should we start with?
+            - generic [ref=f38e31]:
+              - paragraph [ref=f38e32]: Your intended use
+              - generic [ref=f38e33]:
+                - button "Build an app" [ref=f38e34] [cursor=pointer]
+                - button "Research an idea" [ref=f38e35] [cursor=pointer]
+                - button "Watch for changes" [ref=f38e36] [cursor=pointer]
+              - generic [ref=f38e37]:
+                - text: Or describe it in your own words
+                - textbox "Or describe it in your own words" [ref=f38e38]:
+                  - /placeholder: What would you like help with?
+              - paragraph [ref=f38e39]: "App development: Vercel and Supabase connections are not implemented in this demo."
+              - button "Continue conversation →" [ref=f38e40] [cursor=pointer]
+        - img "Mischievous black chibi skull companion concept" [ref=f38e42]
+      - group [ref=f38e43]:
+        - generic "Customize Morrow’s name and appearance" [ref=f38e44] [cursor=pointer]
+    - generic [ref=f38e45]:
+      - generic [ref=f38e46]: morrow. · companion-led concept
+      - generic [ref=f38e47]: Static preview · controls only change the visible mock screen

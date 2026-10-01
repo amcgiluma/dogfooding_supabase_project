@@ -1,0 +1,100 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e64]:
+      - button "Companions" [ref=e65] [cursor=pointer]
+      - generic [ref=e361]: Orbit
+  - main [ref=e362]:
+    - generic [ref=e363]:
+      - generic [ref=e365]:
+        - paragraph [ref=e366]: Orbit / Workspace
+        - heading "Orbit" [level=1] [ref=e367]
+      - generic [ref=e368]:
+        - button "All companions" [ref=e369] [cursor=pointer]
+        - button "Create mission +" [ref=e370] [cursor=pointer]
+    - generic [ref=e371]:
+      - region [ref=e410]:
+        - heading "Mission" [level=2] [ref=e411]
+        - article [ref=e576]:
+          - generic [ref=e492]:
+            - generic [ref=e493]:
+              - paragraph [ref=e494]: research mission
+              - heading "Compare validation options for the prototype" [level=2] [ref=e577]
+              - generic [ref=e496]:
+                - generic [ref=e497]: Active · working
+                - generic [ref=e498]: Demo · steps happen only when you advance them
+            - button "Edit goal" [ref=e578] [cursor=pointer]
+          - generic [ref=e502]:
+            - generic [ref=e503]:
+              - region [ref=e504]:
+                - heading "Mission conversation" [level=3] [ref=e505]
+                - region "Mission conversation" [ref=e506]:
+                  - paragraph [ref=e508]: Start a conversation about this mission.
+                  - generic [ref=e509]:
+                    - generic [ref=e510]: Reply about this mission
+                    - textbox "Reply about this mission" [ref=e511]:
+                      - /placeholder: Your message stays with this mission
+                    - generic [ref=e512]:
+                      - generic [ref=e513]: Demo
+                      - button "Send" [disabled] [ref=e514]
+              - region [ref=e515]:
+                - heading "Progress 18% · demo estimate" [level=3] [ref=e516]:
+                  - text: Progress
+                  - generic [ref=e517]: 18% · demo estimate
+                - progressbar "Demo progress" [ref=e518]
+                - group [ref=e520]:
+                  - generic "Stages and subtasks" [ref=e521] [cursor=pointer]
+              - region [ref=e522]:
+                - heading "History" [level=3] [ref=e523]
+                - list [ref=e524]:
+                  - listitem [ref=e525]:
+                    - time [ref=e526]: Sep 30, 2026, 6:17 PM
+                    - paragraph [ref=e527]: Paused for your permission.
+                  - listitem [ref=e547]:
+                    - time [ref=e548]: Sep 30, 2026, 6:20 PM
+                    - paragraph [ref=e549]: Permission declined. The request remains available.
+                  - listitem [ref=e553]:
+                    - time [ref=e554]: Sep 30, 2026, 6:21 PM
+                    - paragraph [ref=e555]: Mission resumed.
+                  - listitem [ref=e579]:
+                    - time [ref=e580]: Sep 30, 2026, 6:21 PM
+                    - paragraph [ref=e581]: Goal changed from “Compare three ways to validate this product idea” to “Compare validation options for the prototype”.
+                  - listitem [ref=e583]:
+                    - time [ref=e584]: Sep 30, 2026, 6:21 PM
+                    - paragraph [ref=e585]: Permission approved for the described demo action.
+            - complementary "Mission status and deliverables" [ref=e528]:
+              - region [ref=e529]:
+                - heading "Mission controls" [level=3] [ref=e530]
+                - paragraph [ref=e586]: This mission can advance one simulated step when you choose.
+                - generic [ref=e587]:
+                  - button "Pause mission" [ref=e588] [cursor=pointer]
+                  - button "Prepare final review" [ref=e589] [cursor=pointer]
+              - region [ref=e544]:
+                - heading "Deliverables" [level=3] [ref=e545]
+                - paragraph [ref=e546]: No deliverables yet. Advance the demo to create a sample output.
+      - complementary [ref=e383]:
+        - heading "Your missions" [level=2] [ref=e384]
+        - button "General conversation Companion chat" [ref=e459] [cursor=pointer]:
+          - generic [ref=e386]:
+            - strong [ref=e387]: General conversation
+            - generic [ref=e388]: Companion chat
+          - generic [aria-hidden] [ref=e389]: →
+        - button "Build an accessible landing page app · Active" [ref=e490] [cursor=pointer]:
+          - generic [ref=e391]:
+            - strong [ref=e392]: Build an accessible landing page
+            - generic [ref=e393]: app · Active
+          - generic [aria-hidden] [ref=e394]: →
+        - button "Compare validation options for the prototype research · Active" [ref=e590] [cursor=pointer]:
+          - generic [ref=e396]:
+            - strong [ref=e397]: Compare validation options for the prototype
+            - generic [ref=e398]: research · Active
+          - generic [aria-hidden] [ref=e399]: →
+        - button "Watch for useful updates about local AI tools monitoring · Paused · Ready for review" [ref=e400] [cursor=pointer]:
+          - generic [ref=e401]:
+            - strong [ref=e402]: Watch for useful updates about local AI tools
+            - generic [ref=e403]: monitoring · Paused · Ready for review
+          - generic [aria-hidden] [ref=e404]: →
+    - paragraph [ref=e405]: Demo · each conversation and mission belongs to Orbit.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

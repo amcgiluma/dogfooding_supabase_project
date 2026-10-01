@@ -1,0 +1,85 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e64]:
+      - button "Companions" [ref=e65] [cursor=pointer]
+      - generic [ref=e112]: Second
+  - main [ref=e113]:
+    - generic [ref=e114]:
+      - generic [ref=e116]:
+        - paragraph [ref=e117]: Second / Workspace
+        - heading "Second" [level=1] [ref=e118]
+      - generic [ref=e119]:
+        - button "All companions" [ref=e120] [cursor=pointer]
+        - button "Close create form" [expanded] [ref=e192] [cursor=pointer]
+    - region [ref=e193]:
+      - generic [ref=e194]:
+        - heading "Create a mission" [level=2] [ref=e195]
+        - button "Cancel" [ref=e196] [cursor=pointer]
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - text: Short objective
+          - textbox "Short objective" [active] [ref=e199]:
+            - /placeholder: What should we work toward?
+        - group "Mission type" [ref=e200]:
+          - generic [ref=e202] [cursor=pointer]:
+            - radio "App" [checked] [ref=e203]
+            - generic [ref=e204]: App
+          - generic [ref=e205] [cursor=pointer]:
+            - radio "Research" [ref=e206]
+            - generic [ref=e207]: Research
+          - generic [ref=e208] [cursor=pointer]:
+            - radio "Monitoring" [ref=e209]
+            - generic [ref=e210]: Monitoring
+          - generic [ref=e211] [cursor=pointer]:
+            - radio "Custom" [ref=e212]
+            - generic [ref=e213]: Custom
+        - generic [ref=e214]:
+          - text: Recommended date · optional
+          - textbox "Recommended date · optional" [ref=e215]: 2026-10-07
+        - paragraph [ref=e216]: An editable target for the plan, not a scheduled job. Clear the date to leave it open.
+        - button "Create and open mission" [ref=e217] [cursor=pointer]
+      - generic "Objective examples" [ref=e218]:
+        - article [ref=e219]:
+          - img "Concept image of an application being made" [ref=e220]
+          - generic [ref=e221]:
+            - strong [ref=e222]: Build an app
+            - paragraph [ref=e223]: Build a small first version of my app idea
+            - button "Use example" [ref=e224] [cursor=pointer]
+        - article [ref=e225]:
+          - img "Concept image of research materials" [ref=e226]
+          - generic [ref=e227]:
+            - strong [ref=e228]: Research an idea
+            - paragraph [ref=e229]: Research the options for my idea and share the findings
+            - button "Use example" [ref=e230] [cursor=pointer]
+        - article [ref=e231]:
+          - img "Concept image of monitoring signals" [ref=e232]
+          - generic [ref=e233]:
+            - strong [ref=e234]: Watch for changes
+            - paragraph [ref=e235]: Watch for changes that matter to me and summarize them
+            - button "Use example" [ref=e236] [cursor=pointer]
+      - paragraph [ref=e237]: Demo · missions and conversations stay with this companion.
+    - generic [ref=e122]:
+      - region [ref=e123]:
+        - heading "General conversation" [level=2] [ref=e124]
+        - region "General conversation" [ref=e125]:
+          - paragraph [ref=e127]: Start a conversation with your companion.
+          - generic [ref=e128]:
+            - generic [ref=e129]: Message your companion
+            - textbox "Message your companion" [ref=e130]:
+              - /placeholder: Keep this conversation with your companion
+            - generic [ref=e131]:
+              - generic [ref=e132]: Demo
+              - button "Send" [disabled] [ref=e133]
+      - complementary [ref=e134]:
+        - heading "Your missions" [level=2] [ref=e135]
+        - button "General conversation Selected" [ref=e136] [cursor=pointer]:
+          - generic [ref=e137]:
+            - strong [ref=e138]: General conversation
+            - generic [ref=e139]: Selected
+          - generic [aria-hidden] [ref=e140]: →
+        - paragraph [ref=e141]: No missions yet. Create one when you are ready.
+    - paragraph [ref=e142]: Demo · each conversation and mission belongs to Second.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

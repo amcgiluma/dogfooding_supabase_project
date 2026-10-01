@@ -1,1 +1,62 @@
-hello
+# Compañeros digitales
+
+Una web de compañeros que conocen al usuario, organizan sus misiones y trabajan para entregar resultados útiles.
+
+- [Mapa visual interactivo](resumen.html): resumen de la idea con imágenes y un recorrido de misión.
+- [Proyecto completo](proyecto.md): visión, decisiones, pendientes y propuesta de plan de construcción.
+- [Registro del brainstorming](decisiones.md): preguntas y respuestas con las aclaraciones posteriores.
+- [Imágenes y prompts](assets/README.md): procedencia de las imágenes conceptuales originales.
+
+Abre `resumen.html` en el navegador. No requiere instalación ni conexión: conserva la carpeta `assets` junto al archivo. También funciona con un servidor estático local.
+
+La demostración es conceptual. Los controles permiten explorar la experiencia, sin ejecutar agentes ni crear recursos remotos. Las ilustraciones, nombres de estados y pantallas son propuestas visuales; las decisiones confirmadas y los puntos pendientes se distinguen en el documento completo.
+
+## Local prototype
+
+The navigable React demo lives in this repository. It walks through onboarding, companion workspaces, separate general and mission conversations, mission creation, simulated progress, permission decisions and deliverable review.
+
+### Run it
+
+Use Node.js 20.19.x or 22.12+ and pnpm 10.15. The `packageManager` field pins the pnpm version for Corepack.
+
+```sh
+corepack pnpm install
+corepack pnpm dev
+```
+
+If Corepack is unavailable, run the same pinned pnpm CLI through npm:
+
+```sh
+npm exec --yes --package=pnpm@10.15.0 -- pnpm install
+npm exec --yes --package=pnpm@10.15.0 -- pnpm dev
+```
+
+The dev command prints the local URL. To check or preview a production build:
+
+```sh
+corepack pnpm typecheck
+corepack pnpm test
+corepack pnpm build
+corepack pnpm preview
+```
+
+```sh
+npm exec --yes --package=pnpm@10.15.0 -- pnpm typecheck
+npm exec --yes --package=pnpm@10.15.0 -- pnpm test
+npm exec --yes --package=pnpm@10.15.0 -- pnpm build
+npm exec --yes --package=pnpm@10.15.0 -- pnpm preview
+```
+
+The test script runs the focused Node tests in `tests/`. The V01–V03 plan covers additional domain and browser verification.
+
+### Walkthrough
+
+Complete the four onboarding steps, open the new companion, send a general message, then create a mission from an example or a custom objective. The seeded missions show active work, a permission decision and a ready-for-review deliverable. Advance active work with the visible demo control, pause and resume it, edit its goal explicitly, then confirm its final review or request corrections. The correction stays on the same mission and keeps its history. Refresh to check that IDs, messages and progress remain saved; use **Reset demo** to return to onboarding.
+
+### Data and demo limits
+
+The demo stores its versioned snapshot in this browser's `localStorage` under `companions-prototype:v1`. Use **Reset demo** in the app to remove only that key and return to first-run onboarding. Other browser data is left alone. If browser storage is unavailable, the app explains that changes are temporary and offers a retry. Invalid saved data is shown as a recovery state; reset is explicit.
+
+Mission work is deterministic sample behavior. It advances only when you press a demo action. The prototype has no AI, backend, account/auth, payments, EC2 work or app connectors, and it does not make network requests for mission work. No Supabase project setup is needed to run it.
+
+Supabase is the intended future backend for structured data. A future adapter should preserve the repository boundary, scope every read and write to the right user and companion, and enforce authorization with Row Level Security. Any real-time subscriptions would need the same access rules. Auth, Supabase storage, deployment and external connections remain future work and are not configured by this local prototype.

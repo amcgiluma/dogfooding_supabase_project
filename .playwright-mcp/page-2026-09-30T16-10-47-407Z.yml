@@ -1,0 +1,43 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - button "Go to companions" [ref=f1e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f1e62]:
+      - button "Companions" [ref=f1e63] [cursor=pointer]
+  - main [ref=f1e64]:
+    - generic [ref=f1e65]:
+      - generic [ref=f1e66]:
+        - paragraph [ref=f1e67]: Your companions
+        - heading "Good to see you, Juanma." [level=1] [ref=f1e68]
+        - paragraph [ref=f1e69]: Each companion keeps their own conversations and missions.
+      - button "Create companion +" [ref=f1e70] [cursor=pointer]
+    - region "Companions" [ref=f1e71]:
+      - article [ref=f1e72]:
+        - button "Open Morrow" [ref=f1e73] [cursor=pointer]
+        - generic [ref=f1e74]:
+          - heading "Morrow" [level=2] [ref=f1e75]
+          - generic [ref=f1e76]:
+            - button "Rename" [ref=f1e77] [cursor=pointer]
+            - button "Choose appearance" [ref=f1e78] [cursor=pointer]
+          - button "Open Morrow →" [ref=f1e79] [cursor=pointer]
+          - generic [ref=f1e80]:
+            - heading "Missions" [level=3] [ref=f1e81]
+            - list [ref=f1e82]:
+              - listitem [ref=f1e83]:
+                - generic [ref=f1e84]:
+                  - text: Build a calm landing page for my idea
+                  - generic [ref=f1e85]: Active
+                - button "Open →" [ref=f1e86] [cursor=pointer]
+              - listitem [ref=f1e87]:
+                - generic [ref=f1e88]:
+                  - text: Compare three ways to validate this product idea
+                  - generic [ref=f1e89]: Waiting for permission
+                - button "Open →" [ref=f1e90] [cursor=pointer]
+              - listitem [ref=f1e91]:
+                - generic [ref=f1e92]:
+                  - text: Watch for useful updates about local AI tools
+                  - generic [ref=f1e93]: Paused · Ready for review
+                - button "Open →" [ref=f1e94] [cursor=pointer]
+    - paragraph [ref=f1e95]: Demo · conversations and missions stay with their companion.
+  - contentinfo [ref=f1e24]:
+    - generic [ref=f1e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f1e26] [cursor=pointer]

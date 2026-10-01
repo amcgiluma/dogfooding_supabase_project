@@ -1,0 +1,136 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e62]:
+      - button "Companions" [ref=e63] [cursor=pointer]
+      - generic [ref=e96]: Morrow
+  - main [ref=e97]:
+    - generic [ref=e98]:
+      - generic [ref=e100]:
+        - paragraph [ref=e101]: Morrow / Workspace
+        - heading "Morrow" [level=1] [ref=e102]
+      - generic [ref=e103]:
+        - button "All companions" [ref=e104] [cursor=pointer]
+        - button "Close create form" [expanded] [ref=e191] [cursor=pointer]
+    - region [ref=e193]:
+      - generic [ref=e194]:
+        - heading "Create a mission" [level=2] [ref=e195]
+        - button "Cancel" [ref=e196] [cursor=pointer]
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - text: Short objective
+          - textbox "Short objective" [active] [ref=e199]:
+            - /placeholder: What should we work toward?
+            - text: Build a small first version of my app idea
+        - group "Mission type" [ref=e200]:
+          - generic [ref=e202] [cursor=pointer]:
+            - radio "App" [checked] [ref=e203]
+            - generic [ref=e204]: App
+          - generic [ref=e205] [cursor=pointer]:
+            - radio "Research" [ref=e206]
+            - generic [ref=e207]: Research
+          - generic [ref=e208] [cursor=pointer]:
+            - radio "Monitoring" [ref=e209]
+            - generic [ref=e210]: Monitoring
+          - generic [ref=e211] [cursor=pointer]:
+            - radio "Custom" [ref=e212]
+            - generic [ref=e213]: Custom
+        - generic [ref=e214]:
+          - text: Recommended date · optional
+          - textbox "Recommended date · optional" [ref=e215]: 2026-10-07
+        - paragraph [ref=e216]: An editable target for the plan, not a scheduled job. Clear the date to leave it open.
+        - button "Create and open mission" [ref=e217] [cursor=pointer]
+      - generic "Objective examples" [ref=e218]:
+        - article [ref=e219]:
+          - img "Concept image of an application being made" [ref=e220]
+          - generic [ref=e221]:
+            - strong [ref=e222]: Build an app
+            - paragraph [ref=e223]: Build a small first version of my app idea
+            - button "Use example" [ref=e224] [cursor=pointer]
+        - article [ref=e225]:
+          - img "Concept image of research materials" [ref=e226]
+          - generic [ref=e227]:
+            - strong [ref=e228]: Research an idea
+            - paragraph [ref=e229]: Research the options for my idea and share the findings
+            - button "Use example" [ref=e230] [cursor=pointer]
+        - article [ref=e231]:
+          - img "Concept image of monitoring signals" [ref=e232]
+          - generic [ref=e233]:
+            - strong [ref=e234]: Watch for changes
+            - paragraph [ref=e235]: Watch for changes that matter to me and summarize them
+            - button "Use example" [ref=e236] [cursor=pointer]
+      - paragraph [ref=e237]: Demo · missions and conversations stay with this companion.
+    - generic [ref=e106]:
+      - region [ref=e141]:
+        - heading "Mission" [level=2] [ref=e142]
+        - article [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - paragraph [ref=e146]: app mission
+              - heading "Build a calm landing page for my idea" [level=2] [ref=e147]
+              - generic [ref=e148]:
+                - generic [ref=e149]: Active · working
+                - generic [ref=e150]: Demo · steps happen only when you advance them
+            - button "Edit goal" [ref=e153] [cursor=pointer]
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - region [ref=e156]:
+                - heading "Mission conversation" [level=3] [ref=e157]
+                - region "Mission conversation" [ref=e158]:
+                  - paragraph [ref=e160]: Start a conversation about this mission.
+                  - generic [ref=e161]:
+                    - generic [ref=e162]: Reply about this mission
+                    - textbox "Reply about this mission" [ref=e163]:
+                      - /placeholder: Your message stays with this mission
+                    - generic [ref=e164]:
+                      - generic [ref=e165]: Demo
+                      - button "Send" [disabled] [ref=e166]
+              - region [ref=e167]:
+                - heading "Progress 18% · demo estimate" [level=3] [ref=e168]:
+                  - text: Progress
+                  - generic [ref=e169]: 18% · demo estimate
+                - progressbar "Demo progress" [ref=e170]
+                - group [ref=e172]:
+                  - generic "Stages and subtasks" [ref=e173] [cursor=pointer]
+              - region [ref=e174]:
+                - heading "History" [level=3] [ref=e175]
+                - list [ref=e176]:
+                  - listitem [ref=e177]:
+                    - time [ref=e178]: Sep 30, 2026, 6:29 PM
+                    - paragraph [ref=e179]: Started the first pass.
+            - complementary "Mission status and deliverables" [ref=e180]:
+              - region [ref=e181]:
+                - heading "Mission controls" [level=3] [ref=e182]
+                - paragraph [ref=e183]: This mission can advance one simulated step when you choose.
+                - generic [ref=e184]:
+                  - button "Pause mission" [ref=e185] [cursor=pointer]
+                  - button "Advance demo one step" [ref=e186] [cursor=pointer]
+              - region [ref=e187]:
+                - heading "Deliverables" [level=3] [ref=e188]
+                - paragraph [ref=e189]: No deliverables yet. Advance the demo to create a sample output.
+      - complementary [ref=e118]:
+        - heading "Your missions" [level=2] [ref=e119]
+        - button "General conversation Companion chat" [ref=e190] [cursor=pointer]:
+          - generic [ref=e121]:
+            - strong [ref=e122]: General conversation
+            - generic [ref=e123]: Companion chat
+          - generic [aria-hidden] [ref=e124]: →
+        - button "Build a calm landing page for my idea app · Active" [ref=e125] [cursor=pointer]:
+          - generic [ref=e126]:
+            - strong [ref=e127]: Build a calm landing page for my idea
+            - generic [ref=e128]: app · Active
+          - generic [aria-hidden] [ref=e129]: →
+        - button "Compare three ways to validate this product idea research · Waiting for permission" [ref=e130] [cursor=pointer]:
+          - generic [ref=e131]:
+            - strong [ref=e132]: Compare three ways to validate this product idea
+            - generic [ref=e133]: research · Waiting for permission
+          - generic [aria-hidden] [ref=e134]: →
+        - button "Watch for useful updates about local AI tools monitoring · Paused · Ready for review" [ref=e135] [cursor=pointer]:
+          - generic [ref=e136]:
+            - strong [ref=e137]: Watch for useful updates about local AI tools
+            - generic [ref=e138]: monitoring · Paused · Ready for review
+          - generic [aria-hidden] [ref=e139]: →
+    - paragraph [ref=e140]: Demo · each conversation and mission belongs to Morrow.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

@@ -1,0 +1,106 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e64]:
+      - button "Companions" [ref=e65] [cursor=pointer]
+      - generic [ref=e361]: Orbit
+  - main [ref=e362]:
+    - generic [ref=e363]:
+      - generic [ref=e365]:
+        - paragraph [ref=e366]: Orbit / Workspace
+        - heading "Orbit" [level=1] [ref=e367]
+      - generic [ref=e368]:
+        - button "All companions" [ref=e369] [cursor=pointer]
+        - button "Create mission +" [ref=e370] [cursor=pointer]
+    - generic [ref=e371]:
+      - region [ref=e410]:
+        - heading "Mission" [level=2] [ref=e411]
+        - article [ref=e591]:
+          - generic [ref=e592]:
+            - generic [ref=e593]:
+              - paragraph [ref=e594]: monitoring mission
+              - heading "Watch for useful updates about local AI tools" [level=2] [ref=e595]
+              - generic [ref=e596]:
+                - generic [ref=e597]: Active · working
+                - generic [ref=e598]: Demo · steps happen only when you advance them
+            - button "Edit goal" [ref=e601] [cursor=pointer]
+          - generic [ref=e603]:
+            - generic [ref=e604]:
+              - region [ref=e605]:
+                - heading "Mission conversation" [level=3] [ref=e606]
+                - region "Mission conversation" [ref=e607]:
+                  - article [ref=e649]:
+                    - text: You
+                    - paragraph [ref=e650]: Please compare the setup time for each option.
+                  - generic [ref=e610]:
+                    - generic [ref=e611]: Reply about this mission
+                    - textbox "Reply about this mission" [ref=e612]:
+                      - /placeholder: Your message stays with this mission
+                    - generic [ref=e613]:
+                      - generic [ref=e614]: Demo
+                      - button "Send" [disabled] [ref=e615]
+              - region [ref=e661]:
+                - heading "Progress 32% · demo estimate" [level=3] [ref=e662]:
+                  - text: Progress
+                  - generic [ref=e618]: 32% · demo estimate
+                - progressbar "Demo progress" [ref=e619]
+                - group [ref=e621]:
+                  - generic "Stages and subtasks" [ref=e622] [cursor=pointer]
+              - region [ref=e623]:
+                - heading "History" [level=3] [ref=e624]
+                - list [ref=e625]:
+                  - listitem [ref=e626]:
+                    - time [ref=e627]: Sep 30, 2026, 6:17 PM
+                    - paragraph [ref=e628]: Ready for your review.
+                  - listitem [ref=e653]:
+                    - time [ref=e654]: Sep 30, 2026, 6:22 PM
+                    - paragraph [ref=e655]: "Corrections requested: Please compare the setup time for each option."
+                  - listitem [ref=e663]:
+                    - time [ref=e664]: Sep 30, 2026, 6:22 PM
+                    - paragraph [ref=e665]: A concise update format is ready for this monitoring goal.
+                  - listitem [ref=e667]:
+                    - time [ref=e668]: Sep 30, 2026, 6:23 PM
+                    - paragraph [ref=e669]: "Permission requested: Review a sample update."
+                  - listitem [ref=e684]:
+                    - time [ref=e685]: Sep 30, 2026, 6:23 PM
+                    - paragraph [ref=e686]: Permission approved for the described demo action.
+            - complementary "Mission status and deliverables" [ref=e629]:
+              - region [ref=e630]:
+                - heading "Mission controls" [level=3] [ref=e631]
+                - paragraph [ref=e687]: This mission can advance one simulated step when you choose.
+                - generic [ref=e688]:
+                  - button "Pause mission" [ref=e689] [cursor=pointer]
+                  - button "Prepare final review" [ref=e690] [cursor=pointer]
+              - region [ref=e636]:
+                - heading "Deliverables" [level=3] [ref=e637]
+                - article [ref=e638]:
+                  - paragraph [ref=e639]: update · earlier output
+                  - heading "Weekly update" [level=4] [ref=e640]
+                  - time [ref=e641]: Sep 30, 2026, 6:17 PM
+                  - paragraph [ref=e642]: "Fictional sample digest 1. Local inference: A hypothetical tool adds a smaller model option, which may reduce memory use for local testing. 2. Developer workflow: A hypothetical desktop runner improves prompt comparison, which could make experiments easier to repeat. 3. Data handling: A hypothetical release clarifies offline mode, worth checking before using sensitive files. Suggested next step: choose one signal and compare its setup effort and memory needs against your current workflow. This digest is entirely fictional. No actual sources were checked, and nothing is being watched or scheduled."
+      - complementary [ref=e383]:
+        - heading "Your missions" [level=2] [ref=e384]
+        - button "General conversation Companion chat" [ref=e459] [cursor=pointer]:
+          - generic [ref=e386]:
+            - strong [ref=e387]: General conversation
+            - generic [ref=e388]: Companion chat
+          - generic [aria-hidden] [ref=e389]: →
+        - button "Build an accessible landing page app · Active" [ref=e490] [cursor=pointer]:
+          - generic [ref=e391]:
+            - strong [ref=e392]: Build an accessible landing page
+            - generic [ref=e393]: app · Active
+          - generic [aria-hidden] [ref=e394]: →
+        - button "Compare validation options for the prototype research · Active" [ref=e590] [cursor=pointer]:
+          - generic [ref=e396]:
+            - strong [ref=e397]: Compare validation options for the prototype
+            - generic [ref=e398]: research · Active
+          - generic [aria-hidden] [ref=e399]: →
+        - button "Watch for useful updates about local AI tools monitoring · Active" [ref=e691] [cursor=pointer]:
+          - generic [ref=e401]:
+            - strong [ref=e402]: Watch for useful updates about local AI tools
+            - generic [ref=e403]: monitoring · Active
+          - generic [aria-hidden] [ref=e404]: →
+    - paragraph [ref=e405]: Demo · each conversation and mission belongs to Orbit.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

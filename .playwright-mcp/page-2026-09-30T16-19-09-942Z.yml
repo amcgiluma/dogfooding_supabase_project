@@ -1,0 +1,59 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e64]:
+      - button "Companions" [ref=e65] [cursor=pointer]
+  - main [ref=e314]:
+    - generic [ref=e315]:
+      - generic [ref=e316]:
+        - paragraph [ref=e317]: Your companions
+        - heading "Good to see you, Juanma Demo." [level=1] [ref=e318]
+        - paragraph [ref=e319]: Each companion keeps their own conversations and missions.
+      - button "Create companion +" [ref=e320] [cursor=pointer]
+    - region "Companions" [ref=e321]:
+      - article [ref=e322]:
+        - button "Open Orbit" [ref=e323] [cursor=pointer]
+        - generic [ref=e324]:
+          - heading "Orbit" [level=2] [ref=e325]
+          - generic [ref=e326]:
+            - button "Rename" [ref=e327] [cursor=pointer]
+            - button "Choose appearance" [ref=e328] [cursor=pointer]
+          - button "Open Orbit →" [ref=e329] [cursor=pointer]
+          - generic [ref=e330]:
+            - heading "Missions" [level=3] [ref=e331]
+            - list [ref=e332]:
+              - listitem [ref=e333]:
+                - generic [ref=e334]:
+                  - text: Build a calm landing page for my idea
+                  - generic [ref=e335]: Active
+                - button "Open →" [ref=e336] [cursor=pointer]
+              - listitem [ref=e337]:
+                - generic [ref=e338]:
+                  - text: Compare three ways to validate this product idea
+                  - generic [ref=e339]: Waiting for permission
+                - button "Open →" [ref=e340] [cursor=pointer]
+              - listitem [ref=e341]:
+                - generic [ref=e342]:
+                  - text: Watch for useful updates about local AI tools
+                  - generic [ref=e343]: Paused · Ready for review
+                - button "Open →" [ref=e344] [cursor=pointer]
+      - article [ref=e345]:
+        - button "Open Second" [ref=e346] [cursor=pointer]
+        - generic [ref=e347]:
+          - heading "Second" [level=2] [ref=e348]
+          - generic [ref=e349]:
+            - button "Rename" [ref=e350] [cursor=pointer]
+            - button "Choose appearance" [ref=e351] [cursor=pointer]
+          - button "Open Second →" [ref=e352] [cursor=pointer]
+          - generic [ref=e353]:
+            - heading "Missions" [level=3] [ref=e354]
+            - list [ref=e355]:
+              - listitem [ref=e356]:
+                - generic [ref=e357]:
+                  - text: Draft custom observability plan
+                  - generic [ref=e358]: Active
+                - button "Open →" [ref=e359] [cursor=pointer]
+    - paragraph [ref=e360]: Demo · conversations and missions stay with their companion.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

@@ -1,0 +1,6 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg); color: var(--fg); font: 16px/1.45 system-ui, sans-serif; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--bg); }
+button, input, textarea, select { font: inherit; }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+::selection { background: var(--forest); color: var(--fg); }

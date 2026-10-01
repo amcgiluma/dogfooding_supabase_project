@@ -1,0 +1,43 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - button "Go to companions" [ref=f1e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f1e6]:
+      - button "Companions" [ref=f1e7] [cursor=pointer]
+      - generic [ref=f1e230]: Retry Probe
+  - status [ref=f1e231]:
+    - paragraph [ref=f1e232]:
+      - strong [ref=f1e233]: Changes are not being saved.
+      - text: Could not save in browser storage. Your latest changes are still available in memory. Keep this tab open or retry browser storage.
+    - button "Retry saving" [ref=f1e234] [cursor=pointer]
+  - main [ref=f1e235]:
+    - generic [ref=f1e236]:
+      - generic [ref=f1e238]:
+        - paragraph [ref=f1e239]: Retry Probe / Workspace
+        - heading "Retry Probe" [level=1] [ref=f1e240]
+      - generic [ref=f1e241]:
+        - button "All companions" [ref=f1e242] [cursor=pointer]
+        - button "Create mission +" [ref=f1e243] [cursor=pointer]
+    - generic [ref=f1e244]:
+      - region [ref=f1e245]:
+        - heading "General conversation" [level=2] [ref=f1e246]
+        - region "General conversation" [ref=f1e247]:
+          - paragraph [ref=f1e249]: Start a conversation with your companion.
+          - generic [ref=f1e250]:
+            - generic [ref=f1e251]: Message your companion
+            - textbox "Message your companion" [ref=f1e252]:
+              - /placeholder: Keep this conversation with your companion
+            - generic [ref=f1e253]:
+              - generic [ref=f1e254]: Demo
+              - button "Send" [disabled] [ref=f1e255]
+      - complementary [ref=f1e256]:
+        - heading "Your missions" [level=2] [ref=f1e257]
+        - button "General conversation Selected" [ref=f1e258] [cursor=pointer]:
+          - generic [ref=f1e259]:
+            - strong [ref=f1e260]: General conversation
+            - generic [ref=f1e261]: Selected
+          - generic [aria-hidden] [ref=f1e262]: →
+        - paragraph [ref=f1e263]: No missions yet. Create one when you are ready.
+    - paragraph [ref=f1e264]: Demo · each conversation and mission belongs to Retry Probe.
+  - contentinfo [ref=f1e56]:
+    - generic [ref=f1e57]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f1e58] [cursor=pointer]

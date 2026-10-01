@@ -1,0 +1,12 @@
+# Template: it is not loaded until copied to .codex/agents/<name>.toml.
+name = "agent_name"
+description = "Specific responsibility and when to invoke this agent."
+model = "gpt-6-luna"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Perform only the responsibility described for this agent.
+Read the goal, constraints, and acceptance criteria for the assigned task.
+Return concrete results and evidence from the checks performed.
+If a necessary decision is missing, inform the primary agent before expanding the scope.
+"""

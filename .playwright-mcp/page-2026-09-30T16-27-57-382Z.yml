@@ -1,0 +1,43 @@
+- generic [ref=f2e3]:
+  - banner [ref=f2e4]:
+    - button "Go to companions" [ref=f2e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f2e78]:
+      - button "Companions" [ref=f2e79] [cursor=pointer]
+  - main [ref=f2e80]:
+    - generic [ref=f2e81]:
+      - generic [ref=f2e82]:
+        - paragraph [ref=f2e83]: Your companions
+        - heading "Good to see you, Reset Check." [level=1] [ref=f2e84]
+        - paragraph [ref=f2e85]: Each companion keeps their own conversations and missions.
+      - button "Create companion +" [ref=f2e86] [cursor=pointer]
+    - region "Companions" [ref=f2e87]:
+      - article [ref=f2e88]:
+        - button "Open Reset Orbit" [ref=f2e89] [cursor=pointer]
+        - generic [ref=f2e90]:
+          - heading "Reset Orbit" [level=2] [ref=f2e91]
+          - generic [ref=f2e92]:
+            - button "Rename" [ref=f2e93] [cursor=pointer]
+            - button "Choose appearance" [ref=f2e94] [cursor=pointer]
+          - button "Open Reset Orbit →" [ref=f2e95] [cursor=pointer]
+          - generic [ref=f2e96]:
+            - heading "Missions" [level=3] [ref=f2e97]
+            - list [ref=f2e98]:
+              - listitem [ref=f2e99]:
+                - generic [ref=f2e100]:
+                  - text: Build a calm landing page for my idea
+                  - generic [ref=f2e101]: Active
+                - button "Open →" [ref=f2e102] [cursor=pointer]
+              - listitem [ref=f2e103]:
+                - generic [ref=f2e104]:
+                  - text: Compare three ways to validate this product idea
+                  - generic [ref=f2e105]: Waiting for permission
+                - button "Open →" [ref=f2e106] [cursor=pointer]
+              - listitem [ref=f2e107]:
+                - generic [ref=f2e108]:
+                  - text: Watch for useful updates about local AI tools
+                  - generic [ref=f2e109]: Paused · Ready for review
+                - button "Open →" [ref=f2e110] [cursor=pointer]
+    - paragraph [ref=f2e111]: Demo · conversations and missions stay with their companion.
+  - contentinfo [ref=f2e11]:
+    - generic [ref=f2e12]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f2e13] [cursor=pointer]

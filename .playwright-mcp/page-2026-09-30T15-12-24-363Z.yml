@@ -1,0 +1,44 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - strong [ref=e3]: Static preview
+    - generic [ref=e4]: Visual concept · no saved data or live agent work
+  - main [ref=e5]:
+    - generic [ref=e6]:
+      - link "Preview home" [ref=e7] [cursor=pointer]:
+        - /url: option-a.html
+        - text: morrow.
+      - navigation "Preview screens" [ref=e8]:
+        - button "01 Onboarding" [ref=e9] [cursor=pointer]
+        - button "02 Home" [ref=e10] [cursor=pointer]
+        - button "03 Workspace" [ref=e11] [cursor=pointer]
+        - button "04 Mission" [ref=e12] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - paragraph [ref=e16]: Option A · Companion first
+          - heading "Let’s make a little room for good work." [level=1] [ref=e17]
+          - paragraph [ref=e18]: Meet your companion. Tell them what you want to move forward, then shape their name and look together.
+          - generic [ref=e19]:
+            - generic [ref=e20]:
+              - text: Your name
+              - textbox "Your name" [ref=e21]:
+                - /placeholder: What should I call you?
+            - generic [ref=e22]:
+              - text: What would you like help with?
+              - textbox "What would you like help with?" [ref=e23]:
+                - /placeholder: I want to turn an idea into a useful first version…
+            - paragraph [ref=e24]: "Try: build an app · research an idea · watch for changes · something else"
+            - paragraph [ref=e25]: For app projects, Vercel and Supabase connections can come later, when a mission needs them.
+            - button "Meet your companion →" [ref=e26] [cursor=pointer]
+        - img "Cute black skull companion concept" [ref=e28]
+      - generic [ref=e29]:
+        - heading "Make them yours" [level=3] [ref=e30]
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - text: Companion name
+            - textbox "Companion name" [ref=e33]: Morrow
+          - generic [ref=e34]: Skull · current look
+          - generic [ref=e36]: Wolf · yellow frames, green lenses
+    - generic [ref=e38]:
+      - generic [ref=e39]: morrow. · companion-led concept
+      - generic [ref=e40]: Static preview · controls only change the visible mock screen

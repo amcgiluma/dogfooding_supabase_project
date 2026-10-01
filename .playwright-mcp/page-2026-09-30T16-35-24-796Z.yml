@@ -1,0 +1,103 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e62]:
+      - button "Companions" [ref=e63] [cursor=pointer]
+      - generic [ref=e96]: Morrow
+  - main [ref=e97]:
+    - generic [ref=e98]:
+      - generic [ref=e100]:
+        - paragraph [ref=e101]: Morrow / Workspace
+        - heading "Morrow" [level=1] [ref=e102]
+      - generic [ref=e103]:
+        - button "All companions" [ref=e104] [cursor=pointer]
+        - button "Create mission +" [ref=e239] [cursor=pointer]
+    - generic [ref=e106]:
+      - region [ref=e141]:
+        - heading "Mission" [level=2] [ref=e142]
+        - article [ref=e367]:
+          - generic [ref=e368]:
+            - generic [ref=e369]:
+              - paragraph [ref=e370]: monitoring mission
+              - heading "Watch for useful updates about local AI tools" [level=2] [ref=e371]
+              - generic [ref=e372]:
+                - generic [ref=e373]: Paused · Ready for review
+                - generic [ref=e374]: Demo · steps happen only when you advance them
+            - generic [ref=e375]:
+              - button "Request corrections" [ref=e378] [cursor=pointer]
+              - generic [ref=e419]:
+                - generic [ref=e420]: Edit mission goal
+                - textbox "Edit mission goal" [active] [ref=e421]: Watch for useful updates about local AI tools
+                - generic [ref=e422]:
+                  - button "Save goal" [ref=e423] [cursor=pointer]
+                  - button "Cancel" [ref=e424] [cursor=pointer]
+          - generic [ref=e379]:
+            - generic [ref=e380]:
+              - region [ref=e381]:
+                - heading "Mission conversation" [level=3] [ref=e382]
+                - region "Mission conversation" [ref=e383]:
+                  - paragraph [ref=e385]: Start a conversation about this mission.
+                  - generic [ref=e386]:
+                    - generic [ref=e387]: Reply about this mission
+                    - textbox "Reply about this mission" [ref=e388]:
+                      - /placeholder: Your message stays with this mission
+                    - generic [ref=e389]:
+                      - generic [ref=e390]: Demo
+                      - button "Send" [disabled] [ref=e391]
+              - region [ref=e392]:
+                - heading "Progress 100% · demo estimate" [level=3] [ref=e393]:
+                  - text: Progress
+                  - generic [ref=e394]: 100% · demo estimate
+                - progressbar "Demo progress" [ref=e395]
+                - group [ref=e397]:
+                  - generic "Stages and subtasks" [ref=e398] [cursor=pointer]
+              - region [ref=e399]:
+                - heading "History" [level=3] [ref=e400]
+                - list [ref=e401]:
+                  - listitem [ref=e402]:
+                    - time [ref=e403]: Sep 30, 2026, 6:29 PM
+                    - paragraph [ref=e404]: Ready for your review.
+            - complementary "Mission status and deliverables" [ref=e405]:
+              - region [ref=e406]:
+                - heading "Mission controls" [level=3] [ref=e407]
+                - paragraph [ref=e408]: This mission is paused while you review the deliverable.
+                - button "Confirm complete" [ref=e410] [cursor=pointer]
+                - paragraph [ref=e411]: Request corrections from the goal controls above.
+              - region [ref=e412]:
+                - heading "Deliverables" [level=3] [ref=e413]
+                - article [ref=e414]:
+                  - paragraph [ref=e415]: update · ready for review
+                  - heading "Weekly update" [level=4] [ref=e416]
+                  - time [ref=e417]: Sep 30, 2026, 6:29 PM
+                  - paragraph [ref=e418]: "Fictional sample digest 1. Local inference: A hypothetical tool adds a smaller model option, which may reduce memory use for local testing. 2. Developer workflow: A hypothetical desktop runner improves prompt comparison, which could make experiments easier to repeat. 3. Data handling: A hypothetical release clarifies offline mode, worth checking before using sensitive files. Suggested next step: choose one signal and compare its setup effort and memory needs against your current workflow. This digest is entirely fictional. No actual sources were checked, and nothing is being watched or scheduled."
+      - complementary [ref=e118]:
+        - heading "Your missions" [level=2] [ref=e119]
+        - button "General conversation Companion chat" [ref=e190] [cursor=pointer]:
+          - generic [ref=e121]:
+            - strong [ref=e122]: General conversation
+            - generic [ref=e123]: Companion chat
+          - generic [aria-hidden] [ref=e124]: →
+        - button "Build a calm landing page for my idea app · Active" [ref=e125] [cursor=pointer]:
+          - generic [ref=e126]:
+            - strong [ref=e127]: Build a calm landing page for my idea
+            - generic [ref=e128]: app · Active
+          - generic [aria-hidden] [ref=e129]: →
+        - button "Compare three ways to validate this product idea research · Waiting for permission" [ref=e130] [cursor=pointer]:
+          - generic [ref=e131]:
+            - strong [ref=e132]: Compare three ways to validate this product idea
+            - generic [ref=e133]: research · Waiting for permission
+          - generic [aria-hidden] [ref=e134]: →
+        - button "Watch for useful updates about local AI tools monitoring · Paused · Ready for review" [ref=e135] [cursor=pointer]:
+          - generic [ref=e136]:
+            - strong [ref=e137]: Watch for useful updates about local AI tools
+            - generic [ref=e138]: monitoring · Paused · Ready for review
+          - generic [aria-hidden] [ref=e139]: →
+        - button "Build a meal planning app that turns a full seven day menu into one grocery list, tracks ingredient swaps, flags dietary restrictions, and suggests recipes that use food already at app · Active" [ref=e287] [cursor=pointer]:
+          - generic [ref=e288]:
+            - strong [ref=e289]: Build a meal planning app that turns a full seven day menu into one grocery list, tracks ingredient swaps, flags dietary restrictions, and suggests recipes that use food already at
+            - generic [ref=e290]: app · Active
+          - generic [aria-hidden] [ref=e291]: →
+    - paragraph [ref=e140]: Demo · each conversation and mission belongs to Morrow.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

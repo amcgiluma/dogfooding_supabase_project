@@ -1,0 +1,52 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - button "Go to companions" [ref=f1e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f1e62]:
+      - button "Companions" [ref=f1e63] [cursor=pointer]
+      - generic [ref=f1e96]: Morrow
+  - main [ref=f1e97]:
+    - generic [ref=f1e98]:
+      - generic [ref=f1e100]:
+        - paragraph [ref=f1e101]: Morrow / Workspace
+        - heading "Morrow" [level=1] [ref=f1e102]
+      - generic [ref=f1e103]:
+        - button "All companions" [ref=f1e104] [cursor=pointer]
+        - button "Create mission +" [ref=f1e105] [cursor=pointer]
+    - generic [ref=f1e106]:
+      - region [ref=f1e107]:
+        - heading "General conversation" [level=2] [ref=f1e108]
+        - region "General conversation" [ref=f1e109]:
+          - paragraph [ref=f1e111]: Start a conversation with your companion.
+          - generic [ref=f1e112]:
+            - generic [ref=f1e113]: Message your companion
+            - textbox "Message your companion" [ref=f1e114]:
+              - /placeholder: Keep this conversation with your companion
+            - generic [ref=f1e115]:
+              - generic [ref=f1e116]: Demo
+              - button "Send" [disabled] [ref=f1e117]
+      - complementary [ref=f1e118]:
+        - heading "Your missions" [level=2] [ref=f1e119]
+        - button "General conversation Selected" [ref=f1e120] [cursor=pointer]:
+          - generic [ref=f1e121]:
+            - strong [ref=f1e122]: General conversation
+            - generic [ref=f1e123]: Selected
+          - generic [aria-hidden] [ref=f1e124]: →
+        - button "Build a calm landing page for my idea app · Active" [ref=f1e125] [cursor=pointer]:
+          - generic [ref=f1e126]:
+            - strong [ref=f1e127]: Build a calm landing page for my idea
+            - generic [ref=f1e128]: app · Active
+          - generic [aria-hidden] [ref=f1e129]: →
+        - button "Compare three ways to validate this product idea research · Waiting for permission" [ref=f1e130] [cursor=pointer]:
+          - generic [ref=f1e131]:
+            - strong [ref=f1e132]: Compare three ways to validate this product idea
+            - generic [ref=f1e133]: research · Waiting for permission
+          - generic [aria-hidden] [ref=f1e134]: →
+        - button "Watch for useful updates about local AI tools monitoring · Paused · Ready for review" [ref=f1e135] [cursor=pointer]:
+          - generic [ref=f1e136]:
+            - strong [ref=f1e137]: Watch for useful updates about local AI tools
+            - generic [ref=f1e138]: monitoring · Paused · Ready for review
+          - generic [aria-hidden] [ref=f1e139]: →
+    - paragraph [ref=f1e140]: Demo · each conversation and mission belongs to Morrow.
+  - contentinfo [ref=f1e24]:
+    - generic [ref=f1e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f1e26] [cursor=pointer]

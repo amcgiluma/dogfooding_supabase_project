@@ -1,0 +1,43 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e62]:
+      - button "Companions" [ref=e63] [cursor=pointer]
+  - main [ref=e64]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - paragraph [ref=e67]: Your companions
+        - heading "Good to see you, Casey." [level=1] [ref=e68]
+        - paragraph [ref=e69]: Each companion keeps their own conversations and missions.
+      - button "Create companion +" [ref=e70] [cursor=pointer]
+    - region "Companions" [ref=e71]:
+      - article [ref=e72]:
+        - button "Open Morrow" [ref=e73] [cursor=pointer]
+        - generic [ref=e74]:
+          - heading "Morrow" [level=2] [ref=e75]
+          - generic [ref=e76]:
+            - button "Rename" [ref=e77] [cursor=pointer]
+            - button "Choose appearance" [ref=e78] [cursor=pointer]
+          - button "Open Morrow →" [ref=e79] [cursor=pointer]
+          - generic [ref=e80]:
+            - heading "Missions" [level=3] [ref=e81]
+            - list [ref=e82]:
+              - listitem [ref=e83]:
+                - generic [ref=e84]:
+                  - text: Build a calm landing page for my idea
+                  - generic [ref=e85]: Active
+                - button "Open →" [ref=e86] [cursor=pointer]
+              - listitem [ref=e87]:
+                - generic [ref=e88]:
+                  - text: Compare three ways to validate this product idea
+                  - generic [ref=e89]: Waiting for permission
+                - button "Open →" [ref=e90] [cursor=pointer]
+              - listitem [ref=e91]:
+                - generic [ref=e92]:
+                  - text: Watch for useful updates about local AI tools
+                  - generic [ref=e93]: Paused · Ready for review
+                - button "Open →" [ref=e94] [cursor=pointer]
+    - paragraph [ref=e95]: Demo · conversations and missions stay with their companion.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

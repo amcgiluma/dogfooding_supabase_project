@@ -1,0 +1,73 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - button "Go to companions" [ref=f1e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f1e6]:
+      - button "Companions" [ref=f1e7] [cursor=pointer]
+  - main [ref=f1e169]:
+    - generic [ref=f1e170]:
+      - generic [ref=f1e171]:
+        - paragraph [ref=f1e172]: Your companions
+        - heading "Good to see you, Juanma Demo." [level=1] [ref=f1e173]
+        - paragraph [ref=f1e174]: Each companion keeps their own conversations and missions.
+      - button "Cancel" [expanded] [ref=f1e216] [cursor=pointer]
+    - generic [ref=f1e217]:
+      - generic [ref=f1e218]:
+        - text: Name your companion
+        - textbox "Name your companion" [active] [ref=f1e219]:
+          - /placeholder: A new companion
+      - group "Choose an appearance" [ref=f1e220]:
+        - generic [ref=f1e222] [cursor=pointer]:
+          - radio "Skull" [checked] [ref=f1e223]
+          - generic [ref=f1e224]: Skull
+        - generic [ref=f1e225] [cursor=pointer]:
+          - radio "Wolf" [ref=f1e226]
+          - generic [ref=f1e227]: Wolf
+      - paragraph [ref=f1e228]: A new companion starts with an empty workspace.
+      - button "Create and open" [ref=f1e229] [cursor=pointer]
+    - region "Companions" [ref=f1e176]:
+      - article [ref=f1e177]:
+        - button "Open Orbit" [ref=f1e178] [cursor=pointer]
+        - generic [ref=f1e179]:
+          - heading "Orbit" [level=2] [ref=f1e180]
+          - generic [ref=f1e181]:
+            - button "Rename" [ref=f1e182] [cursor=pointer]
+            - button "Choose appearance" [ref=f1e183] [cursor=pointer]
+          - button "Open Orbit →" [ref=f1e184] [cursor=pointer]
+          - generic [ref=f1e185]:
+            - heading "Missions" [level=3] [ref=f1e186]
+            - list [ref=f1e187]:
+              - listitem [ref=f1e188]:
+                - generic [ref=f1e189]:
+                  - text: Build an accessible landing page
+                  - generic [ref=f1e190]: Active
+                - button "Open →" [ref=f1e191] [cursor=pointer]
+              - listitem [ref=f1e192]:
+                - generic [ref=f1e193]:
+                  - text: Compare validation options for the prototype
+                  - generic [ref=f1e194]: Active
+                - button "Open →" [ref=f1e195] [cursor=pointer]
+              - listitem [ref=f1e196]:
+                - generic [ref=f1e197]:
+                  - text: Watch for useful local AI updates and compare setup effort
+                  - generic [ref=f1e198]: Complete
+                - button "Open →" [ref=f1e199] [cursor=pointer]
+      - article [ref=f1e200]:
+        - button "Open Second" [ref=f1e201] [cursor=pointer]
+        - generic [ref=f1e202]:
+          - heading "Second" [level=2] [ref=f1e203]
+          - generic [ref=f1e204]:
+            - button "Rename" [ref=f1e205] [cursor=pointer]
+            - button "Choose appearance" [ref=f1e206] [cursor=pointer]
+          - button "Open Second →" [ref=f1e207] [cursor=pointer]
+          - generic [ref=f1e208]:
+            - heading "Missions" [level=3] [ref=f1e209]
+            - list [ref=f1e210]:
+              - listitem [ref=f1e211]:
+                - generic [ref=f1e212]:
+                  - text: Draft custom observability plan
+                  - generic [ref=f1e213]: Active
+                - button "Open →" [ref=f1e214] [cursor=pointer]
+    - paragraph [ref=f1e215]: Demo · conversations and missions stay with their companion.
+  - contentinfo [ref=f1e56]:
+    - generic [ref=f1e57]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f1e58] [cursor=pointer]

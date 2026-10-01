@@ -1,0 +1,103 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - button "Go to companions" [ref=f1e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f1e6]:
+      - button "Companions" [ref=f1e7] [cursor=pointer]
+      - generic [ref=f1e59]: Orbit
+  - main [ref=f1e60]:
+    - generic [ref=f1e61]:
+      - generic [ref=f1e63]:
+        - paragraph [ref=f1e64]: Orbit / Workspace
+        - heading "Orbit" [level=1] [ref=f1e65]
+      - generic [ref=f1e66]:
+        - button "All companions" [ref=f1e67] [cursor=pointer]
+        - button "Create mission +" [ref=f1e68] [cursor=pointer]
+    - generic [ref=f1e69]:
+      - region [ref=f1e107]:
+        - heading "Mission" [level=2] [ref=f1e108]
+        - article [ref=f1e109]:
+          - generic [ref=f1e110]:
+            - generic [ref=f1e111]:
+              - paragraph [ref=f1e112]: app mission
+              - heading "Build an accessible landing page" [level=2] [ref=f1e113]
+              - generic [ref=f1e114]:
+                - generic [ref=f1e115]: Active · working
+                - generic [ref=f1e116]: Demo · steps happen only when you advance them
+            - button "Edit goal" [ref=f1e119] [cursor=pointer]
+          - generic [ref=f1e120]:
+            - generic [ref=f1e121]:
+              - region [ref=f1e122]:
+                - heading "Mission conversation" [level=3] [ref=f1e123]
+                - region "Mission conversation" [ref=f1e124]:
+                  - generic [ref=f1e125]:
+                    - article [ref=f1e126]:
+                      - text: You
+                      - paragraph [ref=f1e127]: MARKER_ORBIT_MISSION_2026
+                    - article [ref=f1e128]:
+                      - text: Companion
+                      - paragraph [ref=f1e129]: I’ve noted that for this mission. This is a local demo, so no work runs in the background.
+                  - generic [ref=f1e130]:
+                    - generic [ref=f1e131]: Reply about this mission
+                    - textbox "Reply about this mission" [ref=f1e132]:
+                      - /placeholder: Your message stays with this mission
+                    - generic [ref=f1e133]:
+                      - generic [ref=f1e134]: Demo
+                      - button "Send" [disabled] [ref=f1e135]
+              - region [ref=f1e136]:
+                - heading "Progress 18% · demo estimate" [level=3] [ref=f1e137]:
+                  - text: Progress
+                  - generic [ref=f1e138]: 18% · demo estimate
+                - progressbar "Demo progress" [ref=f1e139]
+                - group [ref=f1e141]:
+                  - generic "Stages and subtasks" [ref=f1e142] [cursor=pointer]
+              - region [ref=f1e143]:
+                - heading "History" [level=3] [ref=f1e144]
+                - list [ref=f1e145]:
+                  - listitem [ref=f1e146]:
+                    - time [ref=f1e147]: Sep 30, 2026, 6:17 PM
+                    - paragraph [ref=f1e148]: Started the first pass.
+                  - listitem [ref=f1e149]:
+                    - time [ref=f1e150]: Sep 30, 2026, 6:20 PM
+                    - paragraph [ref=f1e151]: Mission paused.
+                  - listitem [ref=f1e152]:
+                    - time [ref=f1e153]: Sep 30, 2026, 6:20 PM
+                    - paragraph [ref=f1e154]: Mission resumed.
+                  - listitem [ref=f1e155]:
+                    - time [ref=f1e156]: Sep 30, 2026, 6:20 PM
+                    - paragraph [ref=f1e157]: Goal changed from “Build a calm landing page for my idea” to “Build an accessible landing page”.
+            - complementary "Mission status and deliverables" [ref=f1e158]:
+              - region [ref=f1e159]:
+                - heading "Mission controls" [level=3] [ref=f1e160]
+                - paragraph [ref=f1e161]: This mission can advance one simulated step when you choose.
+                - generic [ref=f1e162]:
+                  - button "Pause mission" [ref=f1e163] [cursor=pointer]
+                  - button "Advance demo one step" [ref=f1e164] [cursor=pointer]
+              - region [ref=f1e165]:
+                - heading "Deliverables" [level=3] [ref=f1e166]
+                - paragraph [ref=f1e167]: No deliverables yet. Advance the demo to create a sample output.
+      - complementary [ref=f1e84]:
+        - heading "Your missions" [level=2] [ref=f1e85]
+        - button "General conversation Companion chat" [ref=f1e168] [cursor=pointer]:
+          - generic [ref=f1e87]:
+            - strong [ref=f1e88]: General conversation
+            - generic [ref=f1e89]: Companion chat
+          - generic [aria-hidden] [ref=f1e90]: →
+        - button "Build an accessible landing page app · Active" [active] [ref=f1e91] [cursor=pointer]:
+          - generic [ref=f1e92]:
+            - strong [ref=f1e93]: Build an accessible landing page
+            - generic [ref=f1e94]: app · Active
+          - generic [aria-hidden] [ref=f1e95]: →
+        - button "Compare validation options for the prototype research · Active" [ref=f1e96] [cursor=pointer]:
+          - generic [ref=f1e97]:
+            - strong [ref=f1e98]: Compare validation options for the prototype
+            - generic [ref=f1e99]: research · Active
+          - generic [aria-hidden] [ref=f1e100]: →
+        - button "Watch for useful local AI updates and compare setup effort monitoring · Completed" [ref=f1e101] [cursor=pointer]:
+          - generic [ref=f1e102]:
+            - strong [ref=f1e103]: Watch for useful local AI updates and compare setup effort
+            - generic [ref=f1e104]: monitoring · Completed
+          - generic [aria-hidden] [ref=f1e105]: →
+    - paragraph [ref=f1e106]: Demo · each conversation and mission belongs to Orbit.
+  - contentinfo [ref=f1e56]:
+    - generic [ref=f1e57]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f1e58] [cursor=pointer]

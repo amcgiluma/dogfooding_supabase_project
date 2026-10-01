@@ -1,0 +1,110 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=e62]:
+      - button "Companions" [ref=e63] [cursor=pointer]
+      - generic [ref=e96]: Morrow
+  - main [ref=e97]:
+    - generic [ref=e98]:
+      - generic [ref=e100]:
+        - paragraph [ref=e101]: Morrow / Workspace
+        - heading "Morrow" [level=1] [ref=e102]
+      - generic [ref=e103]:
+        - button "All companions" [ref=e104] [cursor=pointer]
+        - button "Create mission +" [ref=e239] [cursor=pointer]
+    - generic [ref=e106]:
+      - region [ref=e141]:
+        - heading "Mission" [level=2] [ref=e142]
+        - article [ref=e240]:
+          - generic [ref=e241]:
+            - generic [ref=e242]:
+              - paragraph [ref=e243]: app mission
+              - heading "Build a meal planning app that turns a full seven day menu into one grocery list, tracks ingredient swaps, flags dietary restrictions, and suggests recipes that use food already at" [level=2] [ref=e244]
+              - generic [ref=e245]:
+                - generic [ref=e246]: Active · working
+                - generic [ref=e247]: Target date · Oct 7, 2026
+                - generic [ref=e248]: Demo · steps happen only when you advance them
+            - button "Edit goal" [ref=e251] [cursor=pointer]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - region [ref=e254]:
+                - heading "Mission conversation" [level=3] [ref=e255]
+                - region "Mission conversation" [ref=e256]:
+                  - generic [ref=e257]:
+                    - article [ref=e292]:
+                      - text: You
+                      - paragraph [ref=e293]: Please include ingredient substitutions, flag dietary restrictions, and explain which recipes reuse food already at home so the grocery list avoids duplicates.
+                    - article [ref=e294]:
+                      - text: Companion
+                      - paragraph [ref=e295]: I’ve noted that for this mission. This is a local demo, so no work runs in the background.
+                  - generic [ref=e259]:
+                    - generic [ref=e260]: Reply about this mission
+                    - textbox "Reply about this mission" [ref=e261]:
+                      - /placeholder: Your message stays with this mission
+                    - generic [ref=e262]:
+                      - generic [ref=e263]: Demo
+                      - button "Send" [disabled] [ref=e264]
+              - region [ref=e296]:
+                - heading "Progress 32% · demo estimate" [level=3] [ref=e297]:
+                  - text: Progress
+                  - generic [ref=e267]: 32% · demo estimate
+                - progressbar "Demo progress" [ref=e268]
+                - group [ref=e269]:
+                  - generic "Stages and subtasks" [ref=e270] [cursor=pointer]
+              - region [ref=e271]:
+                - heading "History" [level=3] [ref=e272]
+                - list [ref=e273]:
+                  - listitem [ref=e274]:
+                    - time [ref=e275]: Sep 30, 2026, 6:32 PM
+                    - paragraph [ref=e276]: Mission created.
+                  - listitem [ref=e299]:
+                    - time [ref=e300]: Sep 30, 2026, 6:33 PM
+                    - paragraph [ref=e301]: The first screen and its main path are outlined.
+                  - listitem [ref=e302]:
+                    - time [ref=e303]: Sep 30, 2026, 6:33 PM
+                    - paragraph [ref=e304]: "Partial deliverable added: First screen proposal."
+            - complementary "Mission status and deliverables" [ref=e277]:
+              - region [ref=e278]:
+                - heading "Mission controls" [level=3] [ref=e279]
+                - paragraph [ref=e280]: This mission can advance one simulated step when you choose.
+                - generic [ref=e281]:
+                  - button "Pause mission" [ref=e282] [cursor=pointer]
+                  - button "Advance to permission" [active] [ref=e305] [cursor=pointer]
+              - region [ref=e284]:
+                - heading "Deliverables" [level=3] [ref=e285]
+                - article [ref=e306]:
+                  - paragraph [ref=e307]: app · earlier output
+                  - heading "First screen proposal" [level=4] [ref=e308]
+                  - time [ref=e309]: Sep 30, 2026, 6:33 PM
+                  - paragraph [ref=e310]: A focused first version with a welcome view, a place to collect notes, and one clear next step. Suggested first pass 1. Welcome and explain the workspace 2. Add a note with a short title 3. Show the next action beside each note This is a text proposal for the local demo, not a built or deployed application.
+      - complementary [ref=e118]:
+        - heading "Your missions" [level=2] [ref=e119]
+        - button "General conversation Companion chat" [ref=e190] [cursor=pointer]:
+          - generic [ref=e121]:
+            - strong [ref=e122]: General conversation
+            - generic [ref=e123]: Companion chat
+          - generic [aria-hidden] [ref=e124]: →
+        - button "Build a calm landing page for my idea app · Active" [ref=e125] [cursor=pointer]:
+          - generic [ref=e126]:
+            - strong [ref=e127]: Build a calm landing page for my idea
+            - generic [ref=e128]: app · Active
+          - generic [aria-hidden] [ref=e129]: →
+        - button "Compare three ways to validate this product idea research · Waiting for permission" [ref=e130] [cursor=pointer]:
+          - generic [ref=e131]:
+            - strong [ref=e132]: Compare three ways to validate this product idea
+            - generic [ref=e133]: research · Waiting for permission
+          - generic [aria-hidden] [ref=e134]: →
+        - button "Watch for useful updates about local AI tools monitoring · Paused · Ready for review" [ref=e135] [cursor=pointer]:
+          - generic [ref=e136]:
+            - strong [ref=e137]: Watch for useful updates about local AI tools
+            - generic [ref=e138]: monitoring · Paused · Ready for review
+          - generic [aria-hidden] [ref=e139]: →
+        - button "Build a meal planning app that turns a full seven day menu into one grocery list, tracks ingredient swaps, flags dietary restrictions, and suggests recipes that use food already at app · Active" [ref=e287] [cursor=pointer]:
+          - generic [ref=e288]:
+            - strong [ref=e289]: Build a meal planning app that turns a full seven day menu into one grocery list, tracks ingredient swaps, flags dietary restrictions, and suggests recipes that use food already at
+            - generic [ref=e290]: app · Active
+          - generic [aria-hidden] [ref=e291]: →
+    - paragraph [ref=e140]: Demo · each conversation and mission belongs to Morrow.
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

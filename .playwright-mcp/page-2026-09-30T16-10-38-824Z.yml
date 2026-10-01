@@ -1,0 +1,43 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - button "Go to companions" [ref=f1e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation"
+  - main [ref=f1e7]:
+    - generic [ref=f1e8]:
+      - paragraph [ref=f1e9]: A good place to begin
+      - heading "Hi, I’m Morrow." [level=1] [ref=f1e10]
+      - paragraph [ref=f1e11]: I’m glad you’re here. Let’s find a useful next step together.
+      - generic [ref=f1e12]:
+        - paragraph [ref=f1e13]: Morrow
+        - paragraph [ref=f1e14]: One last thing. What should your companion look like?
+        - generic [ref=f1e27]:
+          - generic [ref=f1e28]: You
+          - paragraph [ref=f1e29]: Juanma
+        - generic [ref=f1e37]:
+          - generic [ref=f1e38]: You
+          - paragraph [ref=f1e39]: Build a compact project space
+        - generic [ref=f1e47]:
+          - generic [ref=f1e48]: You
+          - paragraph [ref=f1e49]: Build an app
+        - generic [ref=f1e15]:
+          - generic [ref=f1e50]:
+            - text: Companion name
+            - textbox "Companion name" [active] [ref=f1e51]: Morrow
+          - group "Choose an appearance" [ref=f1e52]:
+            - generic [ref=f1e54] [cursor=pointer]:
+              - radio "Skull" [checked] [ref=f1e55]
+              - generic [ref=f1e56]: Skull
+            - generic [ref=f1e57] [cursor=pointer]:
+              - radio "Wolf · yellow frames, green lenses" [ref=f1e58]
+              - generic [ref=f1e59]: Wolf · yellow frames, green lenses
+          - paragraph [ref=f1e60]: Your profile and companion are saved on this device. No account or app connection is needed.
+          - generic [ref=f1e18]:
+            - button "Back" [ref=f1e36] [cursor=pointer]
+            - button "Meet your companion" [ref=f1e61] [cursor=pointer]
+      - paragraph [ref=f1e20]: Step 4 of 4
+    - generic [ref=f1e21]:
+      - img "Morrow, skull appearance" [ref=f1e22]
+      - paragraph [ref=f1e23]: Morrow
+  - contentinfo [ref=f1e24]:
+    - generic [ref=f1e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f1e26] [cursor=pointer]

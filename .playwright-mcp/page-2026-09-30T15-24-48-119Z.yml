@@ -1,0 +1,53 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "morrow. / direcciones visuales" [ref=e4] [cursor=pointer]:
+      - /url: index.html
+    - generic [ref=e5]: Maquetas estáticas · recorrido local
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - paragraph [ref=e8]: Compañeros digitales · elegir antes de construir
+      - heading "Tres formas de trabajar con un compañero." [level=1] [ref=e9]
+      - paragraph [ref=e10]: "El flujo es el mismo en las tres maquetas: onboarding, inicio, espacio de trabajo y detalle de misión. Cambia dónde empieza la atención."
+    - generic [ref=e11]:
+      - strong [ref=e12]: Elige una dirección para continuar.
+      - text: Ahora solo hay plan y opciones visuales. No hay una aplicación en funcionamiento.
+    - region "Opciones de diseño" [ref=e13]:
+      - article [ref=e14]:
+        - generic [ref=e15]: A · Companion first
+        - heading "El compañero marca el tono." [level=2] [ref=e16]
+        - paragraph [ref=e17]: La identidad ocupa el centro del onboarding y del inicio. Las misiones se integran en el espacio de conversación.
+        - img "Concepto de compañero con aspecto de calavera negra" [ref=e18]
+        - link "Explorar esta maqueta →" [ref=e19] [cursor=pointer]:
+          - /url: option-a.html
+      - article [ref=e20]:
+        - generic [ref=e21]: B · Workspace first
+        - heading "El trabajo siempre está a mano." [level=2] [ref=e22]
+        - paragraph [ref=e23]: Una navegación lateral mantiene visibles compañero y misiones; la conversación y el área de trabajo ganan espacio.
+        - img "Concepto de lobo con gafas de montura amarilla y lentes verdes" [ref=e24]
+        - link "Explorar esta maqueta →" [ref=e25] [cursor=pointer]:
+          - /url: option-b.html
+      - article [ref=e26]:
+        - generic [ref=e27]: C · Mission first
+        - heading "El estado se entiende de un vistazo." [level=2] [ref=e28]
+        - paragraph [ref=e29]: Un espacio más denso pone objetivo, estado, avance y entrega en primer plano.
+        - img "Concepto visual de una mesa de investigación" [ref=e30]
+        - link "Explorar esta maqueta →" [ref=e31] [cursor=pointer]:
+          - /url: option-c.html
+    - region [ref=e32]:
+      - generic [ref=e33]:
+        - paragraph [ref=e34]: Plan corto
+        - heading "Primero elegir. Después construir." [level=2] [ref=e35]
+        - paragraph [ref=e36]: Todo lo que ves aquí es local y simulado para comparar estructura y tono.
+      - list [ref=e37]:
+        - listitem [ref=e38]:
+          - generic [ref=e39]: Ahora
+          - generic [ref=e40]: Revisar las tres direcciones y elegir una.
+        - listitem [ref=e41]:
+          - generic [ref=e42]: T02–T06
+          - generic [ref=e43]: "Construir por partes el prototipo elegido: base, onboarding, compañeros, misiones y acabado móvil."
+        - listitem [ref=e44]:
+          - generic [ref=e45]: V01–V03
+          - generic [ref=e46]: Comprobar estados, datos locales, recorrido de escritorio, móvil y teclado.
+  - contentinfo [ref=e47]:
+    - generic [ref=e48]: Maquetas locales · sin datos guardados, IA, agentes ni conexiones externas.
+    - generic [ref=e49]: Las imágenes originales del resumen se conservan.

@@ -1,0 +1,34 @@
+- generic [ref=f2e3]:
+  - banner [ref=f2e4]:
+    - button "Go to companions" [ref=f2e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation"
+  - main [ref=f2e26]:
+    - generic [ref=f2e27]:
+      - paragraph [ref=f2e28]: A good place to begin
+      - heading "Hi, I’m Morrow." [level=1] [ref=f2e29]
+      - paragraph [ref=f2e30]: I’m glad you’re here. Let’s find a useful next step together.
+      - generic [ref=f2e31]:
+        - paragraph [ref=f2e32]: Morrow
+        - paragraph [ref=f2e33]: Nice to meet you, Reset Check. What would you like to make progress on?
+        - generic [ref=f2e43]:
+          - generic [ref=f2e44]: You
+          - paragraph [ref=f2e45]: Reset Check
+        - generic [ref=f2e34]:
+          - generic [ref=f2e46]:
+            - text: Your goal
+            - textbox "Your goal" [active] [ref=f2e47]:
+              - /placeholder: What would you like help with?
+          - generic "Goal suggestions" [ref=f2e48]:
+            - button "Ship a first version of my app" [ref=f2e49] [cursor=pointer]
+            - button "Research an idea before I build it" [ref=f2e50] [cursor=pointer]
+            - button "Keep an eye on changes that matter" [ref=f2e51] [cursor=pointer]
+          - generic [ref=f2e37]:
+            - button "Back" [ref=f2e52] [cursor=pointer]
+            - button "Continue" [ref=f2e38] [cursor=pointer]: Continue →
+      - paragraph [ref=f2e39]: Step 2 of 4
+    - generic [ref=f2e40]:
+      - img "Morrow, skull appearance" [ref=f2e41]
+      - paragraph [ref=f2e42]: Morrow
+  - contentinfo [ref=f2e11]:
+    - generic [ref=f2e12]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f2e13] [cursor=pointer]

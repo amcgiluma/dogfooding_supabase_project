@@ -1,0 +1,12 @@
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --fg: #fff;
+  --muted: #b5b5b5;
+  --line: #30332d;
+  --green: #b8d4b0;
+  --forest: #214333;
+  --warm: #f2bd8e;
+  --ink: #11120f;
+  --max: 1240px;
+}

@@ -1,0 +1,55 @@
+.onboarding-page {
+  width: min(100% - 48px, 1180px);
+  min-height: min(760px, calc(100vh - 150px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.82fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 100px);
+  padding: 48px 0 64px;
+  color: #fff;
+}
+
+.onboarding-copy { max-width: 620px; }
+.onboarding-eyebrow { color: #b8d4b0; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.onboarding-page h1 { margin: 10px 0 14px; max-width: 700px; font-size: clamp(42px, 6vw, 68px); line-height: .98; letter-spacing: -.055em; }
+.onboarding-lede { max-width: 540px; color: #deded7; font-size: 18px; }
+.onboarding-conversation { max-width: 580px; margin-top: 32px; border-top: 1px solid #30332d; padding-top: 18px; }
+.onboarding-speaker { margin: 0 0 4px; color: #b8d4b0; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.onboarding-prompt { margin: 0 0 18px; font-size: clamp(20px, 2.6vw, 26px); line-height: 1.2; }
+.onboarding-reply { display: flex; gap: 12px; align-items: baseline; margin: -10px 0 12px 18px; color: #d3d4ca; font-size: 14px; }
+.onboarding-reply span { color: #f2bd8e; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.onboarding-reply p { margin: 0; }
+.onboarding-form { display: grid; gap: 14px; }
+.onboarding-field { display: grid; gap: 7px; color: #e8e8e1; font-size: 14px; }
+.onboarding-field input, .onboarding-field textarea { width: 100%; border: 1px solid #51544b; border-radius: 0; background: #080907; color: #fff; font: inherit; font-size: 16px; padding: 12px 13px; }
+.onboarding-field textarea { min-height: 84px; resize: vertical; }
+.onboarding-page button, .onboarding-page input, .onboarding-page textarea { font-family: inherit; }
+.onboarding-page button:focus-visible, .onboarding-page input:focus-visible, .onboarding-page textarea:focus-visible { outline: 2px solid #b8d4b0; outline-offset: 3px; }
+.onboarding-suggestions { display: flex; flex-wrap: wrap; gap: 8px 15px; }
+.onboarding-text-choice, .onboarding-choice { border: 0; border-bottom: 1px solid #55594f; background: transparent; color: #e6e7dd; padding: 8px 0; font-size: 14px; text-align: left; cursor: pointer; }
+.onboarding-text-choice:hover, .onboarding-choice:hover, .onboarding-choice[aria-pressed="true"] { color: #b8d4b0; border-color: #b8d4b0; }
+.onboarding-hint { margin: 0; color: #bfc1b8; font-size: 13px; }
+.onboarding-error { margin: 0; color: #ffd0a5; font-size: 14px; }
+.onboarding-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+.onboarding-button { border: 1px solid #b8d4b0; background: #214333; color: #fff; padding: 11px 15px; font-size: 15px; font-weight: 700; cursor: pointer; }
+.onboarding-button.secondary { border-color: #64685e; background: transparent; }
+.onboarding-button:disabled { cursor: wait; opacity: .7; }
+.onboarding-step { margin-top: 16px; color: #aeb0a7; font-size: 12px; }
+.onboarding-appearance { display: flex; flex-wrap: wrap; gap: 8px 18px; border: 0; border-top: 1px solid #30332d; margin: 0; padding: 10px 0 0; }
+.onboarding-appearance legend { padding: 0 8px 0 0; color: #e8e8e1; font-size: 14px; }
+.onboarding-appearance-choice { display: grid; grid-template-columns: 18px 48px auto; align-items: center; gap: 8px; min-height: 54px; border-bottom: 1px solid #30332d; padding: 5px 0; font-size: 14px; cursor: pointer; }
+.onboarding-appearance-choice input { accent-color: #b8d4b0; }
+.onboarding-appearance-choice img { width: 48px; height: 48px; object-fit: contain; }
+.onboarding-artwork { min-height: 360px; display: grid; place-items: center; align-content: center; }
+.onboarding-artwork img { display: block; width: min(100%, 390px); height: min(48vh, 390px); object-fit: contain; }
+.onboarding-artwork p { margin: 5px 0 0; border-top: 1px solid #30332d; width: min(100%, 390px); padding-top: 10px; font-size: 18px; font-weight: 700; }
+
+@media (max-width: 720px) {
+  .onboarding-page { width: min(100% - 36px, 560px); min-height: auto; grid-template-columns: 1fr; gap: 20px; padding: 28px 0 44px; }
+  .onboarding-artwork { grid-row: 1; min-height: auto; }
+  .onboarding-artwork img { height: min(35vh, 250px); }
+  .onboarding-page h1 { font-size: clamp(40px, 12vw, 56px); }
+  .onboarding-lede { font-size: 16px; }
+  .onboarding-conversation { margin-top: 25px; }
+}

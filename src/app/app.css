@@ -1,0 +1,45 @@
+.app-shell { width: min(100% - 60px, var(--max)); min-width: 0; min-height: 100vh; margin: 0 auto; display: flex; flex-direction: column; }
+.app-header { min-width: 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.app-brand { border: 0; padding: 0; background: transparent; color: var(--fg); font: inherit; font-size: 20px; font-weight: 750; letter-spacing: -.05em; cursor: pointer; }
+.app-brand span { color: var(--green); }
+.app-nav { display: flex; align-items: center; justify-content: flex-end; gap: 18px; min-width: 0; }
+.app-nav button, .app-footer button, .app-storage button, .app-text-button { border: 0; border-bottom: 1px solid #60645a; padding: 5px 0; background: transparent; color: #d6e3d1; font: inherit; text-align: left; cursor: pointer; }
+.app-nav button[aria-current="page"] { color: var(--fg); border-color: var(--green); }
+.app-current { max-width: 40vw; overflow: hidden; color: var(--muted); text-overflow: ellipsis; white-space: nowrap; }
+.app-content { min-width: 0; flex: 1; }
+.app-shell :where(h1, h2, h3, p, strong, small, li, dd, label, button) { overflow-wrap: anywhere; }
+.app-shell :where(main, section, article, aside, form, header, nav, div) { min-width: 0; }
+.app-storage { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin: 15px 0 0; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--fg); }
+.app-storage p { margin: 0; font-size: 13px; }
+.app-storage strong { color: var(--warm); }
+.app-storage button { flex: none; }
+.app-loading { min-height: 42vh; display: grid; place-items: center; color: var(--muted); }
+.app-recovery { max-width: 680px; min-height: 55vh; padding: 56px 0; }
+.app-eyebrow { margin: 0 0 8px; color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.app-recovery h1 { max-width: 620px; margin: 0 0 16px; font-size: clamp(34px, 5vw, 58px); line-height: 1.02; letter-spacing: -.05em; }
+.app-recovery > p:not(.app-eyebrow) { max-width: 540px; color: #d4d5cb; }
+.app-button { border: 1px solid var(--green); padding: 10px 14px; background: var(--forest); color: var(--fg); font: inherit; font-weight: 700; cursor: pointer; }
+.app-button-secondary { border-color: #55594f; background: transparent; }
+.app-action-error { color: var(--warm); font-size: 13px; }
+.app-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: auto; padding: 13px 0 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.app-reset-dialog { position: fixed; inset: 0; width: min(100% - 36px, 520px); max-width: 520px; margin: auto; border: 1px solid #55594f; border-radius: 0; padding: 25px; background: #000; color: var(--fg); }
+.app-reset-dialog::backdrop { background: rgb(0 0 0 / 78%); }
+.app-reset-dialog h2 { margin: 0 32px 10px 0; font-size: 28px; line-height: 1.05; letter-spacing: -.04em; }
+.app-reset-dialog p { max-width: 440px; }
+.app-reset-dialog .app-dialog-note { color: var(--muted); font-size: 13px; }
+.app-reset-close { position: absolute; top: 16px; right: 20px; }
+.app-dialog-actions { display: flex; align-items: center; justify-content: flex-end; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.app-dialog-actions form { margin: 0; }
+.app-shell :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+@media (max-width: 1050px) {
+  .workspace-grid { grid-template-columns: minmax(0, 1fr); }
+  .workspace-missions { border-top: 1px solid var(--line); border-left: 0; padding: 16px 0 0; }
+}
+@media (max-width: 720px) {
+  .app-shell { width: min(100% - 36px, var(--max)); }
+  .app-header { align-items: flex-start; flex-direction: column; gap: 12px; padding: 16px 0; }
+  .app-nav { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+  .app-storage { align-items: flex-start; flex-direction: column; gap: 9px; }
+  .app-recovery { min-height: 55vh; padding: 38px 0; }
+  .app-footer { align-items: flex-start; flex-direction: column; gap: 8px; }
+}

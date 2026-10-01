@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Un compañero que trabaja contigo · Idea del proyecto</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #000; color: #fff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; }
+    a { color: inherit; text-underline-offset: 4px; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin: auto; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px 0; border-bottom: 1px solid #333; }
+    .brand { font-size: 14px; font-weight: 750; letter-spacing: -.02em; }
+    .status { font-size: 12px; color: #b4b4b4; text-align: right; }
+    main { padding-bottom: 90px; }
+    .hero { padding: clamp(62px, 10vw, 132px) 0 94px; max-width: 930px; }
+    h1 { margin: 0; font-size: clamp(50px, 7.5vw, 105px); line-height: .99; letter-spacing: -.075em; font-weight: 680; }
+    .accent { color: #a0e9bd; }
+    .lead { max-width: 650px; margin: 35px 0 0; color: #c6c6c6; font-size: clamp(19px, 2.2vw, 25px); line-height: 1.42; letter-spacing: -.025em; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 35px; color: #a8a8a8; font-size: 13px; }
+    .meta span::before { content: "•"; color: #a0e9bd; margin-right: 9px; }
+    section { border-top: 1px solid #393939; padding: 35px 0 76px; }
+    .section-head { display: grid; grid-template-columns: minmax(190px, 1fr) minmax(0, 2fr); gap: 32px; align-items: start; margin-bottom: 48px; }
+    h2 { margin: 0; font-size: clamp(27px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -.05em; font-weight: 650; }
+    .section-head p { margin: 0; max-width: 660px; color: #bdbdbd; font-size: 16px; line-height: 1.55; }
+    .journey { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #555; }
+    .step { position: relative; padding: 22px 26px 0 0; min-height: 172px; }
+    .step:not(:last-child) { border-right: 1px solid #333; padding-left: 20px; }
+    .step:first-child { padding-left: 0; }
+    .step:last-child { padding-left: 20px; }
+    .step::before { content: ""; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #a0e9bd; }
+    .step:not(:first-child)::before { left: 20px; }
+    .step small { color: #a0e9bd; font-size: 12px; font-weight: 700; }
+    .step h3 { margin: 18px 0 9px; font-size: 21px; line-height: 1.16; letter-spacing: -.035em; }
+    .step p { margin: 0; max-width: 210px; color: #aaa; font-size: 14px; line-height: 1.45; }
+    .system { display: grid; grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1.2fr) 32px minmax(0, 1.35fr); align-items: stretch; gap: 10px; }
+    .system-node { border-top: 2px solid #eee; padding: 17px 6px 0 0; min-height: 136px; }
+    .system-node.is-green { border-color: #a0e9bd; }
+    .system-node span { display: block; color: #aaa; font-size: 12px; margin-bottom: 12px; }
+    .system-node strong { display: block; font-size: clamp(20px, 2vw, 27px); line-height: 1.15; letter-spacing: -.04em; }
+    .system-node p { color: #aaa; font-size: 13px; line-height: 1.45; max-width: 260px; }
+    .arrow { color: #a0e9bd; font-size: 28px; padding-top: 12px; text-align: center; }
+    .system-note { margin: 26px 0 0; color: #a8a8a8; font-size: 14px; line-height: 1.5; }
+    .levels { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid #555; }
+    .level { padding: 18px 16px 22px 0; border-bottom: 1px solid #333; }
+    .level:not(:first-child) { padding-left: 16px; border-left: 1px solid #333; }
+    .level strong { display: block; font-size: 16px; font-weight: 600; }
+    .bars { display: flex; gap: 4px; align-items: flex-end; height: 42px; margin: 17px 0 10px; }
+    .bars i { display: block; width: 9px; height: 9px; background: #a0e9bd; }
+    .bars i:nth-child(2) { height: 16px; }
+    .bars i:nth-child(3) { height: 23px; }
+    .bars i:nth-child(4) { height: 30px; }
+    .bars i:nth-child(5) { height: 37px; }
+    .level p { margin: 0; color: #a8a8a8; font-size: 13px; line-height: 1.4; }
+    .open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 50px; }
+    .open p { margin: 0; padding: 18px 0; border-top: 1px solid #333; font-size: 17px; letter-spacing: -.015em; }
+    .open b { color: #a0e9bd; font-size: 12px; margin-right: 18px; }
+    footer { border-top: 1px solid #393939; padding: 23px 0 60px; color: #a8a8a8; font-size: 13px; line-height: 1.5; }
+    footer a { color: #fff; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, 620px); }
+      header { padding: 20px 0; }
+      .hero { padding: 82px 0 75px; }
+      .section-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 32px; }
+      section { padding: 30px 0 58px; }
+      .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; }
+      .step { min-height: 160px; }
+      .step:nth-child(3) { padding-left: 0; border-right: 1px solid #333; }
+      .step:nth-child(3)::before { left: 0; }
+      .system { grid-template-columns: 1fr; gap: 0; }
+      .system-node { min-height: 0; padding-bottom: 10px; }
+      .arrow { transform: rotate(90deg); padding: 0; line-height: 1; margin: 5px 0 14px; }
+      .levels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .level { min-height: 126px; }
+      .level:nth-child(odd) { padding-left: 0; border-left: 0; }
+      .level:nth-child(even) { padding-left: 16px; border-left: 1px solid #333; }
+      .open { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 440px) {
+      .status { max-width: 100px; }
+      h1 { font-size: 51px; }
+      .journey { grid-template-columns: 1fr; }
+      .journey .step { min-height: 0; padding: 17px 0 20px; border-right: 0; border-bottom: 1px solid #333; }
+      .step::before, .step:not(:first-child)::before, .step:nth-child(3)::before { left: 0; }
+      .step h3 { margin-top: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Compañero / idea inicial</div>
+      <div class="status">Borrador</div>
+    </header>
+    <main>
+      <div class="hero">
+        <h1>Un agente que <span class="accent">hace camino</span> contigo.</h1>
+        <p class="lead">Creas un compañero, le das una misión y ves cómo avanza. Tú decides el ritmo. La infraestructura trabaja detrás.</p>
+        <div class="meta"><span>Misiones con fecha límite</span><span>Equipo de agentes</span><span>Avances visibles</span></div>
+      </div>
+
+      <section aria-labelledby="journey-title">
+        <div class="section-head">
+          <h2 id="journey-title">El viaje del usuario</h2>
+          <p>La experiencia se cuenta con decisiones sencillas. Nada de tipos de instancia, tokens o parámetros de infraestructura en el recorrido principal.</p>
+        </div>
+        <div class="journey">
+          <div class="step"><small>01</small><h3>Crea a su compañero</h3><p>Elige para qué le ayudará y empieza la relación.</p></div>
+          <div class="step"><small>02</small><h3>Le da misiones</h3><p>Puede tener varias, con objetivo y fecha límite.</p></div>
+          <div class="step"><small>03</small><h3>Marca el ritmo</h3><p>Escoge una capacidad comprensible y conoce su límite.</p></div>
+          <div class="step"><small>04</small><h3>Ve el progreso</h3><p>Recibe avances, bloqueos, ideas y resultados.</p></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="system-title">
+        <div class="section-head">
+          <h2 id="system-title">Lo que hay detrás</h2>
+          <p>Una posible forma de conectarlo. Todavía hay que elegir el harness, definir la imagen y decidir dónde vive la memoria duradera.</p>
+        </div>
+        <div class="system" role="img" aria-label="La aplicación guarda usuarios, misiones y estado en Supabase. Un control privado gestiona una instancia EC2, que ejecuta una imagen con el harness, los agentes y su memoria.">
+          <div class="system-node"><span>Interfaz y datos</span><strong>App + Supabase</strong><p>Login, misiones, estados y avances en tiempo real.</p></div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="system-node is-green"><span>Control privado</span><strong>Crear, pausar, limitar</strong><p>Decide cuándo trabaja y cuánto puede gastar.</p></div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="system-node"><span>Ejecución</span><strong>EC2 + agentes</strong><p>Imagen preparada, harness por elegir y memoria persistente.</p></div>
+        </div>
+        <p class="system-note">Los agentes podrían repartirse entre planificar, ejecutar y verificar. Sus ideas y mejoras entrarían en un backlog visible.</p>
+      </section>
+
+      <section aria-labelledby="capacity-title">
+        <div class="section-head">
+          <h2 id="capacity-title">Capacidad sin jerga</h2>
+          <p>Cinco niveles fáciles de comparar. Su ritmo, límite real y precio se definirán después de medir costes. Estas barras solo ilustran la escala.</p>
+        </div>
+        <div class="levels" aria-label="Cinco niveles de capacidad, de muy baja a muy alta">
+          <div class="level"><strong>Muy baja</strong><div class="bars" aria-hidden="true"><i></i></div><p>Para empezar.</p></div>
+          <div class="level"><strong>Baja</strong><div class="bars" aria-hidden="true"><i></i><i></i></div><p>Ritmo ligero.</p></div>
+          <div class="level"><strong>Media</strong><div class="bars" aria-hidden="true"><i></i><i></i><i></i></div><p>Trabajo regular.</p></div>
+          <div class="level"><strong>Alta</strong><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div><p>Más intensidad.</p></div>
+          <div class="level"><strong>Muy alta</strong><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><p>Máximo ritmo.</p></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="open-title">
+        <div class="section-head">
+          <h2 id="open-title">Lo que decidiremos</h2>
+          <p>La idea queda abierta. Estas decisiones cambian la experiencia, la arquitectura y el precio.</p>
+        </div>
+        <div class="open">
+          <p><b>01</b> Pi o Hermes, y qué puede hacer cada uno.</p>
+          <p><b>02</b> «24/7»: siempre disponible o siempre ejecutando.</p>
+          <p><b>03</b> Una suscripción simple con límites claros.</p>
+          <p><b>04</b> Qué mejoras pueden aplicar los agentes solos.</p>
+        </div>
+      </section>
+    </main>
+    <footer>Resumen visual de una lluvia de ideas. El detalle y las preguntas abiertas están en <a href="ideas.md">ideas.md</a>.</footer>
+  </div>
+</body>
+</html>

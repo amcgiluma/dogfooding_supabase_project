@@ -1,0 +1,43 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation"
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - paragraph [ref=e9]: A good place to begin
+      - heading "Hi, I’m Morrow." [level=1] [ref=e10]
+      - paragraph [ref=e11]: I’m glad you’re here. Let’s find a useful next step together.
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: Morrow
+        - paragraph [ref=e14]: One last thing. What should your companion look like?
+        - generic [ref=e27]:
+          - generic [ref=e28]: You
+          - paragraph [ref=e29]: Juanma Demo
+        - generic [ref=e37]:
+          - generic [ref=e38]: You
+          - paragraph [ref=e39]: Ship a first version of my app
+        - generic [ref=e47]:
+          - generic [ref=e48]: You
+          - paragraph [ref=e49]: Build an app
+        - generic [ref=e15]:
+          - generic [ref=e50]:
+            - text: Companion name
+            - textbox "Companion name" [active] [ref=e51]: Morrow
+          - group "Choose an appearance" [ref=e52]:
+            - generic [ref=e54] [cursor=pointer]:
+              - radio "Skull" [checked] [ref=e55]
+              - generic [ref=e56]: Skull
+            - generic [ref=e57] [cursor=pointer]:
+              - radio "Wolf · yellow frames, green lenses" [ref=e58]
+              - generic [ref=e59]: Wolf · yellow frames, green lenses
+          - paragraph [ref=e60]: Your profile and companion are saved on this device. No account or app connection is needed.
+          - generic [ref=e18]:
+            - button "Back" [ref=e36] [cursor=pointer]
+            - button "Meet your companion" [ref=e61] [cursor=pointer]
+      - paragraph [ref=e20]: Step 4 of 4
+    - generic [ref=e21]:
+      - img "Morrow, skull appearance" [ref=e22]
+      - paragraph [ref=e23]: Morrow
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

@@ -1,0 +1,39 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Go to companions" [ref=e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation"
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - paragraph [ref=e9]: A good place to begin
+      - heading "Hi, I’m Morrow." [level=1] [ref=e10]
+      - paragraph [ref=e11]: I’m glad you’re here. Let’s find a useful next step together.
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: Morrow
+        - paragraph [ref=e14]: What kind of help should we start with?
+        - generic [ref=e27]:
+          - generic [ref=e28]: You
+          - paragraph [ref=e29]: Casey
+        - generic [ref=e37]:
+          - generic [ref=e38]: You
+          - paragraph [ref=e39]: Build a companion app that turns weekly meal plans into a grocery list, tracks edits, and helps me decide what to cook.
+        - generic [ref=e15]:
+          - generic [ref=e40]:
+            - text: Describe how you want to use a companion
+            - textbox "Describe how you want to use a companion" [ref=e41]:
+              - /placeholder: A few words is enough
+              - text: Build an app
+          - generic "Intended use suggestions" [ref=e42]:
+            - button "Build an app" [active] [pressed] [ref=e43] [cursor=pointer]
+            - button "Research an idea" [ref=e44] [cursor=pointer]
+            - button "Watch for changes" [ref=e45] [cursor=pointer]
+          - paragraph [ref=e46]: Vercel and Supabase connections can be added later. This demo does not connect to apps.
+          - generic [ref=e18]:
+            - button "Back" [ref=e36] [cursor=pointer]
+            - button "Continue" [ref=e19] [cursor=pointer]: Continue →
+      - paragraph [ref=e20]: Step 3 of 4
+    - generic [ref=e21]:
+      - img "Morrow, skull appearance" [ref=e22]
+      - paragraph [ref=e23]: Morrow
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=e26] [cursor=pointer]

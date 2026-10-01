@@ -1,0 +1,58 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - button "Go to companions" [ref=f1e5] [cursor=pointer]: morrow.
+    - navigation "Main navigation" [ref=f1e6]:
+      - button "Companions" [ref=f1e7] [cursor=pointer]
+      - generic [ref=f1e59]: Orbit
+  - main [ref=f1e60]:
+    - generic [ref=f1e61]:
+      - generic [ref=f1e63]:
+        - paragraph [ref=f1e64]: Orbit / Workspace
+        - heading "Orbit" [level=1] [ref=f1e65]
+      - generic [ref=f1e66]:
+        - button "All companions" [ref=f1e67] [cursor=pointer]
+        - button "Create mission +" [ref=f1e68] [cursor=pointer]
+    - generic [ref=f1e69]:
+      - region [ref=f1e70]:
+        - heading "General conversation" [level=2] [ref=f1e71]
+        - region "General conversation" [ref=f1e72]:
+          - generic [ref=f1e73]:
+            - article [ref=f1e74]:
+              - text: You
+              - paragraph [ref=f1e75]: MARKER_ORBIT_GENERAL_2026
+            - article [ref=f1e76]:
+              - text: Companion
+              - paragraph [ref=f1e77]: I’ve noted that for your workspace. This is a local demo, so no work runs in the background.
+          - generic [ref=f1e78]:
+            - generic [ref=f1e79]: Message your companion
+            - textbox "Message your companion" [ref=f1e80]:
+              - /placeholder: Keep this conversation with your companion
+            - generic [ref=f1e81]:
+              - generic [ref=f1e82]: Demo
+              - button "Send" [disabled] [ref=f1e83]
+      - complementary [ref=f1e84]:
+        - heading "Your missions" [level=2] [ref=f1e85]
+        - button "General conversation Selected" [ref=f1e86] [cursor=pointer]:
+          - generic [ref=f1e87]:
+            - strong [ref=f1e88]: General conversation
+            - generic [ref=f1e89]: Selected
+          - generic [aria-hidden] [ref=f1e90]: →
+        - button "Build an accessible landing page app · Active" [ref=f1e91] [cursor=pointer]:
+          - generic [ref=f1e92]:
+            - strong [ref=f1e93]: Build an accessible landing page
+            - generic [ref=f1e94]: app · Active
+          - generic [aria-hidden] [ref=f1e95]: →
+        - button "Compare validation options for the prototype research · Active" [ref=f1e96] [cursor=pointer]:
+          - generic [ref=f1e97]:
+            - strong [ref=f1e98]: Compare validation options for the prototype
+            - generic [ref=f1e99]: research · Active
+          - generic [aria-hidden] [ref=f1e100]: →
+        - button "Watch for useful local AI updates and compare setup effort monitoring · Completed" [ref=f1e101] [cursor=pointer]:
+          - generic [ref=f1e102]:
+            - strong [ref=f1e103]: Watch for useful local AI updates and compare setup effort
+            - generic [ref=f1e104]: monitoring · Completed
+          - generic [aria-hidden] [ref=f1e105]: →
+    - paragraph [ref=f1e106]: Demo · each conversation and mission belongs to Orbit.
+  - contentinfo [ref=f1e56]:
+    - generic [ref=f1e57]: Local demo · work advances only when you choose
+    - button "Reset demo" [ref=f1e58] [cursor=pointer]

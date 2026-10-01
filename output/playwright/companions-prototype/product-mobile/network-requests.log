@@ -1,0 +1,4 @@
+41. [GET] blob:http://127.0.0.1:5174/a29743d2-9c89-4608-bfdd-931a6936b359
+77. [GET] blob:http://127.0.0.1:5174/8b49dd9d-0f46-4115-89eb-3371497dc724
+
+Note: 110 static requests not shown, run with "static" option to see them.
