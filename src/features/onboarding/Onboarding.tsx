@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import type { OnboardingInput } from '../../domain/types';
 import { useApp } from '../../app/AppProvider';
+import type { MotionPreferences } from '../../app/motion';
 import './onboarding.css';
 
 const steps = ['you', 'goal', 'use', 'companion'] as const;
@@ -10,46 +11,22 @@ const stepIndex: Record<Step, number> = { you: 0, goal: 1, use: 2, companion: 3 
 const goalSuggestions = ['Ship a first version', 'Explore an idea', 'Keep track of changes'];
 const useSuggestions = ['Build something', 'Research a question', 'Stay on top of changes'];
 
-function useMotionPreferences() {
-  const [preferences, setPreferences] = useState(() => ({
-    reduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-    hidden: document.visibilityState === 'hidden',
-  }));
-
-  useEffect(() => {
-    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const updateMotion = () => setPreferences((current) => ({ ...current, reduced: media.matches }));
-    const updateVisibility = () => setPreferences((current) => ({
-      ...current,
-      hidden: document.visibilityState === 'hidden',
-    }));
-
-    media.addEventListener('change', updateMotion);
-    document.addEventListener('visibilitychange', updateVisibility);
-    return () => {
-      media.removeEventListener('change', updateMotion);
-      document.removeEventListener('visibilitychange', updateVisibility);
-    };
-  }, []);
-
-  return preferences;
-}
-
 function useTypedPrompt(prompt: string, reducedMotion: boolean, hidden: boolean) {
-  const [visibleLength, setVisibleLength] = useState(() => reducedMotion ? prompt.length : 0);
+  const [typing, setTyping] = useState(() => ({ prompt, length: reducedMotion ? prompt.length : 0 }));
+  const visibleLength = typing.prompt === prompt ? typing.length : 0;
 
   useEffect(() => {
-    setVisibleLength(reducedMotion ? prompt.length : 0);
+    setTyping({ prompt, length: reducedMotion ? prompt.length : 0 });
   }, [prompt, reducedMotion]);
 
   useEffect(() => {
     if (reducedMotion || hidden || visibleLength >= prompt.length) return;
 
     const timeout = window.setTimeout(() => {
-      setVisibleLength((length) => Math.min(length + 1, prompt.length));
+      setTyping((current) => ({ prompt, length: Math.min(current.length + 1, prompt.length) }));
     }, 28);
     return () => window.clearTimeout(timeout);
-  }, [hidden, prompt.length, reducedMotion, visibleLength]);
+  }, [hidden, prompt, reducedMotion, visibleLength]);
 
   return reducedMotion ? prompt : prompt.slice(0, visibleLength);
 }
@@ -96,15 +73,14 @@ function StellarScene({ reducedMotion, hidden }: { reducedMotion: boolean; hidde
 }
 
 /** Collects the first profile and opens the new companion's general chat. */
-export function Onboarding() {
+export function Onboarding({ motion }: { motion: MotionPreferences }) {
   const { actions, navigate } = useApp();
-  const motion = useMotionPreferences();
   const [step, setStep] = useState<Step>('you');
   const [draft, setDraft] = useState<OnboardingInput>({
     name: '',
     goal: '',
     intendedUse: '',
-    companionName: 'Morrow',
+    companionName: 'Raiden',
     appearance: 'skull',
   });
   const [error, setError] = useState('');
@@ -195,8 +171,8 @@ export function Onboarding() {
 
   return (
     <main className="onboarding-page">
-      <StellarScene reducedMotion={motion.reduced} hidden={motion.hidden} />
-      <p className="onboarding-wordmark">morrow<span>+</span></p>
+      <StellarScene key={step} reducedMotion={motion.reduced} hidden={motion.hidden} />
+      <p className="onboarding-wordmark">RAIDEN<span> / PERSONAL</span></p>
 
       <div className="onboarding-mascot" role="img" aria-label="Reserved space for your future mascot">
         <i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" />
@@ -206,7 +182,7 @@ export function Onboarding() {
         <p className="onboarding-greeting" id="onboarding-greeting">hello, human.</p>
         <p className="onboarding-step">Step {stepIndex[step] + 1} of {steps.length}</p>
 
-        <div className="onboarding-conversation">
+        <div className="onboarding-conversation" key={step}>
           <div className="onboarding-prompt-wrap">
             <h1 className="onboarding-prompt" id="onboarding-prompt">
             <span className="onboarding-prompt-measure" aria-hidden="true">{prompt}</span>
@@ -222,7 +198,7 @@ export function Onboarding() {
             <div className="onboarding-reply"><span>Your goal</span><p>{draft.goal.trim()}</p></div>
           )}
           {stepIndex[step] > stepIndex.use && (
-            <div className="onboarding-reply"><span>How you’ll use Morrow</span><p>{draft.intendedUse.trim()}</p></div>
+            <div className="onboarding-reply"><span>How you’ll use your companion</span><p>{draft.intendedUse.trim()}</p></div>
           )}
 
           <form className="onboarding-form" onSubmit={goForward} noValidate>
@@ -279,7 +255,7 @@ export function Onboarding() {
                     placeholder="A few words is enough"
                   />
                 </label>
-                <div className="onboarding-suggestions" aria-label="Ways to use Morrow">
+                <div className="onboarding-suggestions" aria-label="Ways to use your companion">
                   {useSuggestions.map((suggestion) => (
                     <button
                       key={suggestion}

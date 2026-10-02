@@ -51,7 +51,7 @@ The test script runs the focused Node tests in `tests/`. The V01–V03 plan cove
 
 ### Walkthrough
 
-Complete the four onboarding steps to enter your companion's chat. Send a general message, then create a mission from an example or a custom objective. Choose missions from the sidebar and open details when needed. The seeded missions show active work, a permission decision and a ready-for-review deliverable. Advance active work with the visible demo control, pause and resume it, edit its goal explicitly, then confirm its final review or request corrections. The correction stays on the same mission and keeps its history. Refresh to check that IDs, messages and progress remain saved; use **Reset demo** to return to onboarding.
+Complete the four onboarding steps to enter your companion's chat. Send a general message, then create a mission from an example or a custom objective. Use the top navigation and mission row to move between companion chats and missions. The seeded missions show active work, a permission decision and a ready-for-review deliverable. Mission stages, progress, history and deliverables appear in the technical column on desktop; open Details on smaller screens. Advance active work with the visible demo control, pause and resume it, edit its goal explicitly, then confirm its final review or request corrections. The correction stays on the same mission and keeps its history. Refresh to check that IDs, messages and progress remain saved; use **Reset demo** to return to onboarding.
 
 ### Data and demo limits
 
@@ -69,7 +69,9 @@ Supabase is the intended future backend for structured data. A future adapter sh
 
 [Open the privately published previews](https://morrow-chat-redesign.supabase-8786.chatgpt.site). Sign in with the owning ChatGPT account if prompted. Only the static previews are published; the React prototype is not deployed there.
 
-Juanma selected A3 Sidekick for the React application. The implementation uses a chat-first layout, charcoal navigation and input surfaces, blue actions and empty mounts for the future mascot. First-run onboarding has a moving stellar background and finite typewriter questions. Reduced-motion preferences show the full question immediately and keep the stars still; motion pauses while the tab is hidden.
+The older Morrow previews record an earlier design direction. Juanma selected Vector for the React application: a graphite interface with a compact Raiden header and mission title, flat transcript rows and a technical stages and activity column. Local Rajdhani and IBM Plex fonts provide the display and body type. New profiles start with a companion named Raiden; saved companion names and browser data remain intact. First-run onboarding keeps its typewriter prompt and layered star field, which moves for a finite time on each step. Reduced motion shows the full prompt and still stars; hidden tabs pause typing and interface motion.
+
+The workspace reserves a 72×72px mascot mount on desktop and a 56×56px mount on mobile. The existing onboarding, navigation and companion-list mounts remain available for future artwork. View changes, dialogs, messages and progress updates use brief finite transitions; selecting the current view does not replay its entrance.
 
 The published HTML previews remain design references. Run the React prototype locally to use the implemented experience.
 
@@ -79,4 +81,4 @@ The published HTML previews remain design references. Run the React prototype lo
 
 [Open the privately published Raiden proposals](https://raiden-interface.supabase-8786.chatgpt.site). Sign in with the owning ChatGPT account if prompted. The older Morrow previews keep their existing URL.
 
-The React application remains on the existing design until a proposal is selected. These previews do not read or modify the prototype's saved data. See [preview setup and review status](docs/raiden-interface/README.md) for local viewing, building and the next implementation steps.
+The Vector selection is implemented in the local React prototype. These static previews do not read or modify the prototype's saved data. See [preview setup and implementation notes](docs/raiden-interface/README.md) for local viewing and build details.

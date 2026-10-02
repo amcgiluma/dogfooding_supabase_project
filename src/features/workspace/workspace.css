@@ -1,47 +1,286 @@
-.workspace-page { display: flex; min-width: 0; min-height: 0; height: 100%; flex: 1; flex-direction: column; color: var(--fg); }
-.workspace-topbar { display: flex; min-height: 58px; align-items: center; gap: 11px; border-bottom: 1px solid var(--line); padding: 7px 20px; background: var(--bg); }
-.workspace-context { display: flex; min-width: 0; align-items: baseline; gap: 5px; flex: 1; }
-.workspace-context strong { max-width: 35vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
-.workspace-context span { min-width: 0; overflow: hidden; color: var(--muted); text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
-.mascot-slot.mascot-slot-mobile { display: none; width: 31px; height: 31px; }
-.mascot-slot.mascot-slot-mobile i { width: 5px; height: 5px; }.mascot-slot.mascot-slot-mobile i:nth-child(1) { top: 3px; left: 3px; }.mascot-slot.mascot-slot-mobile i:nth-child(2) { top: 3px; right: 3px; }.mascot-slot.mascot-slot-mobile i:nth-child(3) { bottom: 3px; left: 3px; }.mascot-slot.mascot-slot-mobile i:nth-child(4) { right: 3px; bottom: 3px; }
-.workspace-top-actions { display: flex; align-items: center; gap: 10px; }
-.workspace-quiet-button { min-height: 40px; border: 1px solid transparent; border-radius: 4px; padding: 7px 11px; background: transparent; color: var(--accent); cursor: pointer; }
-.workspace-quiet-button:hover { background: var(--surface-hover); }
-.workspace-create-trigger { border-color: var(--line); }
-.mobile-menu { display: none; width: 44px; height: 44px; flex: none; border: 0; border-radius: 4px; background: transparent; color: var(--fg); font-size: 19px; cursor: pointer; }
-.workspace-stage { display: flex; min-width: 0; min-height: 0; flex: 1; }
-.workspace-conversation { display: flex; min-width: 0; min-height: 0; flex: 1; flex-direction: column; }
-.workspace-stage.has-details .workspace-conversation { flex-direction: row; }
-.workspace-stage.has-details .chat-panel { min-width: 0; }
-.general-details { width: 320px; min-width: 280px; flex: none; overflow-y: auto; border-left: 1px solid var(--line); padding: 18px 16px; background: var(--surface); }
-.general-details h2 { margin: 0 0 12px; font-size: 14px; }
-.general-details dl, .general-details-dialog dl { margin: 0; }
-.general-details dl > div, .general-details-dialog dl > div { border-top: 1px solid var(--line); padding: 10px 0; }
-.general-details dt, .general-details-dialog dt { color: var(--muted); font-size: 11px; }
-.general-details dd, .general-details-dialog dd { margin: 3px 0 0; font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
-.general-details-dialog { position: fixed; inset: 0; width: min(100vw, 620px); height: 100dvh; max-height: none; margin: 0 0 0 auto; border: 0; border-left: 1px solid var(--line); padding: 0 15px 30px; background: var(--surface); color: var(--fg); overflow-y: auto; }
-.general-details-dialog::backdrop { background: rgb(0 0 0 / 72%); }
-.general-details-dialog[open] { display: block; }
-.general-details-dialog dl { padding: 14px; }
-.workspace-details-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 12px 16px; }
-.workspace-details-heading h2 { margin: 0; font-size: 14px; }
-.workspace-page :where(button, input, textarea, select) { min-width: 0; }
-.workspace-page :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-@media (max-width: 900px) {
-  .workspace-topbar { min-height: 58px; gap: 8px; padding: 5px 10px; }
-  .workspace-topbar .mobile-menu { display: block; }
-  .mascot-slot.mascot-slot-mobile { display: block; }
-  .workspace-context { display: block; }
-  .workspace-context strong, .workspace-context span { display: block; max-width: 100%; }
-  .workspace-context span { font-size: 11px; }
-  .workspace-top-actions { gap: 2px; }
-  .workspace-quiet-button { min-height: 44px; padding: 6px 8px; }
-  .workspace-create-trigger { display: none; }
-  .workspace-stage.has-details .workspace-conversation { flex-direction: column; }
+.workspace-page {
+  display:flex;
+  min-width:0;
+  min-height:0;
+  flex:1;
+  flex-direction:column;
+  color:var(--fg);
+  overflow:hidden
 }
-@media (max-width: 380px) {
-  .workspace-topbar { gap: 4px; padding-inline: 5px; }
-  .workspace-context strong { font-size: 13px; }
-  .workspace-quiet-button { padding-inline: 6px; font-size: 13px; }
+.workspace-hero {
+  flex:none;
+  padding:clamp(14px,2vw,24px) clamp(18px,5vw,72px) 0;
+  animation:workspace-in .24s ease-out both
+}
+.workspace-hero-title {
+  display:flex;
+  align-items:stretch;
+  gap:clamp(14px,2vw,28px);
+  min-width:0
+}
+.workspace-title-marker {
+  width:3px;
+  flex:none;
+  background:var(--accent)
+}
+.workspace-hero-title>div {
+  min-width:0
+}
+.workspace-hero-title p {
+  margin:0 0 3px;
+  color:var(--accent);
+  font:600 14px/1.1 var(--display);
+  letter-spacing:.13em;
+  text-transform:uppercase
+}
+.workspace-hero-title h1 {
+  max-width:100%;
+  margin:0;
+  font:700 clamp(32px,4vw,56px)/1.02 var(--display);
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+  overflow-wrap:anywhere
+}
+.workspace-hero-actions {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:13px 0 0 32px;
+  color:var(--muted);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+.workspace-quiet-button {
+  min-height:40px;
+  border:1px solid var(--line);
+  padding:6px 11px;
+  background:transparent;
+  color:var(--accent);
+  cursor:pointer;
+  transition:color .14s,border-color .14s,background-color .14s
+}
+.workspace-presence {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 14px;
+}
+.mascot-slot.workspace-mascot {
+  width: 72px;
+  height: 72px;
+  flex: none;
+}
+.workspace-quiet-button:hover {
+  border-color:var(--accent);
+  background:var(--surface);
+  color:var(--fg)
+}
+.workspace-mission-nav {
+  display:flex;
+  min-width:0;
+  gap:22px;
+  margin-top:19px;
+  border-bottom:1px solid var(--line);
+  overflow-x:auto;
+  scrollbar-width:thin
+}
+.workspace-mission-nav button {
+  position:relative;
+  min-height:43px;
+  flex:none;
+  max-width:min(420px,70vw);
+  border:0;
+  padding:8px 1px;
+  background:transparent;
+  color:var(--muted);
+  text-align:left;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  cursor:pointer
+}
+.workspace-mission-nav button[aria-current=page] {
+  color:var(--fg)
+}
+.workspace-mission-nav button[aria-current=page]::after {
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  height:2px;
+  background:var(--accent);
+  content:''
+}
+.workspace-stage {
+  display:flex;
+  min-width:0;
+  min-height:0;
+  flex:1
+}
+.workspace-conversation {
+  display:flex;
+  min-width:0;
+  min-height:0;
+  flex:1;
+  flex-direction:column
+}
+.workspace-stage.has-details .workspace-conversation {
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr)
+}
+.workspace-stage.has-details .chat-panel {
+  min-width:0
+}
+.workspace-stage.has-details .mission-details-panel,.workspace-stage.has-details .general-details {
+  width:auto;
+  min-width:0
+}
+.workspace-details-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border-bottom:1px solid var(--line);
+  padding:12px 16px
+}
+.workspace-details-heading h2 {
+  margin:0;
+  font:600 18px var(--display);
+  text-transform:uppercase
+}
+.general-details {
+  overflow-y:auto;
+  border-left:1px solid var(--line);
+  padding:18px 16px
+}
+.general-details dl,.general-details-dialog dl {
+  margin:0
+}
+.general-details dl>div,.general-details-dialog dl>div {
+  border-top:1px solid var(--line);
+  padding:10px 0
+}
+.general-details dt,.general-details-dialog dt {
+  color:var(--muted);
+  font-size:11px
+}
+.general-details dd,.general-details-dialog dd {
+  margin:3px 0 0;
+  font-size:13px;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere
+}
+.general-details-dialog {
+  position:fixed;
+  inset:0;
+  width:min(100vw,620px);
+  height:100dvh;
+  max-height:none;
+  margin:0 0 0 auto;
+  border:0;
+  border-left:1px solid var(--line);
+  padding:0 15px 30px;
+  background:var(--surface);
+  color:var(--fg);
+  overflow-y:auto
+}
+.general-details-dialog::backdrop {
+  background:rgb(0 0 0 / 72%)
+}
+.general-details-dialog[open] {
+  display:block;
+  animation:workspace-in .2s ease-out both
+}
+.general-details-dialog dl {
+  padding:14px
+}
+.workspace-page :where(button,input,textarea,select) {
+  min-width:0
+}
+.workspace-page :focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:2px
+}
+.mobile-menu,.workspace-topbar,.mascot-slot-mobile {
+  display:none
+}
+@keyframes workspace-in {
+  from {
+    opacity:0;
+    transform:translateY(7px)
+  }
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+@media(max-width:900px) {
+  .workspace-hero {
+    padding:16px 22px 0
+  }
+  .workspace-hero-title h1 {
+    font-size:clamp(30px,4.5vw,42px)
+  }
+  .workspace-stage.has-details .workspace-conversation {
+    display:flex;
+    flex-direction:column
+  }
+  .workspace-stage.has-details .mission-details-panel {
+    display:none
+  }
+  .workspace-stage.has-details .chat-panel {
+    flex:none;
+    min-height:0
+  }
+  .workspace-page {
+    overflow-y:auto
+  }
+  .workspace-stage {
+    min-height:0;
+    overflow:visible
+  }
+  .workspace-conversation {
+    overflow:visible
+  }
+  .workspace-page .chat-panel {
+    min-height:360px
+  }
+  .general-details {
+    display:none
+  }
+}
+@media(max-width:520px) {
+  .mascot-slot.workspace-mascot {
+    width: 56px;
+    height: 56px;
+  }
+  .workspace-hero {
+    padding:16px 14px 0
+  }
+  .workspace-hero-title {
+    gap:12px
+  }
+  .workspace-hero-title h1 {
+    font-size:clamp(28px,8vw,34px);
+    line-height:1.04
+  }
+  .workspace-hero-title p {
+    font-size:12px
+  }
+  .workspace-hero-actions {
+    margin-left:15px
+  }
+  .workspace-mission-nav {
+    gap:16px;
+    margin-top:13px
+  }
+  .workspace-mission-nav button {
+    min-height:42px;
+    max-width:75vw
+  }
+  .workspace-page .chat-panel {
+    min-height:330px
+  }
 }

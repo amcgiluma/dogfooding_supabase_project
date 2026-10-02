@@ -3,11 +3,12 @@ import { useApp } from '../../app/AppProvider';
 import { getMissionDeliverables, getMissionEvents, getMission } from '../../domain/selectors';
 import { getDemoStep } from '../../domain/simulation';
 import type { ActionResult, Mission } from '../../domain/types';
+import type { MotionPreferences } from '../../app/motion';
 import { Chat } from '../chat/Chat';
 import { STAGE_FIXTURES } from './stageFixtures';
 import './mission.css';
 
-export interface MissionDetailProps { detailsOpen: boolean; wide: boolean; onCloseDetails: () => void; onOpenDetails: (opener?: HTMLElement) => void }
+export interface MissionDetailProps { detailsOpen: boolean; wide: boolean; motion: MotionPreferences; onCloseDetails: () => void; onOpenDetails: (opener?: HTMLElement) => void }
 
 function missionStatus(mission: Mission): string {
   switch (mission.status) {
@@ -30,7 +31,7 @@ function stageState(mission: Mission, index: number): 'complete' | 'ready' | 'pe
   return 'pending';
 }
 
-function MissionActionStrip({ mission, companionId, onViewDeliverable }: { mission: Mission; companionId: string; onViewDeliverable: (opener: HTMLElement) => void }) {
+function MissionActionStrip({ mission, companionId, motion, onViewDeliverable }: { mission: Mission; companionId: string; motion: MotionPreferences; onViewDeliverable: (opener: HTMLElement) => void }) {
   const { actions } = useApp();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState('');
@@ -39,7 +40,31 @@ function MissionActionStrip({ mission, companionId, onViewDeliverable }: { missi
   const actionRef = useRef<HTMLButtonElement>(null);
   const correctionRef = useRef<HTMLTextAreaElement>(null);
   const correctionTrigger = useRef<HTMLButtonElement>(null);
+  const stripRef = useRef<HTMLElement>(null);
+  const lastAnimatedState = useRef<string | null>(null);
   const demoStep = mission.status === 'active' ? getDemoStep(mission) : null;
+  useEffect(() => {
+    const element = stripRef.current;
+    const stateKey = `${mission.status}:${mission.demoCursor}`;
+    if (!element || lastAnimatedState.current === stateKey) return;
+    if (motion.reduced || motion.hidden) {
+      lastAnimatedState.current = stateKey;
+      return;
+    }
+
+    let animation: Animation | undefined;
+    const frame = requestAnimationFrame(() => {
+      lastAnimatedState.current = stateKey;
+      animation = element.animate(
+        [{ opacity: 0.72, transform: 'translateY(5px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 210, easing: 'ease-out' },
+      );
+    });
+    return () => {
+      cancelAnimationFrame(frame);
+      animation?.cancel();
+    };
+  }, [mission.status, mission.demoCursor, motion.reduced, motion.hidden]);
 
   async function run(runAction: () => Promise<ActionResult>) {
     if (pending) return;
@@ -60,7 +85,7 @@ function MissionActionStrip({ mission, companionId, onViewDeliverable }: { missi
   function openCorrections() { setCorrectionOpen(true); requestAnimationFrame(() => correctionRef.current?.focus()); }
   function closeCorrections() { setCorrectionOpen(false); requestAnimationFrame(() => correctionTrigger.current?.focus()); }
 
-  return <section className="mission-controls" aria-label="Mission actions">
+  return <section ref={stripRef} className="mission-controls" aria-label="Mission actions">
     {mission.status === 'active' && <><p>This is a demo. Advance one simulated step when you choose.</p><div className="mission-control-row"><button ref={actionRef} className="mission-button mission-button-secondary" type="button" disabled={pending} onClick={() => void run(() => actions.pauseMission(companionId, mission.id))}>Pause mission</button>{demoStep && <button className="mission-button" type="button" disabled={pending} onClick={() => void run(() => actions.advanceDemo(companionId, mission.id))}>{demoStep.kind === 'permission' ? 'Advance to permission' : demoStep.kind === 'review' ? 'Prepare final review' : 'Advance demo one step'}</button>}</div></>}
     {mission.status === 'waiting_permission' && <><p className="mission-control-lead">Permission needed for this simulated action</p><dl className="mission-gate"><div><dt>Action</dt><dd>{mission.gate.action}</dd></div><div><dt>Resource</dt><dd>{mission.gate.resource}</dd></div></dl><p>{mission.gate.explanation}</p><div className="mission-control-row"><button ref={actionRef} className="mission-button" type="button" disabled={pending} onClick={() => void run(() => actions.decidePermission(companionId, mission.id, mission.gate.id, 'approve'))}>Approve this action</button><button className="mission-button mission-button-secondary" type="button" disabled={pending} onClick={() => void run(() => actions.decidePermission(companionId, mission.id, mission.gate.id, 'decline'))}>Decline</button><button className="mission-text-button" type="button" disabled={pending} onClick={() => void run(() => actions.pauseMission(companionId, mission.id))}>Pause</button></div></>}
     {mission.status === 'paused' && <><p>{mission.resumeState.status === 'waiting_permission' ? 'The same permission request remains unresolved. Resume to decide it.' : 'Work is stopped at this point. Resume when you want to continue.'}</p><button ref={actionRef} className="mission-button" type="button" disabled={pending} onClick={() => void run(() => actions.resumeMission(companionId, mission.id))}>Resume mission</button></>}
@@ -99,13 +124,13 @@ function MissionDetails({ mission, companionId, onClose }: { mission: Mission; c
     <header className="mission-header"><div><p className="mission-eyebrow">{mission.kind} mission</p><h2 id={`mission-title-${mission.id}`}>{mission.objective}</h2><div className="mission-meta"><span>{missionStatus(mission)}</span>{target && <span>Target · {target}</span>}<span>Demo steps happen only when you advance them</span></div></div><button className="mission-text-button mission-details-close" type="button" onClick={onClose}>Close</button></header>
     {mission.status !== 'completed' && <div className="mission-form-actions"><button ref={editTrigger} className="mission-text-button" type="button" onClick={() => { setDraft(mission.objective); setEditOpen((open) => !open); }}>Edit goal</button></div>}
     {editOpen && <form className="mission-inline-form" onSubmit={(event) => void saveGoal(event)} onKeyDown={(event) => { if (event.key === 'Escape' && !pending) { event.preventDefault(); event.stopPropagation(); setEditOpen(false); requestAnimationFrame(() => editTrigger.current?.focus()); } }}><label htmlFor={`mission-goal-${mission.id}`}>Edit mission goal</label><textarea id={`mission-goal-${mission.id}`} ref={editRef} rows={3} autoFocus value={draft} required onChange={(event) => { setDraft(event.target.value); setError(''); }} aria-invalid={Boolean(error)} aria-describedby={error ? `mission-goal-error-${mission.id}` : undefined} />{error && <p className="mission-error" id={`mission-goal-error-${mission.id}`} role="alert">{error}</p>}<div className="mission-control-row"><button className="mission-button" type="submit" disabled={pending || !draft.trim()}>{pending ? 'Saving…' : 'Save goal'}</button><button className="mission-text-button" type="button" disabled={pending} onClick={() => { setEditOpen(false); requestAnimationFrame(() => editTrigger.current?.focus()); }}>Cancel</button></div></form>}
-    <section className="mission-progress-section"><h3>Progress <span>{mission.progress}% · demo estimate</span></h3><div className="mission-progress-track" role="progressbar" aria-label="Demo progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={mission.progress}><span style={{ width: `${mission.progress}%` }} /></div><details className="mission-stages"><summary>Stages and subtasks</summary><ol>{stages.map((stage, index) => { const state = stageState(mission, index); const text = state === 'complete' ? 'Complete' : state === 'ready' ? 'Ready to review' : 'To do'; return <li className={`mission-stage mission-stage-${state}`} key={stage.title}><div><strong>{stage.title}</strong><span>{text}</span></div><ul>{stage.subtasks.map((task) => <li key={task}>{task}</li>)}</ul></li>; })}</ol></details></section>
+    <section className="mission-progress-section"><h3>Progress <span>{mission.progress}% · demo estimate</span></h3><div className="mission-progress-track" role="progressbar" aria-label="Demo progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={mission.progress}><span style={{ transform: `scaleX(${mission.progress / 100})` }} /></div><details className="mission-stages" open><summary>Stages and subtasks</summary><ol>{stages.map((stage, index) => { const state = stageState(mission, index); const text = state === 'complete' ? 'Complete' : state === 'ready' ? 'Ready to review' : 'To do'; return <li className={`mission-stage mission-stage-${state}`} key={stage.title}><div><strong>{stage.title}</strong><span>{text}</span></div><ul>{stage.subtasks.map((task) => <li key={task}>{task}</li>)}</ul></li>; })}</ol></details></section>
     <section className="mission-history"><h3>History</h3>{events.length === 0 ? <p className="mission-muted">No progress events yet.</p> : <ol>{events.map((event) => <li key={event.id}><time dateTime={event.createdAt}>{formatTime(event.createdAt)}</time><p>{event.summary}</p></li>)}</ol>}</section>
     <section className="mission-deliverables" aria-labelledby={`mission-deliverables-title-${mission.id}`}><h3 id={`mission-deliverables-title-${mission.id}`}>Deliverables</h3>{deliverables.length === 0 ? <p className="mission-muted">No deliverables yet. Advance the demo to create a sample output.</p> : deliverables.map((deliverable) => <article className="mission-deliverable" key={deliverable.id}><p className="mission-deliverable-kind">{deliverable.kind} · {deliverable.id === ('deliverableId' in mission ? mission.deliverableId : null) ? mission.status === 'completed' ? 'confirmed' : 'ready for review' : 'earlier output'}</p><h4>{deliverable.title}</h4><time dateTime={deliverable.createdAt}>{formatTime(deliverable.createdAt)}</time><p className="mission-deliverable-body">{deliverable.body}</p></article>)}</section>
   </div>;
 }
 
-export function MissionDetail({ detailsOpen, wide, onCloseDetails, onOpenDetails }: MissionDetailProps) {
+export function MissionDetail({ detailsOpen, wide, motion, onCloseDetails, onOpenDetails }: MissionDetailProps) {
   const { snapshot, view, navigate } = useApp();
   const mobileDialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -120,8 +145,8 @@ export function MissionDetail({ detailsOpen, wide, onCloseDetails, onOpenDetails
   const scope = { kind: 'mission' as const, companionId: view.companionId, missionId: mission.id };
   const detailContent = <MissionDetails key={mission.id} mission={mission} companionId={view.companionId} onClose={onCloseDetails} />;
   return <>
-    <Chat key={`mission-${view.companionId}-${mission.id}`} scope={scope} companionName={snapshot.companions.find((item) => item.id === view.companionId)?.name} actionStrip={<MissionActionStrip mission={mission} companionId={view.companionId} onViewDeliverable={onOpenDetails} />} />
-    {detailsOpen && wide && <aside className="mission-details-panel" id="mission-details-surface">{detailContent}</aside>}
+    <Chat key={`mission-${view.companionId}-${mission.id}`} scope={scope} companionName={snapshot.companions.find((item) => item.id === view.companionId)?.name} actionStrip={<MissionActionStrip mission={mission} companionId={view.companionId} motion={motion} onViewDeliverable={onOpenDetails} />} />
+    {detailsOpen && wide && <aside key={mission.id} className="mission-details-panel" id="mission-details-surface">{detailContent}</aside>}
     <dialog ref={mobileDialog} id={!wide ? 'mission-details-surface' : undefined} className="mission-details-dialog" aria-label="Mission details" onCancel={(event) => { event.preventDefault(); onCloseDetails(); }} onClose={() => { if (detailsOpen) onCloseDetails(); }}>{!wide && detailContent}</dialog>
   </>;
 }

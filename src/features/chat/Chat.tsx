@@ -37,7 +37,7 @@ export function Chat({ scope, companionName = 'your companion', actionStrip }: C
 
   return <section className="chat-panel" aria-label={label}>
     <div className="chat-history" ref={historyRef} aria-live="polite" aria-relevant="additions" aria-atomic="false">
-      {messages.length === 0 ? <div className="chat-empty"><h1>{scope.kind === 'general' ? `Hey ${snapshot.profile?.name ?? 'there'}. What’s next?` : `Hi, I’m ${companionName}.`}</h1><p>{scope.kind === 'general' ? 'A small start counts.' : 'Let’s make progress on this mission.'}</p></div> : messages.map((message) => <article className={`chat-message chat-message-${message.role}`} key={message.id}><span className="chat-who">{message.role === 'user' ? 'You' : companionName}<span aria-hidden="true"> /</span></span><p>{message.text}</p></article>)}
+      {messages.length === 0 ? <div className="chat-empty"><h2>{scope.kind === 'general' ? `Hey ${snapshot.profile?.name ?? 'there'}. What’s next?` : `Hi, I’m ${companionName}.`}</h2><p>{scope.kind === 'general' ? 'A small start counts.' : 'Let’s make progress on this mission.'}</p></div> : messages.map((message) => <article className={`chat-message chat-message-${message.role}`} key={message.id}><span className="chat-who">{message.role === 'user' ? 'You' : companionName}</span><p>{message.text}</p></article>)}
     </div>
     <div className="chat-bottom">{actionStrip && <div className="chat-action-strip">{actionStrip}</div>}
       <form className="chat-composer" onSubmit={(event) => void send(event)}>

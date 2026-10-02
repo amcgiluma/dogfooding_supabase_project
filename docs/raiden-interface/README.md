@@ -14,7 +14,7 @@ The preview controls demonstrate onboarding, empty/populated chat, mission creat
 
 ## Confirmed direction
 
-Juanma selected a graphite background instead of the earlier pure-black constraint, a pronounced sci-fi direction, clipped corners and visible but finite animations across the whole app. Raiden replaces Morrow as the product brand and the default name for newly created companions. The future implementation must preserve existing custom names and browser data.
+Juanma selected Vector: a graphite interface, sci-fi typography, clipped corners and visible finite motion. Raiden is the product brand and new onboarding profiles use Raiden as the companion name. The React app now has a compact top header, large asymmetric workspace title, flat transcript rows, a technical mission column, and local Rajdhani and IBM Plex fonts. Existing companion names and browser data remain unchanged.
 
 ## Local review and build
 
@@ -38,6 +38,6 @@ Rajdhani 600/700 and IBM Plex Sans 400/500/600 are served from `fonts/`, with th
 
 Animations are finite, use transform/opacity, honor reduced motion and do not run continuously while idle. Interface copy remains English; the design comparison explains the choices in Spanish.
 
-## Review gate
+## Implementation status
 
-Choose one proposal before implementing changes in the React application, as required by `AGENTS.md` and `.agents/skills/html-communication/SKILL.md`. After the selection, apply the chosen design across onboarding, navigation, chat, missions and recovery, then verify existing flows, accessibility, persistence and the production build.
+Vector is selected and implemented in the local React application. Onboarding retains its typewriter and layered stellar scene; the scene settles after a finite step transition, and reduced-motion or hidden-tab preferences stop unnecessary motion. Run the React prototype from the repository root to inspect the implementation. The static proposals above remain unchanged historical references.

@@ -1,14 +1,78 @@
-*, *::before, *::after { box-sizing: border-box; }
-html { background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
-body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--bg); }
-button, input, textarea, select { font: inherit; }
-button { color: inherit; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-::selection { background: #063e75; color: var(--fg); }
-.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
-.mascot-slot { position: relative; width: 48px; height: 48px; flex: none; border: 1px solid #303033; border-radius: 4px; }
-.mascot-slot i { position: absolute; width: 7px; height: 7px; border-color: var(--accent); border-style: solid; }
-.mascot-slot i:nth-child(1) { top: 5px; left: 5px; border-width: 1px 0 0 1px; }
-.mascot-slot i:nth-child(2) { top: 5px; right: 5px; border-width: 1px 1px 0 0; }
-.mascot-slot i:nth-child(3) { bottom: 5px; left: 5px; border-width: 0 0 1px 1px; }
-.mascot-slot i:nth-child(4) { right: 5px; bottom: 5px; border-width: 0 1px 1px 0; }
+*,*::before,*::after {
+  box-sizing:border-box
+}
+html {
+  background:var(--bg);
+  color:var(--fg);
+  font:15px/1.5 var(--body)
+}
+body {
+  margin:0;
+  min-width:320px;
+  min-height:100vh;
+  background:var(--bg)
+}
+button,input,textarea,select {
+  font:inherit
+}
+button {
+  color:inherit
+}
+:focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:3px
+}
+::selection {
+  background:#164653;
+  color:var(--fg)
+}
+.visually-hidden {
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap
+}
+.mascot-slot {
+  position:relative;
+  width:48px;
+  height:48px;
+  flex:none;
+  border:1px solid var(--line);
+  border-radius:0
+}
+.mascot-slot i {
+  position:absolute;
+  width:7px;
+  height:7px;
+  border-color:var(--accent);
+  border-style:solid
+}
+.mascot-slot i:nth-child(1) {
+  top:5px;
+  left:5px;
+  border-width:1px 0 0 1px
+}
+.mascot-slot i:nth-child(2) {
+  top:5px;
+  right:5px;
+  border-width:1px 1px 0 0
+}
+.mascot-slot i:nth-child(3) {
+  bottom:5px;
+  left:5px;
+  border-width:0 0 1px 1px
+}
+.mascot-slot i:nth-child(4) {
+  right:5px;
+  bottom:5px;
+  border-width:0 1px 1px 0
+}
+
+button,
+input,
+textarea,
+select {
+  border-radius: 0;
+}

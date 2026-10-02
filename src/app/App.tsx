@@ -7,6 +7,7 @@ import { Onboarding } from '../features/onboarding/Onboarding';
 import { Workspace } from '../features/workspace/Workspace';
 import './app.css';
 import { useApp } from './AppProvider';
+import { useMotionPreferences } from './motion';
 
 function statusLabel(mission: Mission): string {
   switch (mission.status) {
@@ -40,7 +41,7 @@ function SidebarContent({ onClose, onCreateMission, onReset }: Omit<SidebarProps
   }
 
   return <>
-    <div className="sidebar-brand-row"><button className="app-brand" type="button" onClick={goHome}>morrow<span>+</span></button><button className="sidebar-close" type="button" onClick={onClose}>Close</button></div>
+    <div className="sidebar-brand-row"><button className="app-brand" type="button" onClick={goHome}>RAIDEN<span> / PERSONAL</span></button><button className="sidebar-close" type="button" onClick={onClose}>Close</button></div>
     {selected && <div className="sidebar-mascot-row"><div className="mascot-slot" role="img" aria-label="Reserved space for your future mascot"><i /><i /><i /><i /></div><div><strong>{selected.name}</strong><span>Let’s make progress</span></div></div>}
     <nav className="sidebar-navigation" aria-label="Workspace navigation">
       <button className={`sidebar-link${view.kind === 'workspace' && view.missionId === null ? ' is-current' : ''}`} type="button" aria-current={view.kind === 'workspace' && view.missionId === null ? 'page' : undefined} disabled={!selected} onClick={() => selected && goGeneral(selected.id)}>General chat</button>
@@ -71,7 +72,6 @@ function Sidebar({ open, onClose, onCreateMission, onReset, trigger }: SidebarPr
     requestAnimationFrame(() => trigger.current?.focus());
   }
   return <>
-    <aside className="app-sidebar"><SidebarContent onClose={close} onCreateMission={onCreateMission} onReset={onReset} /></aside>
     <dialog ref={dialog} className="sidebar-dialog" aria-label="Navigation" onCancel={(event) => { event.preventDefault(); close(); }} onClose={() => requestAnimationFrame(() => trigger.current?.focus())} onClick={(event) => { if (event.target === event.currentTarget) close(); }}>
       <SidebarContent onClose={close} onCreateMission={onCreateMission} onReset={onReset} />
     </dialog>
@@ -80,6 +80,7 @@ function Sidebar({ open, onClose, onCreateMission, onReset, trigger }: SidebarPr
 
 export default function App() {
   const { initializing, snapshot, storage, actions, view, navigate } = useApp();
+  const motion = useMotionPreferences();
   const resetDialog = useRef<HTMLDialogElement>(null);
   const menuTrigger = useRef<HTMLButtonElement>(null);
   const [storageError, setStorageError] = useState('');
@@ -121,17 +122,26 @@ export default function App() {
 
   const blocked = storage.mode === 'blocked';
   const onboard = !initializing && !blocked && !snapshot.profile;
-  return <div className={`app-shell${snapshot.profile && !blocked ? ' app-shell-ready' : ''}`}>
-    {snapshot.profile && !blocked && <Sidebar trigger={menuTrigger} open={sidebarOpen && !viewportWide} onClose={() => setSidebarOpen(false)} onCreateMission={createMission} onReset={() => { setSidebarOpen(false); requestAnimationFrame(() => resetDialog.current?.showModal()); }} />}
+  return <div className={`app-shell${snapshot.profile && !blocked ? ' app-shell-ready' : ''}${motion.reduced ? ' is-reduced-motion' : ''}${motion.hidden ? ' is-hidden' : ''}`}>
+    {snapshot.profile && !blocked && <Sidebar trigger={menuTrigger} open={sidebarOpen} onClose={() => setSidebarOpen(false)} onCreateMission={createMission} onReset={() => { setSidebarOpen(false); requestAnimationFrame(() => resetDialog.current?.showModal()); }} />}
     <div className="app-main">
+      {snapshot.profile && !blocked && !onboard && <header className="app-header">
+        <button className="app-brand" type="button" onClick={() => navigate({ kind: 'home' })}>RAIDEN<span> / PERSONAL</span></button>
+        <nav className="app-primary-nav" aria-label="Primary navigation">
+          <button type="button" aria-current={view.kind === 'workspace' && view.missionId === null ? 'page' : undefined} onClick={() => selectedId && navigate({ kind: 'workspace', companionId: selectedId, missionId: null })}>General chat</button>
+          <button type="button" aria-current={view.kind === 'home' ? 'page' : undefined} onClick={() => navigate({ kind: 'home' })}>Companions</button>
+        </nav>
+        <div className="app-header-actions">
+          <button ref={menuTrigger} className="app-menu-trigger" type="button" onClick={() => setSidebarOpen(true)} aria-label="Open navigation">Menu</button>
+          <button className="app-new-mission" type="button" disabled={!selectedId} onClick={createMission}>＋ New mission</button>
+        </div>
+      </header>}
       {storage.mode === 'memory' && <section className="app-storage" role="status" aria-live="polite"><p><strong>Changes are not being saved.</strong> {storage.message}</p><button type="button" onClick={() => void retryPersistence()}>Retry saving</button></section>}
       {storageError && !blocked && <p className="app-action-error app-global-error" role="alert">{storageError}</p>}
       {blocked ? <main className="app-recovery" aria-labelledby="app-recovery-title"><p className="app-eyebrow">Saved demo data needs attention</p><h1 id="app-recovery-title">This demo could not open its saved data.</h1><p>{storage.message} Reset the demo to remove its saved data and start again. Other data in this browser will stay untouched.</p>{storageError && <p className="app-action-error" role="alert">{storageError}</p>}<button className="app-button" type="button" onClick={() => resetDialog.current?.showModal()}>Review reset</button></main>
         : initializing ? <main className="app-loading" aria-live="polite">Loading your demo…</main>
-          : onboard ? <Onboarding />
-            : view.kind === 'home' ? <>
-              <header className="mobile-topbar"><button ref={menuTrigger} type="button" className="mobile-menu" onClick={() => setSidebarOpen(true)} aria-label="Open navigation">☰</button><strong>Companions</strong></header><Home />
-            </> : <Workspace onMenu={() => setSidebarOpen(true)} menuRef={menuTrigger} createOpen={createOpen} onCreateOpenChange={setCreateOpen} renderMissionDetail={(props) => <MissionDetail {...props} />} />}
+          : onboard ? <Onboarding motion={motion} />
+          : view.kind === 'home' ? <Home /> : <Workspace menuRef={menuTrigger} createOpen={createOpen} onCreateOpenChange={setCreateOpen} motion={motion} renderMissionDetail={(props) => <MissionDetail {...props} />} />}
     </div>
     <dialog className="app-reset-dialog" ref={resetDialog} aria-labelledby="app-reset-title" aria-describedby="app-reset-description" onCancel={() => setStorageError('')}><form method="dialog" className="app-reset-close"><button className="app-text-button" type="submit" aria-label="Cancel reset">Cancel</button></form><p className="app-eyebrow">Start over</p><h2 id="app-reset-title">Reset this demo?</h2><p id="app-reset-description">This removes the profile, companions, missions and conversations saved by this demo on this device.</p><p className="app-dialog-note">Other browser data will stay untouched.</p>{storageError && <p className="app-action-error" role="alert">{storageError}</p>}<div className="app-dialog-actions"><form method="dialog"><button className="app-button app-button-secondary" type="submit" disabled={resetPending}>Keep my data</button></form><button className="app-button" type="button" onClick={() => void resetDemo()} disabled={resetPending}>{resetPending ? 'Resetting…' : 'Reset demo'}</button></div></dialog>
   </div>;

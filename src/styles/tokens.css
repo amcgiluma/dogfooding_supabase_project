@@ -1,14 +1,6 @@
-:root {
-  color-scheme: dark;
-  --bg: #000;
-  --fg: #fff;
-  --muted: #a3a3a3;
-  --line: #262626;
-  --accent: #0A84FF;
-  --accent-action: #0066CC;
-  --surface: #111;
-  --surface-raised: #18181b;
-  --surface-hover: #202024;
-  --error: #f2a4aa;
-  --max: 1240px;
-}
+@font-face { font-family: 'IBM Plex Sans'; src: url('/fonts/IBMPlexSans-Regular.woff2') format('woff2'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans'; src: url('/fonts/IBMPlexSans-Medium.woff2') format('woff2'); font-style: normal; font-weight: 500; font-display: swap; }
+@font-face { font-family: 'IBM Plex Sans'; src: url('/fonts/IBMPlexSans-SemiBold.woff2') format('woff2'); font-style: normal; font-weight: 600; font-display: swap; }
+@font-face { font-family: Rajdhani; src: url('/fonts/Rajdhani-SemiBold.ttf') format('truetype'); font-style: normal; font-weight: 600; font-display: swap; }
+@font-face { font-family: Rajdhani; src: url('/fonts/Rajdhani-Bold.ttf') format('truetype'); font-style: normal; font-weight: 700; font-display: swap; }
+:root { color-scheme: dark; --bg:#141619; --fg:#fff; --muted:#b5bec8; --line:#39434d; --accent:#67e8f9; --accent-action:#67e8f9; --surface:#1c2025; --surface-raised:#242a31; --surface-hover:#29323a; --error:#ffaaa7; --violet:#a78bfa; --amber:#fbbf24; --max:1440px; --body:'IBM Plex Sans',sans-serif; --display:Rajdhani,'Arial Narrow',sans-serif; }
