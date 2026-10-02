@@ -65,7 +65,7 @@ export function Workspace({ menuRef, createOpen, onCreateOpenChange, motion, ren
   function openDetails(opener?: HTMLElement) { detailsRestoreTarget.current = opener ?? detailsTrigger.current; setDetailsOpen(true); }
 
   return <main className="workspace-page">
-    {createOpen && <CreateMission companionId={companionId} onClose={(restoreFocus = true) => { onCreateOpenChange(false); if (restoreFocus) requestAnimationFrame(() => (document.querySelector<HTMLButtonElement>('.app-new-mission') ?? menuRef.current)?.focus()); }} />}
+    {createOpen && <CreateMission companionId={companionId} onClose={(restoreFocus = true) => { onCreateOpenChange(false); if (restoreFocus) requestAnimationFrame(() => (document.querySelector<HTMLButtonElement>(wide ? '.app-sidebar .sidebar-new-mission' : '.app-new-mission') ?? menuRef.current)?.focus()); }} />}
     <section className="workspace-hero">
       <div className="workspace-hero-title"><span className="workspace-title-marker" aria-hidden="true" /><div><p>{companion.name} / {missionId ? 'MISSION' : 'GENERAL CHAT'}</p><h1 key={`${companionId}:${missionId ?? 'general'}`}>{title}</h1></div></div>
       <div className="workspace-hero-actions">

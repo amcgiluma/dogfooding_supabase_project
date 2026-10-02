@@ -20,6 +20,7 @@ function statusLabel(mission: Mission): string {
 }
 
 interface SidebarProps {
+  wide: boolean;
   open: boolean;
   onClose: () => void;
   onCreateMission: () => void;
@@ -27,7 +28,7 @@ interface SidebarProps {
   trigger: RefObject<HTMLButtonElement | null>;
 }
 
-function SidebarContent({ onClose, onCreateMission, onReset }: Omit<SidebarProps, 'open' | 'trigger'>) {
+function SidebarContent({ onClose, onCreateMission, onReset }: Omit<SidebarProps, 'open' | 'trigger' | 'wide'>) {
   const { snapshot, view, navigate } = useApp();
   const selected = view.kind === 'workspace' ? getCompanion(snapshot, view.companionId) : snapshot.companions[0];
   const missions = selected ? getCompanionMissions(snapshot, selected.id) : [];
@@ -58,7 +59,7 @@ function SidebarContent({ onClose, onCreateMission, onReset }: Omit<SidebarProps
   </>;
 }
 
-function Sidebar({ open, onClose, onCreateMission, onReset, trigger }: SidebarProps) {
+function Sidebar({ wide, open, onClose, onCreateMission, onReset, trigger }: SidebarProps) {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const element = dialog.current;
@@ -71,6 +72,7 @@ function Sidebar({ open, onClose, onCreateMission, onReset, trigger }: SidebarPr
     onClose();
     requestAnimationFrame(() => trigger.current?.focus());
   }
+  if (wide) return <aside className="app-sidebar" aria-label="Navigation"><SidebarContent onClose={onClose} onCreateMission={onCreateMission} onReset={onReset} /></aside>;
   return <>
     <dialog ref={dialog} className="sidebar-dialog" aria-label="Navigation" onCancel={(event) => { event.preventDefault(); close(); }} onClose={() => requestAnimationFrame(() => trigger.current?.focus())} onClick={(event) => { if (event.target === event.currentTarget) close(); }}>
       <SidebarContent onClose={close} onCreateMission={onCreateMission} onReset={onReset} />
@@ -123,9 +125,9 @@ export default function App() {
   const blocked = storage.mode === 'blocked';
   const onboard = !initializing && !blocked && !snapshot.profile;
   return <div className={`app-shell${snapshot.profile && !blocked ? ' app-shell-ready' : ''}${motion.reduced ? ' is-reduced-motion' : ''}${motion.hidden ? ' is-hidden' : ''}`}>
-    {snapshot.profile && !blocked && <Sidebar trigger={menuTrigger} open={sidebarOpen} onClose={() => setSidebarOpen(false)} onCreateMission={createMission} onReset={() => { setSidebarOpen(false); requestAnimationFrame(() => resetDialog.current?.showModal()); }} />}
+    {snapshot.profile && !blocked && <Sidebar wide={viewportWide} trigger={menuTrigger} open={sidebarOpen && !viewportWide} onClose={() => setSidebarOpen(false)} onCreateMission={createMission} onReset={() => { setSidebarOpen(false); requestAnimationFrame(() => resetDialog.current?.showModal()); }} />}
     <div className="app-main">
-      {snapshot.profile && !blocked && !onboard && <header className="app-header">
+      {snapshot.profile && !blocked && !onboard && !viewportWide && <header className="app-header">
         <button className="app-brand" type="button" onClick={() => navigate({ kind: 'home' })}>RAIDEN<span> / PERSONAL</span></button>
         <nav className="app-primary-nav" aria-label="Primary navigation">
           <button type="button" aria-current={view.kind === 'workspace' && view.missionId === null ? 'page' : undefined} onClick={() => selectedId && navigate({ kind: 'workspace', companionId: selectedId, missionId: null })}>General chat</button>

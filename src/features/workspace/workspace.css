@@ -36,7 +36,7 @@
 .workspace-hero-title h1 {
   max-width:100%;
   margin:0;
-  font:700 clamp(32px,4vw,56px)/1.02 var(--display);
+  font:700 clamp(28px,3.4vw,44px)/1.06 var(--display);
   letter-spacing:-.025em;
   text-transform:uppercase;
   overflow-wrap:anywhere
@@ -112,6 +112,11 @@
   height:2px;
   background:var(--accent);
   content:''
+}
+@media (min-width:901px) {
+  .workspace-mission-nav {
+    display: none;
+  }
 }
 .workspace-stage {
   display:flex;
@@ -221,7 +226,7 @@
     padding:16px 22px 0
   }
   .workspace-hero-title h1 {
-    font-size:clamp(30px,4.5vw,42px)
+    font-size:clamp(28px,4vw,36px)
   }
   .workspace-stage.has-details .workspace-conversation {
     display:flex;
@@ -263,7 +268,7 @@
     gap:12px
   }
   .workspace-hero-title h1 {
-    font-size:clamp(28px,8vw,34px);
+    font-size:clamp(26px,7vw,30px);
     line-height:1.04
   }
   .workspace-hero-title p {

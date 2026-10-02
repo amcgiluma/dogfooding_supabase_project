@@ -5,8 +5,36 @@
   color:var(--fg)
 }
 .app-shell-ready {
+  display: flex;
   height:100dvh;
   overflow:hidden
+}
+.app-shell-ready .app-main {
+  width: auto;
+  flex: 1;
+}
+.app-sidebar {
+  display: flex;
+  width: 220px;
+  flex: none;
+  flex-direction: column;
+  gap: 0;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+  padding: 18px 12px;
+  background: var(--surface);
+}
+.app-sidebar .sidebar-close {
+  display: none;
+}
+.app-sidebar .sidebar-brand-row {
+  min-height: 44px;
+}
+.app-sidebar .app-brand {
+  font-size: 19px;
+}
+.app-sidebar .app-brand span {
+  font-size: 10px;
 }
 .app-main {
   display:flex;
@@ -325,7 +353,7 @@
 }
 .app-recovery h1 {
   margin:0 0 16px;
-  font:700 clamp(30px,4vw,52px)/1.04 var(--display);
+  font:700 clamp(28px,3.4vw,44px)/1.06 var(--display);
   text-transform:uppercase
 }
 .app-recovery>p:not(.app-eyebrow) {
