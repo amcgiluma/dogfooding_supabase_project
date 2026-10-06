@@ -44,8 +44,8 @@
 .workspace-hero-actions {
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:12px;
+  justify-content:flex-start;
+  gap:20px;
   margin:13px 0 0 32px;
   color:var(--muted);
   font-size:12px;
@@ -77,6 +77,29 @@
   background:var(--surface);
   color:var(--fg)
 }
+.workspace-details-toggle {
+  display:inline-flex;
+  flex:none;
+  margin-left:auto;
+  min-height:44px;
+  align-items:center;
+  gap:8px;
+  border:0;
+  border-bottom:1px solid var(--line);
+  padding:8px 10px;
+  background:transparent;
+  color:var(--fg);
+  font:500 14px/1 var(--body);
+  letter-spacing:0;
+  text-transform:none;
+  cursor:pointer;
+  transition:color .16s ease
+}
+.workspace-details-toggle svg { width:20px; height:20px; fill:none; stroke:var(--accent); stroke-width:1.5; }
+.workspace-details-toggle .workspace-details-toggle-pane { fill:currentColor; stroke:none; opacity:0; transition:opacity .16s ease; }
+.workspace-details-toggle:hover { color:var(--fg); }
+.workspace-details-toggle[aria-expanded=true] { color:var(--accent); border-bottom-color:var(--accent); }
+.workspace-details-toggle[aria-expanded=true] .workspace-details-toggle-pane { opacity:.3; }
 .workspace-mission-nav {
   display:flex;
   min-width:0;
@@ -141,6 +164,61 @@
 .workspace-stage.has-details .mission-details-panel,.workspace-stage.has-details .general-details {
   width:auto;
   min-width:0
+}
+@media (min-width:901px) {
+  /* Keep one grid and animate its column, so the chat moves with Details. */
+  .workspace-page.mission-workspace {
+    display:grid;
+    container-type:inline-size;
+    grid-template-columns:minmax(0,1fr) 0px;
+    grid-template-rows:auto minmax(0,1fr);
+    transition:grid-template-columns .42s cubic-bezier(.22,1,.36,1)
+  }
+  .workspace-page.mission-workspace.details-visible {
+    grid-template-columns:minmax(0,1fr) max(300px,37.735849%)
+  }
+  .workspace-page.mission-workspace .workspace-stage,
+  .workspace-page.mission-workspace .workspace-conversation {
+    display:contents
+  }
+  .workspace-page.mission-workspace .workspace-hero {
+    grid-column:1;
+    grid-row:1
+  }
+  .workspace-page.mission-workspace .workspace-hero-title {
+    /* Reserve the reading width so title wrapping cannot move the chat mid-transition. */
+    max-width:calc(100cqw - max(300px,37.735849cqw) - clamp(18px,5vw,72px) - clamp(18px,5vw,72px))
+  }
+  .workspace-page.mission-workspace .chat-panel {
+    grid-column:1;
+    grid-row:2
+  }
+  .workspace-page.mission-workspace .mission-details-panel {
+    grid-column:2;
+    grid-row:1 / span 2;
+    min-height:0;
+    overflow-x:hidden;
+    opacity:0;
+    visibility:hidden;
+    animation:none;
+    transition:opacity .26s ease,visibility .42s
+  }
+  /* Reveal at the final reading width rather than squeezing the text. */
+  .workspace-page.mission-workspace .mission-details-content {
+    width:max(300px,37.735849cqw)
+  }
+  .workspace-page.mission-workspace.details-visible .mission-details-panel {
+    opacity:1;
+    visibility:visible
+  }
+  .workspace-page.mission-workspace.motion-static,
+  .workspace-page.mission-workspace.motion-static .mission-details-panel {
+    transition:none
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .workspace-page.mission-workspace,
+  .workspace-page.mission-workspace .mission-details-panel { transition:none; }
 }
 .workspace-details-heading {
   display:flex;

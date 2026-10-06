@@ -107,7 +107,21 @@ function MissionDetails({ mission, companionId, onClose }: { mission: Mission; c
   const events = getMissionEvents(snapshot, companionId, mission.id);
   const deliverables = getMissionDeliverables(snapshot, companionId, mission.id);
   const stages = STAGE_FIXTURES[mission.kind];
+  const companionName = snapshot.companions.find((item) => item.id === companionId)?.name ?? 'Raiden';
+  const companionNote = mission.status === 'active'
+    ? 'I’m ready for the next demo step. Advance when you choose.'
+    : mission.status === 'waiting_permission'
+      ? 'I’m waiting for your decision on this action.'
+      : mission.status === 'paused'
+        ? mission.resumeState.status === 'waiting_permission'
+          ? 'I’m paused with a permission request unresolved.'
+          : 'I’m paused where I left you. Resume when you’re ready.'
+        : mission.status === 'awaiting_review'
+          ? 'I have a result for you to review. Confirm it or tell me what to change.'
+          : 'You confirmed the result. I’ll keep its history here.';
   const target = mission.targetDate ? new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${mission.targetDate}T00:00:00.000Z`)) : null;
+  const ringCircumference = 2 * Math.PI * 34;
+  const ringLength = ringCircumference * (mission.progress / 100);
 
   async function saveGoal(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -121,12 +135,22 @@ function MissionDetails({ mission, companionId, onClose }: { mission: Mission; c
   }
 
   return <div className="mission-details-content">
-    <header className="mission-header"><div><p className="mission-eyebrow">{mission.kind} mission</p><h2 id={`mission-title-${mission.id}`}>{mission.objective}</h2><div className="mission-meta"><span>{missionStatus(mission)}</span>{target && <span>Target · {target}</span>}<span>Demo steps happen only when you advance them</span></div></div><button className="mission-text-button mission-details-close" type="button" onClick={onClose}>Close</button></header>
+    <header className="mission-header"><div><p className="mission-eyebrow">{mission.kind} mission</p><h2 id={`mission-title-${mission.id}`}>{mission.objective}</h2><div className="mission-meta"><span>{missionStatus(mission)}</span>{target && <span>Target · {target}</span>}</div></div><button className="mission-text-button mission-details-close" type="button" onClick={onClose}>Close</button></header>
     {mission.status !== 'completed' && <div className="mission-form-actions"><button ref={editTrigger} className="mission-text-button" type="button" onClick={() => { setDraft(mission.objective); setEditOpen((open) => !open); }}>Edit goal</button></div>}
     {editOpen && <form className="mission-inline-form" onSubmit={(event) => void saveGoal(event)} onKeyDown={(event) => { if (event.key === 'Escape' && !pending) { event.preventDefault(); event.stopPropagation(); setEditOpen(false); requestAnimationFrame(() => editTrigger.current?.focus()); } }}><label htmlFor={`mission-goal-${mission.id}`}>Edit mission goal</label><textarea id={`mission-goal-${mission.id}`} ref={editRef} rows={3} autoFocus value={draft} required onChange={(event) => { setDraft(event.target.value); setError(''); }} aria-invalid={Boolean(error)} aria-describedby={error ? `mission-goal-error-${mission.id}` : undefined} />{error && <p className="mission-error" id={`mission-goal-error-${mission.id}`} role="alert">{error}</p>}<div className="mission-control-row"><button className="mission-button" type="submit" disabled={pending || !draft.trim()}>{pending ? 'Saving…' : 'Save goal'}</button><button className="mission-text-button" type="button" disabled={pending} onClick={() => { setEditOpen(false); requestAnimationFrame(() => editTrigger.current?.focus()); }}>Cancel</button></div></form>}
-    <section className="mission-progress-section"><h3>Progress <span>{mission.progress}% · demo estimate</span></h3><div className="mission-progress-track" role="progressbar" aria-label="Demo progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={mission.progress}><span style={{ transform: `scaleX(${mission.progress / 100})` }} /></div><details className="mission-stages" open><summary>Stages and subtasks</summary><ol>{stages.map((stage, index) => { const state = stageState(mission, index); const text = state === 'complete' ? 'Complete' : state === 'ready' ? 'Ready to review' : 'To do'; return <li className={`mission-stage mission-stage-${state}`} key={stage.title}><div><strong>{stage.title}</strong><span>{text}</span></div><ul>{stage.subtasks.map((task) => <li key={task}>{task}</li>)}</ul></li>; })}</ol></details></section>
+    <section className="mission-progress-section" aria-labelledby={`mission-progress-title-${mission.id}`}>
+      <h3 id={`mission-progress-title-${mission.id}`}>Progress</h3>
+      <div className="mission-progress-overview">
+        <div className="mission-progress-ring" role="progressbar" aria-label="Demo progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={mission.progress} aria-valuetext={`${mission.progress}% · demo estimate`}>
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle className="mission-progress-ring-track" cx="40" cy="40" r="34" /><circle className="mission-progress-ring-value" cx="40" cy="40" r="34" style={{ strokeDasharray: `${ringLength} ${ringCircumference}` }} /></svg>
+          <span><strong>{mission.progress}%</strong><small>demo estimate</small></span>
+        </div>
+        <div className="mission-companion-note"><div className="mission-companion-identity"><div className="mascot-slot mascot-slot-small" aria-hidden="true"><i /><i /><i /><i /></div><strong>{companionName}</strong></div><p>{companionNote}</p></div>
+      </div>
+    </section>
+    <section className="mission-stages" aria-labelledby={`mission-stages-title-${mission.id}`}><h3 id={`mission-stages-title-${mission.id}`}>Stages and subtasks</h3><ol className="mission-route">{stages.map((stage, index) => { const state = stageState(mission, index); const text = state === 'complete' ? 'Complete' : state === 'ready' ? 'Ready to review' : 'To do'; const marker = state === 'complete' ? '✓' : state === 'ready' ? '↗' : String(index + 1); return <li className={`mission-stage mission-stage-${state}`} key={stage.title}><div className="mission-stage-heading"><span className="mission-stage-marker" aria-hidden="true">{marker}</span><div><strong>{stage.title}</strong><span>{text}</span></div></div><ul>{stage.subtasks.map((task) => <li key={task}>{task}</li>)}</ul></li>; })}</ol></section>
     <section className="mission-history"><h3>History</h3>{events.length === 0 ? <p className="mission-muted">No progress events yet.</p> : <ol>{events.map((event) => <li key={event.id}><time dateTime={event.createdAt}>{formatTime(event.createdAt)}</time><p>{event.summary}</p></li>)}</ol>}</section>
-    <section className="mission-deliverables" aria-labelledby={`mission-deliverables-title-${mission.id}`}><h3 id={`mission-deliverables-title-${mission.id}`}>Deliverables</h3>{deliverables.length === 0 ? <p className="mission-muted">No deliverables yet. Advance the demo to create a sample output.</p> : deliverables.map((deliverable) => <article className="mission-deliverable" key={deliverable.id}><p className="mission-deliverable-kind">{deliverable.kind} · {deliverable.id === ('deliverableId' in mission ? mission.deliverableId : null) ? mission.status === 'completed' ? 'confirmed' : 'ready for review' : 'earlier output'}</p><h4>{deliverable.title}</h4><time dateTime={deliverable.createdAt}>{formatTime(deliverable.createdAt)}</time><p className="mission-deliverable-body">{deliverable.body}</p></article>)}</section>
+    <section className="mission-deliverables" aria-labelledby={`mission-deliverables-title-${mission.id}`}><h3 id={`mission-deliverables-title-${mission.id}`} tabIndex={-1}>Deliverables</h3>{deliverables.length === 0 ? <p className="mission-muted">No deliverables yet. Advance the demo to create a sample output.</p> : deliverables.map((deliverable) => <article className="mission-deliverable" key={deliverable.id}><p className="mission-deliverable-kind">{deliverable.kind} · {deliverable.id === ('deliverableId' in mission ? mission.deliverableId : null) ? mission.status === 'completed' ? 'confirmed' : 'ready for review' : 'earlier output'}</p><h4>{deliverable.title}</h4><time dateTime={deliverable.createdAt}>{formatTime(deliverable.createdAt)}</time><p className="mission-deliverable-body">{deliverable.body}</p></article>)}</section>
   </div>;
 }
 
@@ -146,7 +170,7 @@ export function MissionDetail({ detailsOpen, wide, motion, onCloseDetails, onOpe
   const detailContent = <MissionDetails key={mission.id} mission={mission} companionId={view.companionId} onClose={onCloseDetails} />;
   return <>
     <Chat key={`mission-${view.companionId}-${mission.id}`} scope={scope} companionName={snapshot.companions.find((item) => item.id === view.companionId)?.name} actionStrip={<MissionActionStrip mission={mission} companionId={view.companionId} motion={motion} onViewDeliverable={onOpenDetails} />} />
-    {detailsOpen && wide && <aside key={mission.id} className="mission-details-panel" id="mission-details-surface">{detailContent}</aside>}
-    <dialog ref={mobileDialog} id={!wide ? 'mission-details-surface' : undefined} className="mission-details-dialog" aria-label="Mission details" onCancel={(event) => { event.preventDefault(); onCloseDetails(); }} onClose={() => { if (detailsOpen) onCloseDetails(); }}>{!wide && detailContent}</dialog>
+    {wide && <aside inert={!detailsOpen} aria-hidden={!detailsOpen} key={mission.id} className={`mission-details-panel${motion.reduced || motion.hidden ? ' motion-static' : ''}`} id="mission-details-surface">{detailContent}</aside>}
+    <dialog ref={mobileDialog} id={!wide ? 'mission-details-surface' : undefined} className={`mission-details-dialog${motion.reduced || motion.hidden ? ' motion-static' : ''}`} aria-label="Mission details" onCancel={(event) => { event.preventDefault(); onCloseDetails(); }}>{!wide && detailContent}</dialog>
   </>;
 }

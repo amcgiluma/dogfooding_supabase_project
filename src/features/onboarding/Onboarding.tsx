@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import type { OnboardingInput } from '../../domain/types';
 import { useApp } from '../../app/AppProvider';
 import type { MotionPreferences } from '../../app/motion';
+import { useTypedPrompt } from '../../app/useTypedPrompt';
 import './onboarding.css';
 
 const steps = ['you', 'goal', 'use', 'companion'] as const;
@@ -10,26 +11,6 @@ type Step = (typeof steps)[number];
 const stepIndex: Record<Step, number> = { you: 0, goal: 1, use: 2, companion: 3 };
 const goalSuggestions = ['Ship a first version', 'Explore an idea', 'Keep track of changes'];
 const useSuggestions = ['Build something', 'Research a question', 'Stay on top of changes'];
-
-function useTypedPrompt(prompt: string, reducedMotion: boolean, hidden: boolean) {
-  const [typing, setTyping] = useState(() => ({ prompt, length: reducedMotion ? prompt.length : 0 }));
-  const visibleLength = typing.prompt === prompt ? typing.length : 0;
-
-  useEffect(() => {
-    setTyping({ prompt, length: reducedMotion ? prompt.length : 0 });
-  }, [prompt, reducedMotion]);
-
-  useEffect(() => {
-    if (reducedMotion || hidden || visibleLength >= prompt.length) return;
-
-    const timeout = window.setTimeout(() => {
-      setTyping((current) => ({ prompt, length: Math.min(current.length + 1, prompt.length) }));
-    }, 28);
-    return () => window.clearTimeout(timeout);
-  }, [hidden, prompt, reducedMotion, visibleLength]);
-
-  return reducedMotion ? prompt : prompt.slice(0, visibleLength);
-}
 
 function makeStarField(seed: number, count: number) {
   let value = seed;

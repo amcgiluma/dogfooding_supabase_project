@@ -82,3 +82,17 @@ The published HTML previews remain design references. Run the React prototype lo
 [Open the privately published Raiden proposals](https://raiden-interface.supabase-8786.chatgpt.site). Sign in with the owning ChatGPT account if prompted. The older Morrow previews keep their existing URL.
 
 The Vector selection is implemented in the local React prototype. These static previews do not read or modify the prototype's saved data. See [preview setup and implementation notes](docs/raiden-interface/README.md) for local viewing and build details.
+
+## Mission experience proposals
+
+[Compare three guided mission experiences](docs/mission-experience/index.html): Conversation uses a companion-led exchange with a lateral summary; Focus puts one question at the center and turns Details into a visual route; Compact keeps the exchange short with a persistent lower summary and dense mission instruments.
+
+Each proposal walks through objective, type and optional target date, then an editable review inside the same creation menu. The companion speaks through text, as in onboarding. Mission Details shows progress, stages, activity and results, including permission, paused, review and completed examples. The target date is a planning reference, not a scheduled job; progress is a demo estimate. The interfaces use English, and the comparison uses Spanish.
+
+[Private mission design review](https://raiden-mission-experience.supabase-8786.chatgpt.site). Sign in with the owning ChatGPT account if prompted.
+
+Juanma selected **Conversation (A)** for the local React prototype on `design/mission-companion-ui`. Creation stays in one dialog: objective, mission type and optional target, then an editable review. The companion's text accompanies each step, with a live mission brief. Cancel preserves the draft until creation or a companion change.
+
+Mission Details uses a progress ring, stage route, activity and results from the saved mission. On desktop, its column spans the header and chat. Opening and closing animate the column width together with the chat; the title keeps its reading width and the panel content keeps its final width during the reveal. The collapsed panel is inert and hidden from assistive technology. Mobile uses a full-screen dialog. Details and mission creation use brief opening and closing transitions; reduced motion and hidden tabs make them immediate. Progress remains a demo estimate; permission decisions and final review use the existing actions. Reduced motion displays the complete companion prompt immediately.
+
+The published proposals remain isolated static references. They do not access the prototype's browser storage, run agents, or require Supabase setup. See [preview instructions](docs/mission-experience/README.md) for local viewing and packaging.

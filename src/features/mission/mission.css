@@ -101,8 +101,7 @@
   min-width:0;
   overflow-y:auto;
   border-left:1px solid var(--line);
-  background:var(--bg);
-  animation:mission-in .24s ease-out both
+  background:var(--bg)
 }
 .mission-details-dialog {
   position:fixed;
@@ -116,15 +115,27 @@
   padding:0 15px 30px;
   background:var(--surface);
   color:var(--fg);
-  overflow-y:auto
+  overflow-y:auto;
+  opacity:0;
+  transform:translateX(20px);
+  transition:opacity .22s ease,transform .28s cubic-bezier(.22,1,.36,1),display .28s allow-discrete,overlay .28s allow-discrete
 }
 .mission-details-dialog::backdrop {
-  background:rgb(0 0 0 / 72%)
+  background:rgb(0 0 0 / 0%);
+  transition:background-color .24s ease,display .28s allow-discrete,overlay .28s allow-discrete
 }
 .mission-details-dialog[open] {
   display:block;
-  animation:mission-in .2s ease-out both
+  opacity:1;
+  transform:none
 }
+.mission-details-dialog[open]::backdrop { background:rgb(0 0 0 / 72%); }
+@starting-style {
+  .mission-details-dialog[open] { opacity:0; transform:translateX(20px); }
+  .mission-details-dialog[open]::backdrop { background:rgb(0 0 0 / 0%); }
+}
+.mission-details-dialog.motion-static,
+.mission-details-dialog.motion-static::backdrop { transition:none; }
 .mission-details-content {
   min-width:0;
   padding:18px clamp(14px,2vw,28px) 30px
@@ -309,4 +320,61 @@
 .mission-history > ol > li,
 .mission-deliverable {
   animation: mission-in .22s ease-out both;
+}
+
+.mission-details-panel,
+.mission-details-dialog { background: #000; color: #fff; }
+.mission-details-content { background: #000; }
+.mission-header h2 { text-transform: none; line-height: 1.08; }
+.mission-meta { font-size: 12px; }
+.mission-progress-overview { display: grid; grid-template-columns: 90px minmax(0,1fr); align-items: center; gap: 18px; padding-bottom: 16px; }
+.mission-progress-ring { position: relative; display: grid; width: 88px; height: 88px; place-items: center; }
+.mission-progress-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.mission-progress-ring circle { fill: none; stroke-width: 4; }
+.mission-progress-ring-track { stroke: #30363c; }
+.mission-progress-ring-value { stroke: #67e8f9; stroke-linecap: butt; }
+.mission-progress-ring>span { display: grid; justify-items: center; line-height: 1.1; }
+.mission-progress-ring strong { font: 700 22px/1 var(--display); }
+.mission-progress-ring small { position: absolute; top: 100%; margin-top: 4px; color: #b5bec8; font: 10px/1 var(--body); white-space: nowrap; }
+.mission-companion-note { min-width: 0; }
+.mission-companion-identity { display: flex; align-items: center; gap: 8px; color: #fff; font: 600 17px var(--display); }
+.mission-companion-identity .mascot-slot { border-color: #67e8f9; }
+.mission-companion-note>p { margin: 7px 0 0; color: #fff; font-size: 13px; }
+.mission-route { position: relative; margin: 0; padding: 0; list-style: none; }
+.mission-route::before { position: absolute; top: 19px; bottom: 19px; left: 15px; width: 1px; background: #59636c; content: ''; }
+.mission-route .mission-stage { position: relative; border-top: 1px solid #30363c; padding: 12px 0 13px; }
+.mission-route .mission-stage-heading { display: flex; justify-content: flex-start; align-items: center; gap: 11px; }
+.mission-route .mission-stage-heading>div { display: grid; min-width: 0; gap: 2px; }
+.mission-route .mission-stage-heading strong { font-size: 14px; }
+.mission-route .mission-stage-heading>div>span { color: #b5bec8; font-size: 12px; }
+.mission-route .mission-stage-marker { position: relative; z-index: 1; display: grid; width: 31px; height: 31px; flex: 0 0 31px; place-items: center; border: 1px solid #67727c; border-radius: 50%; background: #000; color: #fff; font-size: 12px; }
+.mission-route .mission-stage-complete .mission-stage-marker { border-color: #67e8f9; color: #67e8f9; }
+.mission-route .mission-stage-ready .mission-stage-marker { border-color: #fff; color: #fff; }
+.mission-route .mission-stage-complete>div::before,
+.mission-route .mission-stage-ready>div::before { content: none; }
+.mission-route .mission-stage ul { margin: 5px 0 0 42px; padding-left: 16px; color: #d7dfe6; font-size: 13px; }
+.mission-deliverables h3:focus { outline: 2px solid #67e8f9; outline-offset: 4px; }
+.mission-details-panel.motion-static,
+.mission-details-dialog.motion-static,
+.motion-static .mission-history>ol>li,
+.motion-static .mission-deliverable { animation: none; }
+.motion-static .mission-progress-track span { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .mission-details-panel,
+  .mission-details-dialog,
+  .mission-details-dialog::backdrop,
+  .mission-history>ol>li,
+  .mission-deliverable,
+  .mission-details-panel *,
+  .mission-details-dialog * { animation: none !important; transition: none !important; }
+}
+@media (max-width: 520px) {
+  .mission-progress-overview { grid-template-columns: 82px minmax(0,1fr); gap: 12px; }
+  .mission-progress-ring { width: 80px; height: 80px; }
+  .mission-companion-identity { font-size: 15px; }
+  .mission-companion-note>p { font-size: 12px; }
+  .mission-route .mission-stage-heading strong { font-size: 13px; }
+}
+@media (max-width: 900px) {
+  .mission-details-dialog { width: 100vw; max-width: 100vw; margin: 0; }
 }
